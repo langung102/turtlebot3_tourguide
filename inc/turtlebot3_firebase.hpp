@@ -15,7 +15,6 @@
 #include <assert.h>
 #include <thread>
 #include <firebase/app.h>
-#include <firebase/auth.h>
 #include <firebase/database.h>
 #include "firebase/future.h"
 #include "firebase/util.h"
