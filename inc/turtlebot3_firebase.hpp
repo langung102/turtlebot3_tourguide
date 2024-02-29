@@ -51,6 +51,11 @@ struct getRequestData{
 
 getRequestData getRequest();
 
+struct getPositionData{
+    double xPosition;
+    double yPosition;
+};
+
 getPositionData getPosition();
 
 void setPosition(double x, double y);
