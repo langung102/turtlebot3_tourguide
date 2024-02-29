@@ -16,5 +16,6 @@ void AmclPoseSubscriber::processAmclPose(const geometry_msgs::msg::PoseWithCovar
 {
     this->x = msg->pose.pose.position.x;
     this->y = msg->pose.pose.position.y;
+    setPosition(x, y);
     RCLCPP_INFO(get_logger(), "%f - %f", this->x, this->y);
 }

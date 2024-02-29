@@ -155,3 +155,80 @@ getRequestData getRequest(){
     myRequest.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
     return myRequest; 
 }
+
+getPositionData getPosition(){
+    //initialize positionData variable 
+    getPositionData myPosition;
+    myPosition.xPosition = 0.0;
+    myPosition.yPosition = 0.0;
+   // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        myPosition.xPosition = -1;
+        myPosition.yPosition = -1;
+        // Handle error as needed.
+        return myPosition;
+    }
+       // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        myPosition.xPosition = -1;
+        myPosition.yPosition = -1;
+        // Handle error as needed.
+        return myPosition;
+    }
+     // Get the root reference location of the database.
+    firebase::database::DatabaseReference dbref = database->GetReference(databasePath);
+    firebase::Future<firebase::database::DataSnapshot> result = dbref.Child("position").GetValue();
+    WaitForCompletion(result, "get");
+    const firebase::database::DataSnapshot myResult = *result.result();
+    //check field of id whether exist or not 
+    if(!(myResult.HasChild("x"))){
+        std::cerr << "Don't have this field x" << std::endl;
+    }
+    if(!(myResult.HasChild("y"))){
+        std::cerr << "Don't have this field y" << std::endl;
+    }
+    // check value of x whether null or not
+    if(!(myResult.Child("x").value().is_null())){
+        std::cerr << "Value's x is not null" << std::endl;
+    }
+    if(!(myResult.Child("y").value().is_null())){
+        std::cerr << "Value's y is not null" << std::endl;
+    }
+    //Assign a value to the variable myRequest
+    myPosition.xPosition = myResult.Child("x").value().double_value();
+    myPosition.yPosition = myResult.Child("y").value().double_value();
+    return myPosition; 
+}
+
+void setPosition(double x, double y){
+    // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the database location where you want to publish the value.
+    firebase::database::DatabaseReference reference = database->GetReference(databasePath);
+    // Set the value at the specified location.
+    auto future = reference.Child("position").Child("x").SetValue(x);
+    WaitForCompletion(future, "set");
+     auto future1 = reference.Child("position").Child("y").SetValue(y);
+    WaitForCompletion(future1, "set");
+}

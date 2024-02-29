@@ -51,4 +51,8 @@ struct getRequestData{
 
 getRequestData getRequest();
 
+getPositionData getPosition();
+
+void setPosition(double x, double y);
+
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */
