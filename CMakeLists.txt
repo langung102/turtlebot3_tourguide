@@ -1,26 +1,10 @@
 cmake_minimum_required(VERSION 3.9)
 project(turtlebot3_tourguide)
 
-#build turltebot3_firebase lib
-link_directories(/usr/lib/firebase /usr/lib/firebase/deps/app /usr/lib/firebase/deps/database/external /usr/lib/aarch64-linux-gnu)
+set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=0 -lpthread")
 
-set(firebase_libs 
-    firebase_firestore
-    firebase_storage
-    firebase_functions
-    firebase_database
-    firebase_app
-    firebase_rest_lib
-    leveldb
-    z
-    flatbuffers
-    libuWS
-    secret-1
-    glib-2.0
-    ssl
-    crypto
-    curl
-)
+add_subdirectory(${FIREBASE_CPP_SDK_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/firebase-cpp-sdk/)
+set(firebase_libs firebase_auth firebase_database firebase_app firebase_analytics)
 
 include_directories(inc)
 
