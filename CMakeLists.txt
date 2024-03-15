@@ -37,6 +37,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav2_msgs REQUIRED)
 find_package(nav2_lifecycle_manager REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(nav2_util REQUIRED)
 find_package(rclcpp_action REQUIRED)
 
@@ -44,12 +45,12 @@ set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1")
 
 set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/src/request_handler.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/goal_publisher.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/update_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/navigation.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/global.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/request_handler.hpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/inc/goal_publisher.hpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/inc/update_handler.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/navigation.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/global.hpp
 )
@@ -68,6 +69,7 @@ ament_target_dependencies(turtlebot3_tourguide
   rclcpp_action  
   nav2_lifecycle_manager
   tf2_geometry_msgs
+  sensor_msgs
   nav2_util
 )
 

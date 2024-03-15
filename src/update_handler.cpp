@@ -20,7 +20,7 @@ void AmclPoseSubscriber::processAmclPose(const geometry_msgs::msg::PoseWithCovar
     tf2::fromMsg(msg->pose.pose.orientation, quaternion);
     double roll, pitch, yaw;
     tf2::Matrix3x3(quaternion).getRPY(roll, pitch, yaw);
-    this->yaw_degree = yaw * 180.0 / M_PI
+    this->yaw_degree = yaw * 180.0 / M_PI;
 
     setPosition(this->x, this->y, this->yaw_degree);
     RCLCPP_INFO(get_logger(), "%f - %f - %f", this->x, this->y, this->yaw_degree);
@@ -35,11 +35,23 @@ BatterySubscriber::BatterySubscriber() : Node("battery_state_subscriber")
         {
             processBattery(msg);
         });
+    subscription_ = this->create_subscription<sensor_msgs::msg::BatteryState>(
+        "battery_state",
+        10,
+        std::bind(&BatterySubscriber::processBattery, this, std::placeholders::_1));
+
+    this->timer_ = this->create_wall_timer(std::chrono::seconds(10), std::bind(&BatterySubscriber::timerCallback, this));
+}
+
+void BatterySubscriber::timerCallback() {
+    SetBattery(this->battery);
+    RCLCPP_INFO(get_logger(), "Battery: %d", this->battery);
 }
 
 void BatterySubscriber::processBattery(sensor_msgs::msg::BatteryState::SharedPtr msg)
 {
-    this->battery = (int) msg->percentage;
-    SetBattery(this->battery);
-    RCLCPP_INFO(get_logger(), "Battery: %d", this->battery);
+    int tmp = (int) msg->percentage;
+    if (abs(this->battery - tmp) > 5) {
+        this->battery = tmp;
+    }
 }
