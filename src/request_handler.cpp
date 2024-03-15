@@ -20,9 +20,10 @@ void RequestHandler::OnValueChanged(
     request.id = snapshot.Child("id").value().int64_value();
     firebase::Variant x = snapshot.Child("param").Child("x").value();
     firebase::Variant y = snapshot.Child("param").Child("y").value();
+    firebase::Variant yaw = snapshot.Child("param").Child("yaw").value();
     request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
-    request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
-    RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f)", request.id, request.xPosition, request.yPosition);
+    request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
+    RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f) - %f", request.id, request.xPosition, request.yPosition, request.yaw);
 }
 
 void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
@@ -45,10 +46,10 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.position.x = request.xPosition;
             goal_pose.pose.position.y = request.yPosition;
             goal_pose.pose.position.z = 0.0;
-            goal_pose.pose.orientation.x = 0;
-            goal_pose.pose.orientation.y = 0;
-            goal_pose.pose.orientation.z = 1;
-            goal_pose.pose.orientation.w = 0;
+            double radians = request.yaw * M_PI / 180.0;
+            tf2::Quaternion quaternion;
+            quaternion.setRPY(0, 0, radians);
+            goal_pose.pose.orientation = tf2::toMsg(quaternion);
             this->nav.startNavigation(goal_pose);
             state = 1;
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
@@ -78,10 +79,10 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.position.x = request.xPosition;
             goal_pose.pose.position.y = request.yPosition;
             goal_pose.pose.position.z = 0;
-            goal_pose.pose.orientation.x = 0;
-            goal_pose.pose.orientation.y = 0;
-            goal_pose.pose.orientation.z = 0;
-            goal_pose.pose.orientation.w = 0;
+            double radians = request.yaw * M_PI / 180.0;
+            tf2::Quaternion quaternion;
+            quaternion.setRPY(0, 0, radians);
+            goal_pose.pose.orientation = tf2::toMsg(quaternion);
             this->nav.startNavigation(goal_pose);
             state = 3;
             RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");

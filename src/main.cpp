@@ -2,8 +2,8 @@
 #include "rclcpp/executor.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
 #include <iostream>
-#include "goal_publisher.hpp"
-#include "request_handler.hpp"
+#include "publisher.hpp"
+#include "update_handler.hpp"
 #include "global.hpp"
 
 int main(int argc, char *argv[])
