@@ -1,0 +1,640 @@
+[0.082s] Invoking command in '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide -DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/install/turtlebot3_tourguide
+[0.184s] -- The C compiler identification is GNU 11.4.0
+[0.274s] -- The CXX compiler identification is GNU 11.4.0
+[0.283s] -- Detecting C compiler ABI info
+[0.350s] -- Detecting C compiler ABI info - done
+[0.358s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.358s] -- Detecting C compile features
+[0.359s] -- Detecting C compile features - done
+[0.362s] -- Detecting CXX compiler ABI info
+[0.441s] -- Detecting CXX compiler ABI info - done
+[0.449s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.449s] -- Detecting CXX compile features
+[0.450s] -- Detecting CXX compile features - done
+[0.452s] -- Downloading external project dependencies...
+[0.731s] Getting released firebase-ios-sdk @ CocoaPods-10.22.0
+[0.837s] CMake Warning:
+[0.837s]   Manually-specified variables were not used by the project:
+[0.837s] 
+[0.837s]     DOWNLOAD_FIREBASE_IOS_SDK
+[0.837s]     DOWNLOAD_GOOGLETEST
+[0.837s]     PLATFORM
+[0.837s] 
+[0.837s] 
+[1.039s] hint: Using 'master' as the name for the initial branch. This default branch name
+[1.040s] hint: is subject to change. To configure the initial branch name to use in all
+[1.040s] hint: of your new repositories, which will suppress this warning, call:
+[1.040s] hint: 
+[1.040s] hint: 	git config --global init.defaultBranch <name>
+[1.040s] hint: 
+[1.040s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[1.040s] hint: 'development'. The just-created branch can be renamed via this command:
+[1.040s] hint: 
+[1.040s] hint: 	git branch -m <name>
+[1.058s] Cloning into 'leveldb'...
+[1.059s] hint: Using 'master' as the name for the initial branch. This default branch name
+[1.059s] hint: is subject to change. To configure the initial branch name to use in all
+[1.059s] hint: of your new repositories, which will suppress this warning, call:
+[1.059s] hint: 
+[1.059s] hint: 	git config --global init.defaultBranch <name>
+[1.059s] hint: 
+[1.060s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[1.060s] hint: 'development'. The just-created branch can be renamed via this command:
+[1.060s] hint: 
+[1.060s] hint: 	git branch -m <name>
+[1.064s] hint: Using 'master' as the name for the initial branch. This default branch name
+[1.064s] hint: is subject to change. To configure the initial branch name to use in all
+[1.064s] hint: of your new repositories, which will suppress this warning, call:
+[1.065s] hint: 
+[1.065s] hint: 	git config --global init.defaultBranch <name>
+[1.065s] hint: 
+[1.065s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[1.065s] hint: 'development'. The just-created branch can be renamed via this command:
+[1.066s] hint: 
+[1.066s] hint: 	git branch -m <name>
+[3.896s] From https://github.com/uNetworking/uWebSockets
+[3.896s]  * branch            4d94401b9c98346f9afd838556fdc7dce30561eb -> FETCH_HEAD
+[10.837s] From https://github.com/google/flatbuffers
+[10.837s]  * branch            99aa1ef21dd9dc3f9d4fb0eb82f4b59d0bb5e4c5 -> FETCH_HEAD
+[23.615s] HEAD is now at 99b3c03 Change version to 1.23.
+[23.632s] Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'
+[23.632s] Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'
+[23.635s] Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/benchmark'...
+[41.182s] Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/googletest'...
+[124.480s] error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+[124.480s] error: 177 bytes of body are still expected
+[124.483s] fetch-pack: unexpected disconnect while reading sideband packet
+[124.484s] fatal: early EOF
+[124.484s] fatal: fetch-pack: invalid index-pack output
+[124.484s] gmake[2]: *** [CMakeFiles/boringssl.dir/build.make:99: src/boringssl-stamp/boringssl-download] Error 128
+[124.484s] gmake[1]: *** [CMakeFiles/Makefile2:149: CMakeFiles/boringssl.dir/all] Error 2
+[124.485s] gmake[1]: *** Waiting for unfinished jobs....
+[125.406s] gmake: *** [Makefile:91: all] Error 2
+[125.407s] -- Download complete.
+[125.407s] -- Building external project dependencies...
+[125.407s] -- CMake generator: Unix Makefiles
+[125.407s] -- CMake generator platform: 
+[125.407s] -- CMake toolchain file: 
+[125.407s] -- Sub-configure options: -G;Unix Makefiles;-DCMAKE_C_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_CXX_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_POSITION_INDEPENDENT_CODE=
+[125.408s] -- Sub-build options: 
+[125.408s] -- Build of external project dependencies complete.
+[125.458s] -- Looking for pthread.h
+[125.523s] -- Looking for pthread.h - found
+[125.523s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[125.603s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[125.604s] -- Found Threads: TRUE  
+[125.606s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.a (found version "3.0.2")  
+[125.607s] [0mCMake Deprecation Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/CMakeLists.txt:40 (cmake_policy):
+[125.607s]   The OLD behavior for policy CMP0058 will be removed from a future version
+[125.607s]   of CMake.
+[125.607s] 
+[125.607s]   The cmake-policies(7) manual explains that the OLD behaviors of all
+[125.607s]   policies are deprecated and that a policy should be set to OLD only under
+[125.607s]   specific short-term circumstances.  Projects should be ported to the NEW
+[125.607s]   behavior and not rely on setting a policy to OLD.
+[125.608s] 
+[125.608s] [0m
+[125.608s] -- Found ccache: /usr/bin/ccache
+[125.609s] -- firebase_execute_process(): running command: /usr/bin/cmake -G Unix Makefiles -DFIREBASE_DOWNLOAD_DIR=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads -DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/opt -DFUZZING=OFF -DDOWNLOAD_BENCHMARK=OFF -DDOWNLOAD_GOOGLETEST=OFF -DEXTERNAL_PROJECT_HTTP_HEADER= /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)
+[125.666s] -- The C compiler identification is GNU 11.4.0
+[125.717s] -- The CXX compiler identification is GNU 11.4.0
+[125.724s] -- Detecting C compiler ABI info
+[125.786s] -- Detecting C compiler ABI info - done
+[125.793s] -- Check for working C compiler: /usr/bin/cc - skipped
+[125.793s] -- Detecting C compile features
+[125.794s] -- Detecting C compile features - done
+[125.796s] -- Detecting CXX compiler ABI info
+[125.866s] -- Detecting CXX compiler ABI info - done
+[125.874s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[125.874s] -- Detecting CXX compile features
+[125.874s] -- Detecting CXX compile features - done
+[126.107s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[126.107s] -- FirebaseSetupPythonInterpreter(LevelDbPatch): Creating Python virtualenv in /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch using /usr/bin/python3.10
+[126.108s] -- firebase_execute_process(): running command: /usr/bin/python3.10 -m venv /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch
+[129.213s] -- FirebaseSetupPythonInterpreter(LevelDbPatch): Found Python executable in virtualenv: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch/bin/python3
+[129.303s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[129.304s] -- Configuring done
+[129.317s] -- Generating done
+[129.318s] -- Build files have been written to: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external
+[129.323s] -- firebase_execute_process(): running command: /usr/bin/cmake --build . -- -j (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)
+[129.374s] [  2%] Creating directories for 'GoogleUtilities'
+[129.374s] [  2%] Creating directories for 'abseil-cpp'
+[129.374s] [  3%] Creating directories for 'protobuf'
+[129.375s] [  4%] Creating directories for 'nanopb'
+[129.375s] [  8%] Creating directories for 're2'
+[129.375s] [  8%] Creating directories for 'boringssl'
+[129.376s] [  8%] Creating directories for 'snappy'
+[129.376s] [  8%] Creating directories for 'c-ares'
+[129.376s] [ 10%] Creating directories for 'grpc'
+[129.460s] [ 11%] Performing download step (download, verify and extract) for 'protobuf'
+[129.461s] [ 13%] Performing download step (download, verify and extract) for 're2'
+[129.461s] [ 15%] Performing download step (download, verify and extract) for 'snappy'
+[129.461s] [ 15%] Performing download step (download, verify and extract) for 'abseil-cpp'
+[129.462s] [ 16%] Performing download step (download, verify and extract) for 'c-ares'
+[129.462s] [ 16%] Performing download step (download, verify and extract) for 'boringssl'
+[129.464s] [ 17%] Performing download step (download, verify and extract) for 'nanopb'
+[129.465s] [ 18%] Performing download step (download, verify and extract) for 'GoogleUtilities'
+[129.468s] [ 20%] Performing download step (download, verify and extract) for 'grpc'
+[129.472s] -- Downloading...
+[129.472s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+[129.472s]    timeout='none'
+[129.472s]    inactivity timeout='none'
+[129.472s] -- Using src='https://github.com/protocolbuffers/protobuf/archive/29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+[129.473s] -- Downloading...
+[129.473s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+[129.473s]    timeout='none'
+[129.473s]    inactivity timeout='none'
+[129.473s] -- Using src='https://github.com/abseil/abseil-cpp/archive/20220623.0.tar.gz'
+[129.473s] -- Downloading...
+[129.473s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+[129.473s]    timeout='none'
+[129.473s]    inactivity timeout='none'
+[129.473s] -- Using src='https://github.com/google/snappy/archive/refs/tags/1.1.9.tar.gz'
+[129.474s] -- Downloading...
+[129.474s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+[129.474s]    timeout='none'
+[129.474s]    inactivity timeout='none'
+[129.474s] -- Using src='https://github.com/google/re2/archive/8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+[129.475s] -- Downloading...
+[129.475s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+[129.475s]    timeout='none'
+[129.475s]    inactivity timeout='none'
+[129.475s] -- Using src='https://github.com/nanopb/nanopb/archive/nanopb-0.3.9.8.tar.gz'
+[129.475s] -- Downloading...
+[129.475s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+[129.475s]    timeout='none'
+[129.476s]    inactivity timeout='none'
+[129.476s] -- Using src='https://github.com/c-ares/c-ares/archive/e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+[129.476s] -- Downloading...
+[129.476s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+[129.476s]    timeout='none'
+[129.476s]    inactivity timeout='none'
+[129.476s] -- Using src='https://github.com/google/boringssl/archive/b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+[129.478s] -- Downloading...
+[129.478s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+[129.478s]    timeout='none'
+[129.478s]    inactivity timeout='none'
+[129.478s] -- Using src='https://github.com/google/GoogleUtilities/archive/7.12.0.tar.gz'
+[129.479s] -- Downloading...
+[129.479s]    dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+[129.479s]    timeout='none'
+[129.479s]    inactivity timeout='none'
+[129.479s] -- Using src='https://github.com/grpc/grpc/archive/v1.50.0.tar.gz'
+[131.028s] -- [download 0% complete]
+[131.035s] -- [download 1% complete]
+[131.144s] -- [download 2% complete]
+[131.239s] -- [download 3% complete]
+[131.274s] -- [download 5% complete]
+[131.283s] -- [download 0% complete]
+[131.385s] -- [download 6% complete]
+[131.402s] -- [download 7% complete]
+[131.483s] -- [download 8% complete]
+[131.638s] -- [download 9% complete]
+[131.714s] -- [download 10% complete]
+[131.722s] -- [download 11% complete]
+[131.727s] -- [download 13% complete]
+[131.751s] -- [download 1% complete]
+[131.784s] -- [download 14% complete]
+[131.820s] -- [download 15% complete]
+[131.839s] -- [download 16% complete]
+[132.155s] -- [download 18% complete]
+[132.189s] -- [download 19% complete]
+[132.193s] -- [download 20% complete]
+[132.414s] -- [download 21% complete]
+[132.445s] -- [download 22% complete]
+[132.515s] -- [download 23% complete]
+[132.548s] -- [download 2% complete]
+[132.738s] -- [download 26% complete]
+[133.475s] -- [download 28% complete]
+[133.596s] -- verifying file...
+[133.596s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+[133.597s] -- Downloading... done
+[133.614s] -- extracting...
+[133.614s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+[133.614s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/GoogleUtilities'
+[133.615s] -- extracting... [tar xfz]
+[133.621s] -- [download 29% complete]
+[133.630s] -- extracting... [analysis]
+[133.630s] -- extracting... [rename]
+[133.630s] -- extracting... [clean up]
+[133.630s] -- extracting... done
+[133.646s] [ 21%] No update step for 'GoogleUtilities'
+[133.668s] [ 22%] No patch step for 'GoogleUtilities'
+[133.690s] [ 23%] No configure step for 'GoogleUtilities'
+[133.713s] [ 24%] No build step for 'GoogleUtilities'
+[133.737s] [ 25%] No install step for 'GoogleUtilities'
+[133.761s] [ 26%] No test step for 'GoogleUtilities'
+[133.794s] [ 27%] Completed 'GoogleUtilities'
+[133.835s] [ 27%] Built target GoogleUtilities
+[133.885s] -- [download 30% complete]
+[133.959s] -- [download 3% complete]
+[134.331s] -- [download 32% complete]
+[134.502s] -- [download 33% complete]
+[134.602s] -- verifying file...
+[134.602s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+[134.602s] -- Downloading... done
+[134.619s] -- extracting...
+[134.619s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+[134.619s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/nanopb'
+[134.619s] -- extracting... [tar xfz]
+[134.641s] -- extracting... [analysis]
+[134.641s] -- extracting... [rename]
+[134.641s] -- extracting... [clean up]
+[134.641s] -- extracting... done
+[134.657s] [ 28%] No update step for 'nanopb'
+[134.679s] [ 30%] Performing patch step for 'nanopb'
+[134.681s] -- [download 34% complete]
+[134.681s] patching file CMakeLists.txt
+[134.681s] patching file generator/nanopb_generator.py
+[134.697s] [ 31%] No configure step for 'nanopb'
+[134.722s] [ 32%] No build step for 'nanopb'
+[134.749s] [ 33%] No install step for 'nanopb'
+[134.775s] [ 34%] No test step for 'nanopb'
+[134.777s] -- [download 35% complete]
+[134.809s] [ 35%] Completed 'nanopb'
+[134.840s] [ 35%] Built target nanopb
+[134.983s] -- verifying file...
+[134.983s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+[134.984s] -- Downloading... done
+[135.001s] -- extracting...
+[135.001s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+[135.001s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/re2'
+[135.001s] -- extracting... [tar xfz]
+[135.018s] -- extracting... [analysis]
+[135.018s] -- extracting... [rename]
+[135.018s] -- extracting... [clean up]
+[135.018s] -- extracting... done
+[135.036s] [ 36%] No update step for 're2'
+[135.045s] -- [download 36% complete]
+[135.060s] [ 37%] No patch step for 're2'
+[135.065s] -- [download 37% complete]
+[135.081s] -- [download 4% complete]
+[135.082s] [ 38%] No configure step for 're2'
+[135.111s] [ 40%] No build step for 're2'
+[135.137s] [ 41%] No install step for 're2'
+[135.167s] [ 42%] No test step for 're2'
+[135.195s] [ 43%] Completed 're2'
+[135.207s] -- [download 38% complete]
+[135.229s] [ 43%] Built target re2
+[135.607s] -- [download 39% complete]
+[135.675s] -- [download 40% complete]
+[135.785s] -- [download 41% complete]
+[135.902s] -- [download 5% complete]
+[136.132s] -- [download 42% complete]
+[136.356s] -- [download 43% complete]
+[136.670s] -- [download 44% complete]
+[137.145s] -- [download 45% complete]
+[137.361s] -- [download 46% complete]
+[137.489s] -- [download 47% complete]
+[137.533s] -- [download 6% complete]
+[137.646s] -- [download 48% complete]
+[137.708s] -- [download 49% complete]
+[137.859s] -- [download 50% complete]
+[138.227s] -- [download 51% complete]
+[138.455s] -- [download 52% complete]
+[138.469s] -- [download 7% complete]
+[138.563s] -- [download 53% complete]
+[138.631s] -- [download 54% complete]
+[138.736s] -- [download 55% complete]
+[138.980s] -- [download 56% complete]
+[139.307s] -- [download 57% complete]
+[139.508s] -- [download 8% complete]
+[139.536s] -- [download 58% complete]
+[139.704s] -- [download 59% complete]
+[139.896s] -- [download 60% complete]
+[140.003s] -- [download 61% complete]
+[140.043s] -- [download 62% complete]
+[140.151s] -- [download 63% complete]
+[140.212s] -- [download 64% complete]
+[140.316s] -- [download 65% complete]
+[140.324s] -- [download 9% complete]
+[140.607s] -- [download 66% complete]
+[141.230s] -- [download 68% complete]
+[141.535s] -- [download 69% complete]
+[141.782s] -- [download 70% complete]
+[141.934s] -- [download 10% complete]
+[141.958s] -- [download 71% complete]
+[142.151s] -- [download 72% complete]
+[142.319s] -- [download 73% complete]
+[142.319s] -- verifying file...
+[142.319s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+[142.322s] -- Downloading... done
+[142.339s] -- extracting...
+[142.339s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+[142.339s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/snappy'
+[142.339s] -- extracting... [tar xfz]
+[142.361s] -- extracting... [analysis]
+[142.361s] -- extracting... [rename]
+[142.361s] -- extracting... [clean up]
+[142.361s] -- extracting... done
+[142.377s] [ 44%] No update step for 'snappy'
+[142.407s] [ 45%] Performing patch step for 'snappy'
+[142.409s] patching file snappy.cc
+[142.425s] [ 46%] No configure step for 'snappy'
+[142.453s] [ 47%] No build step for 'snappy'
+[142.479s] [ 48%] No install step for 'snappy'
+[142.503s] [ 50%] No test step for 'snappy'
+[142.526s] [ 51%] Completed 'snappy'
+[142.554s] [ 51%] Built target snappy
+[142.573s] [ 52%] Creating directories for 'leveldb'
+[142.636s] [ 53%] Performing download step (git clone) for 'leveldb'
+[142.653s] Cloning into 'leveldb'...
+[142.964s] -- [download 74% complete]
+[143.119s] -- [download 11% complete]
+[143.167s] -- [download 75% complete]
+[143.323s] -- [download 76% complete]
+[143.811s] -- [download 77% complete]
+[144.887s] -- [download 78% complete]
+[145.896s] -- [download 79% complete]
+[146.103s] -- [download 80% complete]
+[146.339s] -- [download 12% complete]
+[146.356s] -- [download 81% complete]
+[146.791s] -- [download 82% complete]
+[147.554s] -- [download 83% complete]
+[147.623s] -- [download 84% complete]
+[147.859s] -- [download 85% complete]
+[148.454s] -- [download 86% complete]
+[149.206s] -- [download 87% complete]
+[149.206s] -- [download 13% complete]
+[149.516s] -- [download 88% complete]
+[149.701s] -- [download 89% complete]
+[149.878s] -- [download 90% complete]
+[150.072s] -- [download 91% complete]
+[150.210s] -- [download 92% complete]
+[150.247s] -- [download 14% complete]
+[150.306s] -- [download 93% complete]
+[150.405s] -- [download 94% complete]
+[150.526s] -- [download 95% complete]
+[150.645s] -- [download 96% complete]
+[150.649s] -- verifying file...
+[150.649s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+[150.650s] -- Downloading... done
+[150.667s] -- extracting...
+[150.668s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+[150.668s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/cares'
+[150.668s] -- extracting... [tar xfz]
+[150.697s] -- extracting... [analysis]
+[150.697s] -- extracting... [rename]
+[150.697s] -- extracting... [clean up]
+[150.697s] -- extracting... done
+[150.713s] [ 54%] No update step for 'c-ares'
+[150.734s] [ 55%] No patch step for 'c-ares'
+[150.756s] [ 56%] No configure step for 'c-ares'
+[150.779s] [ 57%] No build step for 'c-ares'
+[150.800s] -- [download 97% complete]
+[150.805s] [ 58%] No install step for 'c-ares'
+[150.829s] [ 60%] No test step for 'c-ares'
+[150.852s] [ 61%] Completed 'c-ares'
+[150.890s] [ 61%] Built target c-ares
+[150.916s] -- [download 98% complete]
+[150.991s] -- [download 15% complete]
+[151.014s] -- [download 99% complete]
+[151.241s] -- [download 100% complete]
+[151.399s] -- verifying file...
+[151.399s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+[151.404s] -- Downloading... done
+[151.421s] -- extracting...
+[151.421s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+[151.421s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp'
+[151.421s] -- extracting... [tar xfz]
+[151.491s] -- extracting... [analysis]
+[151.491s] -- extracting... [rename]
+[151.491s] -- extracting... [clean up]
+[151.491s] -- extracting... done
+[151.510s] [ 62%] No update step for 'abseil-cpp'
+[151.542s] [ 63%] No patch step for 'abseil-cpp'
+[151.573s] [ 64%] No configure step for 'abseil-cpp'
+[151.599s] [ 65%] No build step for 'abseil-cpp'
+[151.623s] [ 66%] No install step for 'abseil-cpp'
+[151.646s] [ 67%] No test step for 'abseil-cpp'
+[151.670s] [ 68%] Completed 'abseil-cpp'
+[151.678s] HEAD is now at 99b3c03 Change version to 1.23.
+[151.700s] Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'
+[151.700s] Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'
+[151.701s] [ 68%] Built target abseil-cpp
+[151.705s] Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/benchmark'...
+[151.713s] -- [download 16% complete]
+[152.459s] -- [download 17% complete]
+[152.774s] -- [download 18% complete]
+[153.166s] -- [download 19% complete]
+[153.620s] -- [download 20% complete]
+[154.991s] -- [download 21% complete]
+[155.767s] -- [download 22% complete]
+[156.853s] -- [download 23% complete]
+[157.403s] -- [download 24% complete]
+[157.887s] -- [download 25% complete]
+[158.321s] -- [download 26% complete]
+[159.396s] -- [download 27% complete]
+[159.779s] -- [download 28% complete]
+[160.350s] -- [download 29% complete]
+[160.763s] -- verifying file...
+[160.763s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+[160.778s] -- Downloading... done
+[160.803s] -- extracting...
+[160.803s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+[160.803s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/protobuf'
+[160.803s] -- extracting... [tar xfz]
+[160.880s] -- [download 30% complete]
+[160.965s] -- extracting... [analysis]
+[160.966s] -- extracting... [rename]
+[160.966s] -- extracting... [clean up]
+[160.966s] -- extracting... done
+[160.981s] [ 70%] No update step for 'protobuf'
+[161.002s] [ 71%] No patch step for 'protobuf'
+[161.025s] [ 72%] No configure step for 'protobuf'
+[161.048s] [ 73%] No build step for 'protobuf'
+[161.071s] [ 74%] No install step for 'protobuf'
+[161.094s] [ 75%] No test step for 'protobuf'
+[161.118s] [ 76%] Completed 'protobuf'
+[161.196s] [ 76%] Built target protobuf
+[161.293s] -- [download 31% complete]
+[161.792s] -- [download 32% complete]
+[162.359s] -- [download 33% complete]
+[162.904s] -- [download 34% complete]
+[163.727s] -- [download 35% complete]
+[164.993s] -- [download 36% complete]
+[165.666s] -- [download 37% complete]
+[166.902s] -- [download 38% complete]
+[167.385s] Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/googletest'...
+[167.571s] -- [download 39% complete]
+[168.409s] -- [download 40% complete]
+[168.932s] -- [download 41% complete]
+[169.572s] -- [download 42% complete]
+[170.192s] -- [download 43% complete]
+[171.364s] -- [download 44% complete]
+[172.109s] -- [download 45% complete]
+[174.341s] -- [download 46% complete]
+[174.562s] -- [download 47% complete]
+[177.371s] -- [download 48% complete]
+[178.146s] -- [download 49% complete]
+[179.555s] -- [download 50% complete]
+[180.566s] -- [download 51% complete]
+[181.578s] -- [download 52% complete]
+[182.005s] -- [download 53% complete]
+[182.838s] -- [download 54% complete]
+[183.231s] -- [download 55% complete]
+[183.455s] -- [download 56% complete]
+[184.057s] -- [download 57% complete]
+[184.306s] -- [download 58% complete]
+[184.516s] -- [download 59% complete]
+[184.774s] -- [download 60% complete]
+[185.076s] -- [download 61% complete]
+[185.617s] -- [download 62% complete]
+[185.954s] -- [download 63% complete]
+[186.001s] -- [download 64% complete]
+[186.825s] -- [download 65% complete]
+[186.858s] -- [download 66% complete]
+[187.189s] -- [download 67% complete]
+[187.629s] -- [download 68% complete]
+[187.758s] -- [download 69% complete]
+[188.734s] -- [download 70% complete]
+[189.253s] -- [download 71% complete]
+[190.143s] -- [download 72% complete]
+[191.301s] -- [download 73% complete]
+[191.443s] -- [download 74% complete]
+[192.292s] -- [download 75% complete]
+[192.770s] -- [download 76% complete]
+[193.925s] -- [download 77% complete]
+[194.080s] -- [download 78% complete]
+[195.025s] -- [download 79% complete]
+[203.819s] -- [download 80% complete]
+[204.472s] -- [download 81% complete]
+[205.286s] -- [download 82% complete]
+[205.729s] -- [download 83% complete]
+[206.220s] -- [download 84% complete]
+[206.669s] -- [download 85% complete]
+[207.522s] -- [download 86% complete]
+[208.357s] -- [download 87% complete]
+[209.280s] -- [download 88% complete]
+[210.281s] -- [download 89% complete]
+[211.402s] -- [download 90% complete]
+[212.222s] -- [download 91% complete]
+[213.137s] -- [download 92% complete]
+[214.288s] -- [download 93% complete]
+[214.586s] -- [download 94% complete]
+[214.902s] -- [download 95% complete]
+[215.185s] -- [download 96% complete]
+[215.475s] -- [download 97% complete]
+[216.167s] -- [download 98% complete]
+[217.152s] -- [download 99% complete]
+[217.472s] -- [download 100% complete]
+[218.881s] -- verifying file...
+[218.881s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+[218.902s] -- Downloading... done
+[218.919s] -- extracting...
+[218.919s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+[218.919s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/grpc'
+[218.919s] -- extracting... [tar xfz]
+[219.297s] -- extracting... [analysis]
+[219.297s] -- extracting... [rename]
+[219.297s] -- extracting... [clean up]
+[219.297s] -- extracting... done
+[219.314s] [ 77%] No update step for 'grpc'
+[219.337s] [ 78%] No patch step for 'grpc'
+[219.360s] [ 80%] No configure step for 'grpc'
+[219.384s] [ 81%] No build step for 'grpc'
+[219.408s] [ 82%] No install step for 'grpc'
+[219.434s] [ 83%] No test step for 'grpc'
+[219.469s] [ 84%] Completed 'grpc'
+[219.502s] [ 84%] Built target grpc
+[248.736s] Submodule path 'third_party/benchmark': checked out 'bf585a2789e30585b4e3ce6baf11ef2750b54677'
+[248.803s] Submodule path 'third_party/googletest': checked out 'c27acebba3b3c7d94209e0467b0a801db4af73ed'
+[248.835s] [ 85%] Performing update step for 'leveldb'
+[248.858s] [ 86%] Performing patch step for 'leveldb'
+[248.897s] Checking patch util/env_windows.cc...
+[248.898s] Checking patch util/env_windows_test.cc...
+[248.898s] Applied patch util/env_windows.cc cleanly.
+[248.898s] Applied patch util/env_windows_test.cc cleanly.
+[248.898s] Applying patch /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external/leveldb-1.23_windows_paths.patch
+[248.918s] [ 87%] No configure step for 'leveldb'
+[248.942s] [ 88%] No build step for 'leveldb'
+[248.965s] [ 90%] No install step for 'leveldb'
+[248.988s] [ 91%] No test step for 'leveldb'
+[249.011s] [ 92%] Completed 'leveldb'
+[249.042s] [ 92%] Built target leveldb
+[367.646s] -- verifying file...
+[367.646s]        file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+[367.787s] -- Downloading... done
+[367.805s] -- extracting...
+[367.805s]      src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+[367.805s]      dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/boringssl'
+[367.805s] -- extracting... [tar xfz]
+[368.529s] -- extracting... [analysis]
+[368.529s] -- extracting... [rename]
+[368.529s] -- extracting... [clean up]
+[368.529s] -- extracting... done
+[368.544s] [ 93%] No update step for 'boringssl'
+[368.567s] [ 94%] No patch step for 'boringssl'
+[368.593s] [ 95%] No configure step for 'boringssl'
+[368.622s] [ 96%] No build step for 'boringssl'
+[368.657s] [ 97%] No install step for 'boringssl'
+[368.690s] [ 98%] No test step for 'boringssl'
+[368.718s] [100%] Completed 'boringssl'
+[368.758s] [100%] Built target boringssl
+[368.832s] [33mCMake Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp/CMakeLists.txt:70 (message):
+[368.832s]   A future Abseil release will default ABSL_PROPAGATE_CXX_STD to ON for CMake
+[368.832s]   3.8 and up.  We recommend enabling this option to ensure your project still
+[368.833s]   builds correctly.
+[368.833s] 
+[368.833s] [0m
+[368.892s] -- Looking for res_servicename in resolv
+[368.968s] -- Looking for res_servicename in resolv - not found
+[368.969s] -- Looking for gethostbyname in nsl
+[369.032s] -- Looking for gethostbyname in nsl - found
+[369.032s] -- Looking for gethostbyname in socket
+[369.083s] -- Looking for gethostbyname in socket - not found
+[369.083s] -- Looking for socket in socket
+[369.150s] -- Looking for socket in socket - not found
+[369.150s] -- Looking for clock_gettime in rt
+[369.227s] -- Looking for clock_gettime in rt - found
+[369.228s] -- Looking for include file sys/types.h
+[369.292s] -- Looking for include file sys/types.h - found
+[369.293s] -- Looking for include file sys/socket.h
+[369.358s] -- Looking for include file sys/socket.h - found
+[369.358s] -- Looking for include file arpa/inet.h
+[369.427s] -- Looking for include file arpa/inet.h - found
+[369.427s] -- Looking for include file arpa/nameser_compat.h
+[369.487s] -- Looking for include file arpa/nameser_compat.h - found
+[369.487s] -- Looking for include file arpa/nameser.h
+[369.555s] -- Looking for include file arpa/nameser.h - found
+[369.555s] -- Looking for include file assert.h
+[369.626s] -- Looking for include file assert.h - found
+[369.626s] -- Looking for include file errno.h
+[369.707s] -- Looking for include file errno.h - found
+[369.707s] -- Looking for include file fcntl.h
+[369.770s] -- Looking for include file fcntl.h - found
+[369.771s] -- Looking for include file inttypes.h
+[369.830s] -- Looking for include file inttypes.h - found
+[369.831s] -- Looking for include file limits.h
+[369.891s] -- Looking for include file limits.h - found
+[369.891s] -- Looking for include file malloc.h
+[369.899s] Invoked command in '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide -DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/install/turtlebot3_tourguide
+[369.902s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 182, in _reconfigure
+    buildfile = get_buildfile(cmake_cache)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 114, in get_buildfile
+    if 'Visual Studio' in generator:
+TypeError: argument of type 'NoneType' is not iterable

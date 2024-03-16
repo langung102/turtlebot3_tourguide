@@ -1,0 +1,4305 @@
+[0.000000] (-) TimerEvent: {}
+[0.000118] (turtlebot3_tourguide) JobQueued: {'identifier': 'turtlebot3_tourguide', 'dependencies': OrderedDict()}
+[0.000185] (turtlebot3_tourguide) JobStarted: {'identifier': 'turtlebot3_tourguide'}
+[0.080592] (turtlebot3_tourguide) JobProgress: {'identifier': 'turtlebot3_tourguide', 'progress': 'cmake'}
+[0.080876] (turtlebot3_tourguide) Command: {'cmd': ['/usr/bin/cmake', '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide', '-DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/install/turtlebot3_tourguide'], 'cwd': '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'dinhthong'), ('LC_TIME', 'vi_VN'), ('GIO_MODULE_DIR', '/home/dinhthong/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/snap/code/155/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dinhthong'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/dinhthong/turtlebot3_ws/src'), ('TERM_PROGRAM_VERSION', '1.87.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/155/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('GTK_IM_MODULE_FILE', '/home/dinhthong/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/155/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'vi_VN'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/155/usr/share/code/code'), ('MANAGERPID', '966'), ('SYSTEMD_EXEC_PID', '1120'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4331'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/dinhthong/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dinhthong'), ('JOURNAL_STREAM', '8:23900'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'dinhthong'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dinhthong/.local/bin:/opt/ros/humble/bin:/home/dinhthong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dinhthong-Nitro-AN515-55:@/tmp/.ICE-unix/1083,unix/dinhthong-Nitro-AN515-55:/tmp/.ICE-unix/1083'), ('GTK_EXE_PREFIX', '/snap/code/155/usr'), ('INVOCATION_ID', 'cb67806b282c4c10a5babb8d14dfb99a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/155/usr/lib/locale'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.B73PK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8947f12bcb.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/dinhthong/snap/code/155/.local/share/glib-2.0/schemas'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/dinhthong/turtlebot3_ws/install/turtlebot3_tourguide:/home/dinhthong/turtlebot3_ws/install/turtlebot3_simulations:/home/dinhthong/turtlebot3_ws/install/turtlebot3_gazebo:/home/dinhthong/turtlebot3_ws/install/turtlebot3_firebase:/home/dinhthong/turtlebot3_ws/install/turtlebot3_fake_node:/home/dinhthong/turtlebot3_ws/install/navigation2:/home/dinhthong/turtlebot3_ws/install/nav2_common:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'vi_VN'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'vi_VN'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/home/dinhthong/snap/code/155/.local/share:/home/dinhthong/snap/code/155:/snap/code/155/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dinhthong/turtlebot3_ws/install/nav2_common/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/dinhthong/turtlebot3_ws/install/turtlebot3_tourguide:/home/dinhthong/turtlebot3_ws/install/turtlebot3_simulations:/home/dinhthong/turtlebot3_ws/install/turtlebot3_gazebo:/home/dinhthong/turtlebot3_ws/install/turtlebot3_firebase:/home/dinhthong/turtlebot3_ws/install/turtlebot3_fake_node:/home/dinhthong/turtlebot3_ws/install/navigation2:/home/dinhthong/turtlebot3_ws/install/nav2_common:/opt/ros/humble')]), 'shell': False}
+[0.099321] (-) TimerEvent: {}
+[0.183905] (turtlebot3_tourguide) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199469] (-) TimerEvent: {}
+[0.273929] (turtlebot3_tourguide) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.283421] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299564] (-) TimerEvent: {}
+[0.350448] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.357900] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.358223] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.358949] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.362225] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399687] (-) TimerEvent: {}
+[0.440841] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.449080] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.449355] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.449855] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.452224] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading external project dependencies...\n'}
+[0.499791] (-) TimerEvent: {}
+[0.600073] (-) TimerEvent: {}
+[0.700411] (-) TimerEvent: {}
+[0.731201] (turtlebot3_tourguide) StderrLine: {'line': b'Getting released firebase-ios-sdk @ CocoaPods-10.22.0\n'}
+[0.800553] (-) TimerEvent: {}
+[0.836541] (turtlebot3_tourguide) StderrLine: {'line': b'CMake Warning:\n'}
+[0.836788] (turtlebot3_tourguide) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[0.836894] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[0.836987] (turtlebot3_tourguide) StderrLine: {'line': b'    DOWNLOAD_FIREBASE_IOS_SDK\n'}
+[0.837080] (turtlebot3_tourguide) StderrLine: {'line': b'    DOWNLOAD_GOOGLETEST\n'}
+[0.837173] (turtlebot3_tourguide) StderrLine: {'line': b'    PLATFORM\n'}
+[0.837269] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[0.837362] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[0.905746] (-) TimerEvent: {}
+[1.008222] (-) TimerEvent: {}
+[1.039425] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Using 'master' as the name for the initial branch. This default branch name\n"}
+[1.039733] (turtlebot3_tourguide) StderrLine: {'line': b'hint: is subject to change. To configure the initial branch name to use in all\n'}
+[1.039849] (turtlebot3_tourguide) StderrLine: {'line': b'hint: of your new repositories, which will suppress this warning, call:\n'}
+[1.039950] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.040048] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit config --global init.defaultBranch <name>\n'}
+[1.040143] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.040237] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n"}
+[1.040330] (turtlebot3_tourguide) StderrLine: {'line': b"hint: 'development'. The just-created branch can be renamed via this command:\n"}
+[1.040424] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.040513] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit branch -m <name>\n'}
+[1.058487] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into 'leveldb'...\n"}
+[1.058727] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Using 'master' as the name for the initial branch. This default branch name\n"}
+[1.058834] (turtlebot3_tourguide) StderrLine: {'line': b'hint: is subject to change. To configure the initial branch name to use in all\n'}
+[1.058928] (turtlebot3_tourguide) StderrLine: {'line': b'hint: of your new repositories, which will suppress this warning, call:\n'}
+[1.059033] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.059431] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit config --global init.defaultBranch <name>\n'}
+[1.059547] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.059643] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n"}
+[1.059736] (turtlebot3_tourguide) StderrLine: {'line': b"hint: 'development'. The just-created branch can be renamed via this command:\n"}
+[1.059830] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.059920] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit branch -m <name>\n'}
+[1.063835] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Using 'master' as the name for the initial branch. This default branch name\n"}
+[1.064108] (turtlebot3_tourguide) StderrLine: {'line': b'hint: is subject to change. To configure the initial branch name to use in all\n'}
+[1.064443] (turtlebot3_tourguide) StderrLine: {'line': b'hint: of your new repositories, which will suppress this warning, call:\n'}
+[1.064614] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.065024] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit config --global init.defaultBranch <name>\n'}
+[1.065198] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.065358] (turtlebot3_tourguide) StderrLine: {'line': b"hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n"}
+[1.065514] (turtlebot3_tourguide) StderrLine: {'line': b"hint: 'development'. The just-created branch can be renamed via this command:\n"}
+[1.065670] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \n'}
+[1.065828] (turtlebot3_tourguide) StderrLine: {'line': b'hint: \tgit branch -m <name>\n'}
+[1.108341] (-) TimerEvent: {}
+[1.208627] (-) TimerEvent: {}
+[1.308917] (-) TimerEvent: {}
+[1.409236] (-) TimerEvent: {}
+[1.509523] (-) TimerEvent: {}
+[1.609799] (-) TimerEvent: {}
+[1.710061] (-) TimerEvent: {}
+[1.810427] (-) TimerEvent: {}
+[1.910657] (-) TimerEvent: {}
+[2.010882] (-) TimerEvent: {}
+[2.111145] (-) TimerEvent: {}
+[2.211410] (-) TimerEvent: {}
+[2.311678] (-) TimerEvent: {}
+[2.412028] (-) TimerEvent: {}
+[2.512346] (-) TimerEvent: {}
+[2.612587] (-) TimerEvent: {}
+[2.712884] (-) TimerEvent: {}
+[2.813146] (-) TimerEvent: {}
+[2.913416] (-) TimerEvent: {}
+[3.013687] (-) TimerEvent: {}
+[3.114011] (-) TimerEvent: {}
+[3.214289] (-) TimerEvent: {}
+[3.314606] (-) TimerEvent: {}
+[3.414898] (-) TimerEvent: {}
+[3.515139] (-) TimerEvent: {}
+[3.615480] (-) TimerEvent: {}
+[3.715835] (-) TimerEvent: {}
+[3.816101] (-) TimerEvent: {}
+[3.896113] (turtlebot3_tourguide) StderrLine: {'line': b'From https://github.com/uNetworking/uWebSockets\n'}
+[3.896252] (turtlebot3_tourguide) StderrLine: {'line': b' * branch            4d94401b9c98346f9afd838556fdc7dce30561eb -> FETCH_HEAD\n'}
+[3.916209] (-) TimerEvent: {}
+[4.016503] (-) TimerEvent: {}
+[4.116822] (-) TimerEvent: {}
+[4.217058] (-) TimerEvent: {}
+[4.317295] (-) TimerEvent: {}
+[4.417592] (-) TimerEvent: {}
+[4.517975] (-) TimerEvent: {}
+[4.618227] (-) TimerEvent: {}
+[4.718537] (-) TimerEvent: {}
+[4.818789] (-) TimerEvent: {}
+[4.919025] (-) TimerEvent: {}
+[5.019271] (-) TimerEvent: {}
+[5.119577] (-) TimerEvent: {}
+[5.219866] (-) TimerEvent: {}
+[5.320152] (-) TimerEvent: {}
+[5.420434] (-) TimerEvent: {}
+[5.520706] (-) TimerEvent: {}
+[5.620974] (-) TimerEvent: {}
+[5.721227] (-) TimerEvent: {}
+[5.821477] (-) TimerEvent: {}
+[5.921750] (-) TimerEvent: {}
+[6.022004] (-) TimerEvent: {}
+[6.122319] (-) TimerEvent: {}
+[6.222626] (-) TimerEvent: {}
+[6.322925] (-) TimerEvent: {}
+[6.423236] (-) TimerEvent: {}
+[6.523534] (-) TimerEvent: {}
+[6.623835] (-) TimerEvent: {}
+[6.724141] (-) TimerEvent: {}
+[6.824389] (-) TimerEvent: {}
+[6.924656] (-) TimerEvent: {}
+[7.025002] (-) TimerEvent: {}
+[7.125292] (-) TimerEvent: {}
+[7.225537] (-) TimerEvent: {}
+[7.325803] (-) TimerEvent: {}
+[7.426053] (-) TimerEvent: {}
+[7.526402] (-) TimerEvent: {}
+[7.626641] (-) TimerEvent: {}
+[7.726887] (-) TimerEvent: {}
+[7.827211] (-) TimerEvent: {}
+[7.927512] (-) TimerEvent: {}
+[8.027747] (-) TimerEvent: {}
+[8.128005] (-) TimerEvent: {}
+[8.228291] (-) TimerEvent: {}
+[8.328523] (-) TimerEvent: {}
+[8.428786] (-) TimerEvent: {}
+[8.529066] (-) TimerEvent: {}
+[8.629370] (-) TimerEvent: {}
+[8.729624] (-) TimerEvent: {}
+[8.829971] (-) TimerEvent: {}
+[8.930239] (-) TimerEvent: {}
+[9.030854] (-) TimerEvent: {}
+[9.131223] (-) TimerEvent: {}
+[9.231525] (-) TimerEvent: {}
+[9.331895] (-) TimerEvent: {}
+[9.432182] (-) TimerEvent: {}
+[9.532424] (-) TimerEvent: {}
+[9.632709] (-) TimerEvent: {}
+[9.733029] (-) TimerEvent: {}
+[9.833314] (-) TimerEvent: {}
+[9.933620] (-) TimerEvent: {}
+[10.033891] (-) TimerEvent: {}
+[10.134223] (-) TimerEvent: {}
+[10.234511] (-) TimerEvent: {}
+[10.334778] (-) TimerEvent: {}
+[10.435025] (-) TimerEvent: {}
+[10.535273] (-) TimerEvent: {}
+[10.635550] (-) TimerEvent: {}
+[10.735809] (-) TimerEvent: {}
+[10.836057] (-) TimerEvent: {}
+[10.837282] (turtlebot3_tourguide) StderrLine: {'line': b'From https://github.com/google/flatbuffers\n'}
+[10.837583] (turtlebot3_tourguide) StderrLine: {'line': b' * branch            99aa1ef21dd9dc3f9d4fb0eb82f4b59d0bb5e4c5 -> FETCH_HEAD\n'}
+[10.936182] (-) TimerEvent: {}
+[11.036460] (-) TimerEvent: {}
+[11.136751] (-) TimerEvent: {}
+[11.237055] (-) TimerEvent: {}
+[11.337372] (-) TimerEvent: {}
+[11.437672] (-) TimerEvent: {}
+[11.537924] (-) TimerEvent: {}
+[11.638250] (-) TimerEvent: {}
+[11.738515] (-) TimerEvent: {}
+[11.838745] (-) TimerEvent: {}
+[11.939018] (-) TimerEvent: {}
+[12.039305] (-) TimerEvent: {}
+[12.139587] (-) TimerEvent: {}
+[12.239848] (-) TimerEvent: {}
+[12.340095] (-) TimerEvent: {}
+[12.440409] (-) TimerEvent: {}
+[12.540702] (-) TimerEvent: {}
+[12.641028] (-) TimerEvent: {}
+[12.741299] (-) TimerEvent: {}
+[12.841551] (-) TimerEvent: {}
+[12.941869] (-) TimerEvent: {}
+[13.042201] (-) TimerEvent: {}
+[13.142469] (-) TimerEvent: {}
+[13.242710] (-) TimerEvent: {}
+[13.343017] (-) TimerEvent: {}
+[13.443292] (-) TimerEvent: {}
+[13.543538] (-) TimerEvent: {}
+[13.643850] (-) TimerEvent: {}
+[13.744115] (-) TimerEvent: {}
+[13.845878] (-) TimerEvent: {}
+[13.946210] (-) TimerEvent: {}
+[14.046490] (-) TimerEvent: {}
+[14.147104] (-) TimerEvent: {}
+[14.247416] (-) TimerEvent: {}
+[14.347718] (-) TimerEvent: {}
+[14.448041] (-) TimerEvent: {}
+[14.548319] (-) TimerEvent: {}
+[14.648551] (-) TimerEvent: {}
+[14.748850] (-) TimerEvent: {}
+[14.849138] (-) TimerEvent: {}
+[14.949453] (-) TimerEvent: {}
+[15.049704] (-) TimerEvent: {}
+[15.150020] (-) TimerEvent: {}
+[15.250318] (-) TimerEvent: {}
+[15.350628] (-) TimerEvent: {}
+[15.450910] (-) TimerEvent: {}
+[15.551132] (-) TimerEvent: {}
+[15.651354] (-) TimerEvent: {}
+[15.751602] (-) TimerEvent: {}
+[15.851966] (-) TimerEvent: {}
+[15.952289] (-) TimerEvent: {}
+[16.052600] (-) TimerEvent: {}
+[16.152841] (-) TimerEvent: {}
+[16.253165] (-) TimerEvent: {}
+[16.353429] (-) TimerEvent: {}
+[16.453661] (-) TimerEvent: {}
+[16.553897] (-) TimerEvent: {}
+[16.654201] (-) TimerEvent: {}
+[16.754469] (-) TimerEvent: {}
+[16.854690] (-) TimerEvent: {}
+[16.954933] (-) TimerEvent: {}
+[17.055267] (-) TimerEvent: {}
+[17.155531] (-) TimerEvent: {}
+[17.255796] (-) TimerEvent: {}
+[17.356031] (-) TimerEvent: {}
+[17.456317] (-) TimerEvent: {}
+[17.556584] (-) TimerEvent: {}
+[17.656815] (-) TimerEvent: {}
+[17.757067] (-) TimerEvent: {}
+[17.857389] (-) TimerEvent: {}
+[17.957626] (-) TimerEvent: {}
+[18.057869] (-) TimerEvent: {}
+[18.158154] (-) TimerEvent: {}
+[18.258436] (-) TimerEvent: {}
+[18.358659] (-) TimerEvent: {}
+[18.458883] (-) TimerEvent: {}
+[18.559125] (-) TimerEvent: {}
+[18.659377] (-) TimerEvent: {}
+[18.759620] (-) TimerEvent: {}
+[18.859940] (-) TimerEvent: {}
+[18.960163] (-) TimerEvent: {}
+[19.060431] (-) TimerEvent: {}
+[19.160715] (-) TimerEvent: {}
+[19.261007] (-) TimerEvent: {}
+[19.361289] (-) TimerEvent: {}
+[19.461554] (-) TimerEvent: {}
+[19.561802] (-) TimerEvent: {}
+[19.662121] (-) TimerEvent: {}
+[19.762413] (-) TimerEvent: {}
+[19.862633] (-) TimerEvent: {}
+[19.962919] (-) TimerEvent: {}
+[20.063205] (-) TimerEvent: {}
+[20.163498] (-) TimerEvent: {}
+[20.263825] (-) TimerEvent: {}
+[20.364112] (-) TimerEvent: {}
+[20.464366] (-) TimerEvent: {}
+[20.564599] (-) TimerEvent: {}
+[20.664836] (-) TimerEvent: {}
+[20.765078] (-) TimerEvent: {}
+[20.865333] (-) TimerEvent: {}
+[20.965573] (-) TimerEvent: {}
+[21.065862] (-) TimerEvent: {}
+[21.166092] (-) TimerEvent: {}
+[21.266351] (-) TimerEvent: {}
+[21.366607] (-) TimerEvent: {}
+[21.466906] (-) TimerEvent: {}
+[21.567155] (-) TimerEvent: {}
+[21.667447] (-) TimerEvent: {}
+[21.767706] (-) TimerEvent: {}
+[21.868020] (-) TimerEvent: {}
+[21.968277] (-) TimerEvent: {}
+[22.068498] (-) TimerEvent: {}
+[22.168780] (-) TimerEvent: {}
+[22.269040] (-) TimerEvent: {}
+[22.369309] (-) TimerEvent: {}
+[22.469544] (-) TimerEvent: {}
+[22.569816] (-) TimerEvent: {}
+[22.670077] (-) TimerEvent: {}
+[22.770338] (-) TimerEvent: {}
+[22.870588] (-) TimerEvent: {}
+[22.970809] (-) TimerEvent: {}
+[23.071056] (-) TimerEvent: {}
+[23.171346] (-) TimerEvent: {}
+[23.271613] (-) TimerEvent: {}
+[23.371880] (-) TimerEvent: {}
+[23.472121] (-) TimerEvent: {}
+[23.572356] (-) TimerEvent: {}
+[23.615212] (turtlebot3_tourguide) StderrLine: {'line': b'HEAD is now at 99b3c03 Change version to 1.23.\n'}
+[23.631668] (turtlebot3_tourguide) StderrLine: {'line': b"Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'\n"}
+[23.631884] (turtlebot3_tourguide) StderrLine: {'line': b"Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'\n"}
+[23.634764] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/benchmark'...\n"}
+[23.672467] (-) TimerEvent: {}
+[23.772813] (-) TimerEvent: {}
+[23.873078] (-) TimerEvent: {}
+[23.973331] (-) TimerEvent: {}
+[24.073656] (-) TimerEvent: {}
+[24.173972] (-) TimerEvent: {}
+[24.274232] (-) TimerEvent: {}
+[24.374486] (-) TimerEvent: {}
+[24.474818] (-) TimerEvent: {}
+[24.575043] (-) TimerEvent: {}
+[24.675280] (-) TimerEvent: {}
+[24.775573] (-) TimerEvent: {}
+[24.875843] (-) TimerEvent: {}
+[24.976098] (-) TimerEvent: {}
+[25.076411] (-) TimerEvent: {}
+[25.176697] (-) TimerEvent: {}
+[25.277165] (-) TimerEvent: {}
+[25.377491] (-) TimerEvent: {}
+[25.477767] (-) TimerEvent: {}
+[25.578017] (-) TimerEvent: {}
+[25.678346] (-) TimerEvent: {}
+[25.778662] (-) TimerEvent: {}
+[25.878951] (-) TimerEvent: {}
+[25.979296] (-) TimerEvent: {}
+[26.079564] (-) TimerEvent: {}
+[26.179829] (-) TimerEvent: {}
+[26.280074] (-) TimerEvent: {}
+[26.380399] (-) TimerEvent: {}
+[26.480715] (-) TimerEvent: {}
+[26.581012] (-) TimerEvent: {}
+[26.681339] (-) TimerEvent: {}
+[26.781608] (-) TimerEvent: {}
+[26.881858] (-) TimerEvent: {}
+[26.982174] (-) TimerEvent: {}
+[27.082478] (-) TimerEvent: {}
+[27.182783] (-) TimerEvent: {}
+[27.283080] (-) TimerEvent: {}
+[27.383328] (-) TimerEvent: {}
+[27.483594] (-) TimerEvent: {}
+[27.583854] (-) TimerEvent: {}
+[27.684095] (-) TimerEvent: {}
+[27.784401] (-) TimerEvent: {}
+[27.884705] (-) TimerEvent: {}
+[27.984929] (-) TimerEvent: {}
+[28.085153] (-) TimerEvent: {}
+[28.185382] (-) TimerEvent: {}
+[28.285683] (-) TimerEvent: {}
+[28.385940] (-) TimerEvent: {}
+[28.486203] (-) TimerEvent: {}
+[28.586457] (-) TimerEvent: {}
+[28.686741] (-) TimerEvent: {}
+[28.786969] (-) TimerEvent: {}
+[28.887208] (-) TimerEvent: {}
+[28.987432] (-) TimerEvent: {}
+[29.087657] (-) TimerEvent: {}
+[29.187934] (-) TimerEvent: {}
+[29.288182] (-) TimerEvent: {}
+[29.388548] (-) TimerEvent: {}
+[29.488808] (-) TimerEvent: {}
+[29.589140] (-) TimerEvent: {}
+[29.689442] (-) TimerEvent: {}
+[29.789738] (-) TimerEvent: {}
+[29.890029] (-) TimerEvent: {}
+[29.990322] (-) TimerEvent: {}
+[30.090657] (-) TimerEvent: {}
+[30.190929] (-) TimerEvent: {}
+[30.325500] (-) TimerEvent: {}
+[30.425782] (-) TimerEvent: {}
+[30.526047] (-) TimerEvent: {}
+[30.626300] (-) TimerEvent: {}
+[30.726571] (-) TimerEvent: {}
+[30.826848] (-) TimerEvent: {}
+[30.927174] (-) TimerEvent: {}
+[31.027437] (-) TimerEvent: {}
+[31.127695] (-) TimerEvent: {}
+[31.227945] (-) TimerEvent: {}
+[31.328271] (-) TimerEvent: {}
+[31.428563] (-) TimerEvent: {}
+[31.528819] (-) TimerEvent: {}
+[31.629092] (-) TimerEvent: {}
+[31.729354] (-) TimerEvent: {}
+[31.829650] (-) TimerEvent: {}
+[31.929981] (-) TimerEvent: {}
+[32.030293] (-) TimerEvent: {}
+[32.130682] (-) TimerEvent: {}
+[32.230965] (-) TimerEvent: {}
+[32.331187] (-) TimerEvent: {}
+[32.431451] (-) TimerEvent: {}
+[32.531715] (-) TimerEvent: {}
+[32.631958] (-) TimerEvent: {}
+[32.732244] (-) TimerEvent: {}
+[32.832500] (-) TimerEvent: {}
+[32.932753] (-) TimerEvent: {}
+[33.033066] (-) TimerEvent: {}
+[33.133300] (-) TimerEvent: {}
+[33.233588] (-) TimerEvent: {}
+[33.333889] (-) TimerEvent: {}
+[33.434165] (-) TimerEvent: {}
+[33.534442] (-) TimerEvent: {}
+[33.634687] (-) TimerEvent: {}
+[33.734983] (-) TimerEvent: {}
+[33.835247] (-) TimerEvent: {}
+[33.935489] (-) TimerEvent: {}
+[34.035782] (-) TimerEvent: {}
+[34.136011] (-) TimerEvent: {}
+[34.236238] (-) TimerEvent: {}
+[34.336512] (-) TimerEvent: {}
+[34.436763] (-) TimerEvent: {}
+[34.537087] (-) TimerEvent: {}
+[34.637349] (-) TimerEvent: {}
+[34.737592] (-) TimerEvent: {}
+[34.837923] (-) TimerEvent: {}
+[34.938188] (-) TimerEvent: {}
+[35.038440] (-) TimerEvent: {}
+[35.138733] (-) TimerEvent: {}
+[35.238957] (-) TimerEvent: {}
+[35.339200] (-) TimerEvent: {}
+[35.439488] (-) TimerEvent: {}
+[35.539716] (-) TimerEvent: {}
+[35.639953] (-) TimerEvent: {}
+[35.740330] (-) TimerEvent: {}
+[35.840591] (-) TimerEvent: {}
+[35.940857] (-) TimerEvent: {}
+[36.041132] (-) TimerEvent: {}
+[36.141398] (-) TimerEvent: {}
+[36.241659] (-) TimerEvent: {}
+[36.341947] (-) TimerEvent: {}
+[36.442222] (-) TimerEvent: {}
+[36.542482] (-) TimerEvent: {}
+[36.642718] (-) TimerEvent: {}
+[36.742960] (-) TimerEvent: {}
+[36.843188] (-) TimerEvent: {}
+[36.943433] (-) TimerEvent: {}
+[37.043704] (-) TimerEvent: {}
+[37.143968] (-) TimerEvent: {}
+[37.244200] (-) TimerEvent: {}
+[37.344477] (-) TimerEvent: {}
+[37.444740] (-) TimerEvent: {}
+[37.544994] (-) TimerEvent: {}
+[37.645312] (-) TimerEvent: {}
+[37.745605] (-) TimerEvent: {}
+[37.845900] (-) TimerEvent: {}
+[37.946214] (-) TimerEvent: {}
+[38.046485] (-) TimerEvent: {}
+[38.146731] (-) TimerEvent: {}
+[38.247046] (-) TimerEvent: {}
+[38.347348] (-) TimerEvent: {}
+[38.447636] (-) TimerEvent: {}
+[38.547960] (-) TimerEvent: {}
+[38.648219] (-) TimerEvent: {}
+[38.748478] (-) TimerEvent: {}
+[38.848708] (-) TimerEvent: {}
+[38.948990] (-) TimerEvent: {}
+[39.049254] (-) TimerEvent: {}
+[39.149493] (-) TimerEvent: {}
+[39.249797] (-) TimerEvent: {}
+[39.350026] (-) TimerEvent: {}
+[39.450251] (-) TimerEvent: {}
+[39.550540] (-) TimerEvent: {}
+[39.650803] (-) TimerEvent: {}
+[39.751045] (-) TimerEvent: {}
+[39.851368] (-) TimerEvent: {}
+[39.951597] (-) TimerEvent: {}
+[40.051840] (-) TimerEvent: {}
+[40.152119] (-) TimerEvent: {}
+[40.252398] (-) TimerEvent: {}
+[40.352652] (-) TimerEvent: {}
+[40.452998] (-) TimerEvent: {}
+[40.553288] (-) TimerEvent: {}
+[40.653537] (-) TimerEvent: {}
+[40.753850] (-) TimerEvent: {}
+[40.854197] (-) TimerEvent: {}
+[40.954469] (-) TimerEvent: {}
+[41.054714] (-) TimerEvent: {}
+[41.155020] (-) TimerEvent: {}
+[41.181885] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/googletest'...\n"}
+[41.255116] (-) TimerEvent: {}
+[41.355405] (-) TimerEvent: {}
+[41.455691] (-) TimerEvent: {}
+[41.555967] (-) TimerEvent: {}
+[41.656206] (-) TimerEvent: {}
+[41.756509] (-) TimerEvent: {}
+[41.856804] (-) TimerEvent: {}
+[41.957099] (-) TimerEvent: {}
+[42.057422] (-) TimerEvent: {}
+[42.157684] (-) TimerEvent: {}
+[42.257931] (-) TimerEvent: {}
+[42.358264] (-) TimerEvent: {}
+[42.458460] (-) TimerEvent: {}
+[42.558708] (-) TimerEvent: {}
+[42.659035] (-) TimerEvent: {}
+[42.759263] (-) TimerEvent: {}
+[42.859510] (-) TimerEvent: {}
+[42.959830] (-) TimerEvent: {}
+[43.060098] (-) TimerEvent: {}
+[43.160366] (-) TimerEvent: {}
+[43.260606] (-) TimerEvent: {}
+[43.360919] (-) TimerEvent: {}
+[43.461204] (-) TimerEvent: {}
+[43.561455] (-) TimerEvent: {}
+[43.661779] (-) TimerEvent: {}
+[43.761999] (-) TimerEvent: {}
+[43.862245] (-) TimerEvent: {}
+[43.962512] (-) TimerEvent: {}
+[44.062739] (-) TimerEvent: {}
+[44.162973] (-) TimerEvent: {}
+[44.263259] (-) TimerEvent: {}
+[44.363519] (-) TimerEvent: {}
+[44.463763] (-) TimerEvent: {}
+[44.564096] (-) TimerEvent: {}
+[44.664380] (-) TimerEvent: {}
+[44.764631] (-) TimerEvent: {}
+[44.864940] (-) TimerEvent: {}
+[44.965223] (-) TimerEvent: {}
+[45.065484] (-) TimerEvent: {}
+[45.165753] (-) TimerEvent: {}
+[45.266075] (-) TimerEvent: {}
+[45.366349] (-) TimerEvent: {}
+[45.466589] (-) TimerEvent: {}
+[45.566817] (-) TimerEvent: {}
+[45.667101] (-) TimerEvent: {}
+[45.767356] (-) TimerEvent: {}
+[45.867659] (-) TimerEvent: {}
+[45.967963] (-) TimerEvent: {}
+[46.068257] (-) TimerEvent: {}
+[46.168593] (-) TimerEvent: {}
+[46.268830] (-) TimerEvent: {}
+[46.369072] (-) TimerEvent: {}
+[46.469364] (-) TimerEvent: {}
+[46.569627] (-) TimerEvent: {}
+[46.669882] (-) TimerEvent: {}
+[46.770115] (-) TimerEvent: {}
+[46.870357] (-) TimerEvent: {}
+[46.970626] (-) TimerEvent: {}
+[47.070875] (-) TimerEvent: {}
+[47.171196] (-) TimerEvent: {}
+[47.271515] (-) TimerEvent: {}
+[47.371804] (-) TimerEvent: {}
+[47.472121] (-) TimerEvent: {}
+[47.572419] (-) TimerEvent: {}
+[47.672713] (-) TimerEvent: {}
+[47.773013] (-) TimerEvent: {}
+[47.873309] (-) TimerEvent: {}
+[47.973616] (-) TimerEvent: {}
+[48.073933] (-) TimerEvent: {}
+[48.174267] (-) TimerEvent: {}
+[48.274594] (-) TimerEvent: {}
+[48.374903] (-) TimerEvent: {}
+[48.475209] (-) TimerEvent: {}
+[48.575434] (-) TimerEvent: {}
+[48.675661] (-) TimerEvent: {}
+[48.775936] (-) TimerEvent: {}
+[48.876201] (-) TimerEvent: {}
+[48.976433] (-) TimerEvent: {}
+[49.076675] (-) TimerEvent: {}
+[49.176901] (-) TimerEvent: {}
+[49.277148] (-) TimerEvent: {}
+[49.377460] (-) TimerEvent: {}
+[49.477761] (-) TimerEvent: {}
+[49.578007] (-) TimerEvent: {}
+[49.678326] (-) TimerEvent: {}
+[49.778556] (-) TimerEvent: {}
+[49.878804] (-) TimerEvent: {}
+[49.979128] (-) TimerEvent: {}
+[50.079417] (-) TimerEvent: {}
+[50.208732] (-) TimerEvent: {}
+[50.309023] (-) TimerEvent: {}
+[50.409352] (-) TimerEvent: {}
+[50.509641] (-) TimerEvent: {}
+[50.609932] (-) TimerEvent: {}
+[50.710223] (-) TimerEvent: {}
+[50.810481] (-) TimerEvent: {}
+[50.910795] (-) TimerEvent: {}
+[51.011102] (-) TimerEvent: {}
+[51.111389] (-) TimerEvent: {}
+[51.211725] (-) TimerEvent: {}
+[51.311992] (-) TimerEvent: {}
+[51.412265] (-) TimerEvent: {}
+[51.512514] (-) TimerEvent: {}
+[51.612827] (-) TimerEvent: {}
+[51.713126] (-) TimerEvent: {}
+[51.813435] (-) TimerEvent: {}
+[51.913749] (-) TimerEvent: {}
+[52.014042] (-) TimerEvent: {}
+[52.114319] (-) TimerEvent: {}
+[52.214631] (-) TimerEvent: {}
+[52.314865] (-) TimerEvent: {}
+[52.415099] (-) TimerEvent: {}
+[52.515371] (-) TimerEvent: {}
+[52.615633] (-) TimerEvent: {}
+[52.715896] (-) TimerEvent: {}
+[52.816166] (-) TimerEvent: {}
+[52.916413] (-) TimerEvent: {}
+[53.016676] (-) TimerEvent: {}
+[53.116939] (-) TimerEvent: {}
+[53.217197] (-) TimerEvent: {}
+[53.317425] (-) TimerEvent: {}
+[53.417715] (-) TimerEvent: {}
+[53.517983] (-) TimerEvent: {}
+[53.618217] (-) TimerEvent: {}
+[53.718509] (-) TimerEvent: {}
+[53.818739] (-) TimerEvent: {}
+[53.918978] (-) TimerEvent: {}
+[54.019237] (-) TimerEvent: {}
+[54.119529] (-) TimerEvent: {}
+[54.219789] (-) TimerEvent: {}
+[54.320093] (-) TimerEvent: {}
+[54.420404] (-) TimerEvent: {}
+[54.520647] (-) TimerEvent: {}
+[54.620934] (-) TimerEvent: {}
+[54.721196] (-) TimerEvent: {}
+[54.821440] (-) TimerEvent: {}
+[54.921765] (-) TimerEvent: {}
+[55.022034] (-) TimerEvent: {}
+[55.122286] (-) TimerEvent: {}
+[55.222697] (-) TimerEvent: {}
+[55.322938] (-) TimerEvent: {}
+[55.423188] (-) TimerEvent: {}
+[55.523504] (-) TimerEvent: {}
+[55.623775] (-) TimerEvent: {}
+[55.724034] (-) TimerEvent: {}
+[55.824312] (-) TimerEvent: {}
+[55.924578] (-) TimerEvent: {}
+[56.024818] (-) TimerEvent: {}
+[56.125134] (-) TimerEvent: {}
+[56.225397] (-) TimerEvent: {}
+[56.325645] (-) TimerEvent: {}
+[56.425955] (-) TimerEvent: {}
+[56.526268] (-) TimerEvent: {}
+[56.626478] (-) TimerEvent: {}
+[56.726757] (-) TimerEvent: {}
+[56.826988] (-) TimerEvent: {}
+[56.927231] (-) TimerEvent: {}
+[57.027463] (-) TimerEvent: {}
+[57.127700] (-) TimerEvent: {}
+[57.227955] (-) TimerEvent: {}
+[57.328213] (-) TimerEvent: {}
+[57.428456] (-) TimerEvent: {}
+[57.528762] (-) TimerEvent: {}
+[57.629089] (-) TimerEvent: {}
+[57.729333] (-) TimerEvent: {}
+[57.829588] (-) TimerEvent: {}
+[57.929871] (-) TimerEvent: {}
+[58.030135] (-) TimerEvent: {}
+[58.130393] (-) TimerEvent: {}
+[58.230680] (-) TimerEvent: {}
+[58.330921] (-) TimerEvent: {}
+[58.431190] (-) TimerEvent: {}
+[58.531481] (-) TimerEvent: {}
+[58.631741] (-) TimerEvent: {}
+[58.731989] (-) TimerEvent: {}
+[58.832322] (-) TimerEvent: {}
+[58.932594] (-) TimerEvent: {}
+[59.032826] (-) TimerEvent: {}
+[59.133135] (-) TimerEvent: {}
+[59.233378] (-) TimerEvent: {}
+[59.333617] (-) TimerEvent: {}
+[59.433906] (-) TimerEvent: {}
+[59.534177] (-) TimerEvent: {}
+[59.634440] (-) TimerEvent: {}
+[59.734743] (-) TimerEvent: {}
+[59.835075] (-) TimerEvent: {}
+[59.935346] (-) TimerEvent: {}
+[60.035592] (-) TimerEvent: {}
+[60.135879] (-) TimerEvent: {}
+[60.236134] (-) TimerEvent: {}
+[60.377112] (-) TimerEvent: {}
+[60.477386] (-) TimerEvent: {}
+[60.577637] (-) TimerEvent: {}
+[60.677978] (-) TimerEvent: {}
+[60.778259] (-) TimerEvent: {}
+[60.878477] (-) TimerEvent: {}
+[60.978789] (-) TimerEvent: {}
+[61.079072] (-) TimerEvent: {}
+[61.179346] (-) TimerEvent: {}
+[61.279574] (-) TimerEvent: {}
+[61.379849] (-) TimerEvent: {}
+[61.480120] (-) TimerEvent: {}
+[61.580359] (-) TimerEvent: {}
+[61.680641] (-) TimerEvent: {}
+[61.780899] (-) TimerEvent: {}
+[61.881143] (-) TimerEvent: {}
+[61.981469] (-) TimerEvent: {}
+[62.081708] (-) TimerEvent: {}
+[62.181984] (-) TimerEvent: {}
+[62.282229] (-) TimerEvent: {}
+[62.382576] (-) TimerEvent: {}
+[62.482812] (-) TimerEvent: {}
+[62.583078] (-) TimerEvent: {}
+[62.683332] (-) TimerEvent: {}
+[62.783553] (-) TimerEvent: {}
+[62.883793] (-) TimerEvent: {}
+[62.984077] (-) TimerEvent: {}
+[63.084344] (-) TimerEvent: {}
+[63.184590] (-) TimerEvent: {}
+[63.284830] (-) TimerEvent: {}
+[63.385092] (-) TimerEvent: {}
+[63.485363] (-) TimerEvent: {}
+[63.585655] (-) TimerEvent: {}
+[63.685890] (-) TimerEvent: {}
+[63.786132] (-) TimerEvent: {}
+[63.886450] (-) TimerEvent: {}
+[63.986735] (-) TimerEvent: {}
+[64.087030] (-) TimerEvent: {}
+[64.187342] (-) TimerEvent: {}
+[64.287647] (-) TimerEvent: {}
+[64.387956] (-) TimerEvent: {}
+[64.488190] (-) TimerEvent: {}
+[64.588457] (-) TimerEvent: {}
+[64.688719] (-) TimerEvent: {}
+[64.788954] (-) TimerEvent: {}
+[64.889229] (-) TimerEvent: {}
+[64.989452] (-) TimerEvent: {}
+[65.089687] (-) TimerEvent: {}
+[65.189967] (-) TimerEvent: {}
+[65.290221] (-) TimerEvent: {}
+[65.390478] (-) TimerEvent: {}
+[65.490792] (-) TimerEvent: {}
+[65.591080] (-) TimerEvent: {}
+[65.691348] (-) TimerEvent: {}
+[65.791578] (-) TimerEvent: {}
+[65.891826] (-) TimerEvent: {}
+[65.992143] (-) TimerEvent: {}
+[66.092392] (-) TimerEvent: {}
+[66.192699] (-) TimerEvent: {}
+[66.292998] (-) TimerEvent: {}
+[66.393290] (-) TimerEvent: {}
+[66.493592] (-) TimerEvent: {}
+[66.593883] (-) TimerEvent: {}
+[66.694186] (-) TimerEvent: {}
+[66.794474] (-) TimerEvent: {}
+[66.894758] (-) TimerEvent: {}
+[66.995022] (-) TimerEvent: {}
+[67.095251] (-) TimerEvent: {}
+[67.195507] (-) TimerEvent: {}
+[67.295743] (-) TimerEvent: {}
+[67.396063] (-) TimerEvent: {}
+[67.496326] (-) TimerEvent: {}
+[67.596583] (-) TimerEvent: {}
+[67.696828] (-) TimerEvent: {}
+[67.797162] (-) TimerEvent: {}
+[67.897433] (-) TimerEvent: {}
+[67.997698] (-) TimerEvent: {}
+[68.097960] (-) TimerEvent: {}
+[68.198235] (-) TimerEvent: {}
+[68.298492] (-) TimerEvent: {}
+[68.398738] (-) TimerEvent: {}
+[68.499024] (-) TimerEvent: {}
+[68.599286] (-) TimerEvent: {}
+[68.699535] (-) TimerEvent: {}
+[68.799861] (-) TimerEvent: {}
+[68.900123] (-) TimerEvent: {}
+[69.000377] (-) TimerEvent: {}
+[69.100715] (-) TimerEvent: {}
+[69.200981] (-) TimerEvent: {}
+[69.301276] (-) TimerEvent: {}
+[69.401596] (-) TimerEvent: {}
+[69.501867] (-) TimerEvent: {}
+[69.602139] (-) TimerEvent: {}
+[69.702383] (-) TimerEvent: {}
+[69.802626] (-) TimerEvent: {}
+[69.902880] (-) TimerEvent: {}
+[70.003151] (-) TimerEvent: {}
+[70.103408] (-) TimerEvent: {}
+[70.203684] (-) TimerEvent: {}
+[70.303926] (-) TimerEvent: {}
+[70.404264] (-) TimerEvent: {}
+[70.504580] (-) TimerEvent: {}
+[70.604893] (-) TimerEvent: {}
+[70.705227] (-) TimerEvent: {}
+[70.805496] (-) TimerEvent: {}
+[70.905783] (-) TimerEvent: {}
+[71.006047] (-) TimerEvent: {}
+[71.106341] (-) TimerEvent: {}
+[71.206586] (-) TimerEvent: {}
+[71.306810] (-) TimerEvent: {}
+[71.407091] (-) TimerEvent: {}
+[71.507351] (-) TimerEvent: {}
+[71.607623] (-) TimerEvent: {}
+[71.707912] (-) TimerEvent: {}
+[71.808177] (-) TimerEvent: {}
+[71.908461] (-) TimerEvent: {}
+[72.008693] (-) TimerEvent: {}
+[72.108986] (-) TimerEvent: {}
+[72.209251] (-) TimerEvent: {}
+[72.309522] (-) TimerEvent: {}
+[72.409797] (-) TimerEvent: {}
+[72.510078] (-) TimerEvent: {}
+[72.610343] (-) TimerEvent: {}
+[72.710598] (-) TimerEvent: {}
+[72.810912] (-) TimerEvent: {}
+[72.911228] (-) TimerEvent: {}
+[73.011500] (-) TimerEvent: {}
+[73.111724] (-) TimerEvent: {}
+[73.212014] (-) TimerEvent: {}
+[73.312289] (-) TimerEvent: {}
+[73.412537] (-) TimerEvent: {}
+[73.512854] (-) TimerEvent: {}
+[73.613136] (-) TimerEvent: {}
+[73.713386] (-) TimerEvent: {}
+[73.813717] (-) TimerEvent: {}
+[73.913999] (-) TimerEvent: {}
+[74.014280] (-) TimerEvent: {}
+[74.114549] (-) TimerEvent: {}
+[74.214784] (-) TimerEvent: {}
+[74.315050] (-) TimerEvent: {}
+[74.415332] (-) TimerEvent: {}
+[74.515610] (-) TimerEvent: {}
+[74.615878] (-) TimerEvent: {}
+[74.716151] (-) TimerEvent: {}
+[74.816410] (-) TimerEvent: {}
+[74.916678] (-) TimerEvent: {}
+[75.016912] (-) TimerEvent: {}
+[75.117175] (-) TimerEvent: {}
+[75.217442] (-) TimerEvent: {}
+[75.317715] (-) TimerEvent: {}
+[75.417989] (-) TimerEvent: {}
+[75.518257] (-) TimerEvent: {}
+[75.618479] (-) TimerEvent: {}
+[75.718764] (-) TimerEvent: {}
+[75.818994] (-) TimerEvent: {}
+[75.919244] (-) TimerEvent: {}
+[76.019528] (-) TimerEvent: {}
+[76.119776] (-) TimerEvent: {}
+[76.220075] (-) TimerEvent: {}
+[76.320361] (-) TimerEvent: {}
+[76.420602] (-) TimerEvent: {}
+[76.520869] (-) TimerEvent: {}
+[76.621096] (-) TimerEvent: {}
+[76.721366] (-) TimerEvent: {}
+[76.821618] (-) TimerEvent: {}
+[76.921920] (-) TimerEvent: {}
+[77.022154] (-) TimerEvent: {}
+[77.122396] (-) TimerEvent: {}
+[77.222648] (-) TimerEvent: {}
+[77.322928] (-) TimerEvent: {}
+[77.423156] (-) TimerEvent: {}
+[77.523412] (-) TimerEvent: {}
+[77.623650] (-) TimerEvent: {}
+[77.723981] (-) TimerEvent: {}
+[77.824250] (-) TimerEvent: {}
+[77.924485] (-) TimerEvent: {}
+[78.024710] (-) TimerEvent: {}
+[78.124972] (-) TimerEvent: {}
+[78.225255] (-) TimerEvent: {}
+[78.325488] (-) TimerEvent: {}
+[78.425768] (-) TimerEvent: {}
+[78.526048] (-) TimerEvent: {}
+[78.626298] (-) TimerEvent: {}
+[78.726531] (-) TimerEvent: {}
+[78.826801] (-) TimerEvent: {}
+[78.927045] (-) TimerEvent: {}
+[79.027357] (-) TimerEvent: {}
+[79.127622] (-) TimerEvent: {}
+[79.227884] (-) TimerEvent: {}
+[79.328130] (-) TimerEvent: {}
+[79.428369] (-) TimerEvent: {}
+[79.528621] (-) TimerEvent: {}
+[79.628947] (-) TimerEvent: {}
+[79.729198] (-) TimerEvent: {}
+[79.829447] (-) TimerEvent: {}
+[79.929777] (-) TimerEvent: {}
+[80.030051] (-) TimerEvent: {}
+[80.130289] (-) TimerEvent: {}
+[80.230498] (-) TimerEvent: {}
+[80.330730] (-) TimerEvent: {}
+[80.430960] (-) TimerEvent: {}
+[80.531237] (-) TimerEvent: {}
+[80.631515] (-) TimerEvent: {}
+[80.731767] (-) TimerEvent: {}
+[80.832075] (-) TimerEvent: {}
+[80.932369] (-) TimerEvent: {}
+[81.032665] (-) TimerEvent: {}
+[81.132981] (-) TimerEvent: {}
+[81.233281] (-) TimerEvent: {}
+[81.333576] (-) TimerEvent: {}
+[81.433903] (-) TimerEvent: {}
+[81.534217] (-) TimerEvent: {}
+[81.634526] (-) TimerEvent: {}
+[81.734832] (-) TimerEvent: {}
+[81.835139] (-) TimerEvent: {}
+[81.935464] (-) TimerEvent: {}
+[82.035763] (-) TimerEvent: {}
+[82.136081] (-) TimerEvent: {}
+[82.236369] (-) TimerEvent: {}
+[82.336647] (-) TimerEvent: {}
+[82.436897] (-) TimerEvent: {}
+[82.537216] (-) TimerEvent: {}
+[82.637487] (-) TimerEvent: {}
+[82.737753] (-) TimerEvent: {}
+[82.838019] (-) TimerEvent: {}
+[82.938260] (-) TimerEvent: {}
+[83.038601] (-) TimerEvent: {}
+[83.138843] (-) TimerEvent: {}
+[83.239111] (-) TimerEvent: {}
+[83.339349] (-) TimerEvent: {}
+[83.439579] (-) TimerEvent: {}
+[83.539849] (-) TimerEvent: {}
+[83.640088] (-) TimerEvent: {}
+[83.740391] (-) TimerEvent: {}
+[83.840676] (-) TimerEvent: {}
+[83.940942] (-) TimerEvent: {}
+[84.041199] (-) TimerEvent: {}
+[84.141464] (-) TimerEvent: {}
+[84.241721] (-) TimerEvent: {}
+[84.341991] (-) TimerEvent: {}
+[84.442266] (-) TimerEvent: {}
+[84.542534] (-) TimerEvent: {}
+[84.642772] (-) TimerEvent: {}
+[84.743003] (-) TimerEvent: {}
+[84.843265] (-) TimerEvent: {}
+[84.943531] (-) TimerEvent: {}
+[85.043829] (-) TimerEvent: {}
+[85.144099] (-) TimerEvent: {}
+[85.244411] (-) TimerEvent: {}
+[85.344659] (-) TimerEvent: {}
+[85.444980] (-) TimerEvent: {}
+[85.545248] (-) TimerEvent: {}
+[85.671642] (-) TimerEvent: {}
+[85.771921] (-) TimerEvent: {}
+[85.872197] (-) TimerEvent: {}
+[85.972442] (-) TimerEvent: {}
+[86.072776] (-) TimerEvent: {}
+[86.173050] (-) TimerEvent: {}
+[86.273311] (-) TimerEvent: {}
+[86.373593] (-) TimerEvent: {}
+[86.473874] (-) TimerEvent: {}
+[86.574140] (-) TimerEvent: {}
+[86.674371] (-) TimerEvent: {}
+[86.774664] (-) TimerEvent: {}
+[86.874897] (-) TimerEvent: {}
+[86.975129] (-) TimerEvent: {}
+[87.075423] (-) TimerEvent: {}
+[87.175653] (-) TimerEvent: {}
+[87.275893] (-) TimerEvent: {}
+[87.376213] (-) TimerEvent: {}
+[87.476477] (-) TimerEvent: {}
+[87.576717] (-) TimerEvent: {}
+[87.677036] (-) TimerEvent: {}
+[87.777295] (-) TimerEvent: {}
+[87.877534] (-) TimerEvent: {}
+[87.977845] (-) TimerEvent: {}
+[88.078124] (-) TimerEvent: {}
+[88.178411] (-) TimerEvent: {}
+[88.278661] (-) TimerEvent: {}
+[88.378990] (-) TimerEvent: {}
+[88.479289] (-) TimerEvent: {}
+[88.579586] (-) TimerEvent: {}
+[88.679913] (-) TimerEvent: {}
+[88.780211] (-) TimerEvent: {}
+[88.880518] (-) TimerEvent: {}
+[88.980888] (-) TimerEvent: {}
+[89.081211] (-) TimerEvent: {}
+[89.181509] (-) TimerEvent: {}
+[89.281808] (-) TimerEvent: {}
+[89.382099] (-) TimerEvent: {}
+[89.482397] (-) TimerEvent: {}
+[89.582738] (-) TimerEvent: {}
+[89.683064] (-) TimerEvent: {}
+[89.783303] (-) TimerEvent: {}
+[89.883573] (-) TimerEvent: {}
+[89.983883] (-) TimerEvent: {}
+[90.084159] (-) TimerEvent: {}
+[90.184439] (-) TimerEvent: {}
+[90.284751] (-) TimerEvent: {}
+[90.385050] (-) TimerEvent: {}
+[90.485390] (-) TimerEvent: {}
+[90.585647] (-) TimerEvent: {}
+[90.685915] (-) TimerEvent: {}
+[90.786165] (-) TimerEvent: {}
+[90.886456] (-) TimerEvent: {}
+[90.986708] (-) TimerEvent: {}
+[91.087037] (-) TimerEvent: {}
+[91.187311] (-) TimerEvent: {}
+[91.287551] (-) TimerEvent: {}
+[91.387858] (-) TimerEvent: {}
+[91.488104] (-) TimerEvent: {}
+[91.588422] (-) TimerEvent: {}
+[91.688742] (-) TimerEvent: {}
+[91.788996] (-) TimerEvent: {}
+[91.889333] (-) TimerEvent: {}
+[91.989602] (-) TimerEvent: {}
+[92.089867] (-) TimerEvent: {}
+[92.190133] (-) TimerEvent: {}
+[92.290468] (-) TimerEvent: {}
+[92.390738] (-) TimerEvent: {}
+[92.490983] (-) TimerEvent: {}
+[92.591260] (-) TimerEvent: {}
+[92.691523] (-) TimerEvent: {}
+[92.791809] (-) TimerEvent: {}
+[92.892056] (-) TimerEvent: {}
+[92.992392] (-) TimerEvent: {}
+[93.092663] (-) TimerEvent: {}
+[93.192928] (-) TimerEvent: {}
+[93.293197] (-) TimerEvent: {}
+[93.393458] (-) TimerEvent: {}
+[93.493779] (-) TimerEvent: {}
+[93.594046] (-) TimerEvent: {}
+[93.694289] (-) TimerEvent: {}
+[93.794596] (-) TimerEvent: {}
+[93.894890] (-) TimerEvent: {}
+[93.995181] (-) TimerEvent: {}
+[94.095494] (-) TimerEvent: {}
+[94.195772] (-) TimerEvent: {}
+[94.296035] (-) TimerEvent: {}
+[94.396300] (-) TimerEvent: {}
+[94.496547] (-) TimerEvent: {}
+[94.596845] (-) TimerEvent: {}
+[94.697171] (-) TimerEvent: {}
+[94.797442] (-) TimerEvent: {}
+[94.897694] (-) TimerEvent: {}
+[94.998023] (-) TimerEvent: {}
+[95.098289] (-) TimerEvent: {}
+[95.198564] (-) TimerEvent: {}
+[95.298819] (-) TimerEvent: {}
+[95.399119] (-) TimerEvent: {}
+[95.499422] (-) TimerEvent: {}
+[95.599725] (-) TimerEvent: {}
+[95.700021] (-) TimerEvent: {}
+[95.800319] (-) TimerEvent: {}
+[95.900630] (-) TimerEvent: {}
+[96.000953] (-) TimerEvent: {}
+[96.101263] (-) TimerEvent: {}
+[96.201630] (-) TimerEvent: {}
+[96.301975] (-) TimerEvent: {}
+[96.402283] (-) TimerEvent: {}
+[96.502581] (-) TimerEvent: {}
+[96.602850] (-) TimerEvent: {}
+[96.703087] (-) TimerEvent: {}
+[96.803343] (-) TimerEvent: {}
+[96.903609] (-) TimerEvent: {}
+[97.003854] (-) TimerEvent: {}
+[97.104172] (-) TimerEvent: {}
+[97.204437] (-) TimerEvent: {}
+[97.304695] (-) TimerEvent: {}
+[97.404952] (-) TimerEvent: {}
+[97.505192] (-) TimerEvent: {}
+[97.605499] (-) TimerEvent: {}
+[97.705762] (-) TimerEvent: {}
+[97.806037] (-) TimerEvent: {}
+[97.906305] (-) TimerEvent: {}
+[98.006549] (-) TimerEvent: {}
+[98.106820] (-) TimerEvent: {}
+[98.207090] (-) TimerEvent: {}
+[98.307365] (-) TimerEvent: {}
+[98.407604] (-) TimerEvent: {}
+[98.507878] (-) TimerEvent: {}
+[98.608153] (-) TimerEvent: {}
+[98.708421] (-) TimerEvent: {}
+[98.808659] (-) TimerEvent: {}
+[98.908969] (-) TimerEvent: {}
+[99.009233] (-) TimerEvent: {}
+[99.109471] (-) TimerEvent: {}
+[99.209779] (-) TimerEvent: {}
+[99.310053] (-) TimerEvent: {}
+[99.410292] (-) TimerEvent: {}
+[99.510584] (-) TimerEvent: {}
+[99.610810] (-) TimerEvent: {}
+[99.711058] (-) TimerEvent: {}
+[99.811344] (-) TimerEvent: {}
+[99.911609] (-) TimerEvent: {}
+[100.011870] (-) TimerEvent: {}
+[100.112115] (-) TimerEvent: {}
+[100.212427] (-) TimerEvent: {}
+[100.312740] (-) TimerEvent: {}
+[100.413001] (-) TimerEvent: {}
+[100.513278] (-) TimerEvent: {}
+[100.613542] (-) TimerEvent: {}
+[100.713819] (-) TimerEvent: {}
+[100.814103] (-) TimerEvent: {}
+[100.914366] (-) TimerEvent: {}
+[101.014616] (-) TimerEvent: {}
+[101.114879] (-) TimerEvent: {}
+[101.215155] (-) TimerEvent: {}
+[101.315442] (-) TimerEvent: {}
+[101.415714] (-) TimerEvent: {}
+[101.515960] (-) TimerEvent: {}
+[101.616277] (-) TimerEvent: {}
+[101.716545] (-) TimerEvent: {}
+[101.816773] (-) TimerEvent: {}
+[101.917002] (-) TimerEvent: {}
+[102.017275] (-) TimerEvent: {}
+[102.117539] (-) TimerEvent: {}
+[102.217803] (-) TimerEvent: {}
+[102.318080] (-) TimerEvent: {}
+[102.418367] (-) TimerEvent: {}
+[102.518598] (-) TimerEvent: {}
+[102.618829] (-) TimerEvent: {}
+[102.719104] (-) TimerEvent: {}
+[102.819365] (-) TimerEvent: {}
+[102.919624] (-) TimerEvent: {}
+[103.019931] (-) TimerEvent: {}
+[103.120160] (-) TimerEvent: {}
+[103.220456] (-) TimerEvent: {}
+[103.320728] (-) TimerEvent: {}
+[103.420969] (-) TimerEvent: {}
+[103.521284] (-) TimerEvent: {}
+[103.621560] (-) TimerEvent: {}
+[103.721822] (-) TimerEvent: {}
+[103.822089] (-) TimerEvent: {}
+[103.922321] (-) TimerEvent: {}
+[104.022516] (-) TimerEvent: {}
+[104.122745] (-) TimerEvent: {}
+[104.222994] (-) TimerEvent: {}
+[104.323290] (-) TimerEvent: {}
+[104.423586] (-) TimerEvent: {}
+[104.523877] (-) TimerEvent: {}
+[104.624186] (-) TimerEvent: {}
+[104.724493] (-) TimerEvent: {}
+[104.824793] (-) TimerEvent: {}
+[104.925110] (-) TimerEvent: {}
+[105.025415] (-) TimerEvent: {}
+[105.125680] (-) TimerEvent: {}
+[105.225943] (-) TimerEvent: {}
+[105.326213] (-) TimerEvent: {}
+[105.426507] (-) TimerEvent: {}
+[105.526745] (-) TimerEvent: {}
+[105.627074] (-) TimerEvent: {}
+[105.727356] (-) TimerEvent: {}
+[105.827619] (-) TimerEvent: {}
+[105.927880] (-) TimerEvent: {}
+[106.028176] (-) TimerEvent: {}
+[106.128462] (-) TimerEvent: {}
+[106.228707] (-) TimerEvent: {}
+[106.328991] (-) TimerEvent: {}
+[106.429260] (-) TimerEvent: {}
+[106.529502] (-) TimerEvent: {}
+[106.629809] (-) TimerEvent: {}
+[106.730037] (-) TimerEvent: {}
+[106.830277] (-) TimerEvent: {}
+[106.930597] (-) TimerEvent: {}
+[107.030839] (-) TimerEvent: {}
+[107.131136] (-) TimerEvent: {}
+[107.231429] (-) TimerEvent: {}
+[107.331733] (-) TimerEvent: {}
+[107.432044] (-) TimerEvent: {}
+[107.532313] (-) TimerEvent: {}
+[107.632577] (-) TimerEvent: {}
+[107.732837] (-) TimerEvent: {}
+[107.833088] (-) TimerEvent: {}
+[107.933346] (-) TimerEvent: {}
+[108.033587] (-) TimerEvent: {}
+[108.133905] (-) TimerEvent: {}
+[108.234162] (-) TimerEvent: {}
+[108.334436] (-) TimerEvent: {}
+[108.434660] (-) TimerEvent: {}
+[108.534890] (-) TimerEvent: {}
+[108.635149] (-) TimerEvent: {}
+[108.735373] (-) TimerEvent: {}
+[108.835638] (-) TimerEvent: {}
+[108.935893] (-) TimerEvent: {}
+[109.036151] (-) TimerEvent: {}
+[109.136393] (-) TimerEvent: {}
+[109.236677] (-) TimerEvent: {}
+[109.336950] (-) TimerEvent: {}
+[109.437193] (-) TimerEvent: {}
+[109.537500] (-) TimerEvent: {}
+[109.637756] (-) TimerEvent: {}
+[109.738023] (-) TimerEvent: {}
+[109.838250] (-) TimerEvent: {}
+[109.938528] (-) TimerEvent: {}
+[110.038750] (-) TimerEvent: {}
+[110.138995] (-) TimerEvent: {}
+[110.239333] (-) TimerEvent: {}
+[110.339601] (-) TimerEvent: {}
+[110.439848] (-) TimerEvent: {}
+[110.540166] (-) TimerEvent: {}
+[110.640439] (-) TimerEvent: {}
+[110.740684] (-) TimerEvent: {}
+[110.841014] (-) TimerEvent: {}
+[110.941286] (-) TimerEvent: {}
+[111.041554] (-) TimerEvent: {}
+[111.141798] (-) TimerEvent: {}
+[111.242109] (-) TimerEvent: {}
+[111.342362] (-) TimerEvent: {}
+[111.442594] (-) TimerEvent: {}
+[111.542855] (-) TimerEvent: {}
+[111.643142] (-) TimerEvent: {}
+[111.743405] (-) TimerEvent: {}
+[111.843666] (-) TimerEvent: {}
+[111.943980] (-) TimerEvent: {}
+[112.044277] (-) TimerEvent: {}
+[112.144572] (-) TimerEvent: {}
+[112.244793] (-) TimerEvent: {}
+[112.345039] (-) TimerEvent: {}
+[112.445328] (-) TimerEvent: {}
+[112.545606] (-) TimerEvent: {}
+[112.645851] (-) TimerEvent: {}
+[112.746165] (-) TimerEvent: {}
+[112.846443] (-) TimerEvent: {}
+[112.946671] (-) TimerEvent: {}
+[113.046902] (-) TimerEvent: {}
+[113.147171] (-) TimerEvent: {}
+[113.247426] (-) TimerEvent: {}
+[113.347693] (-) TimerEvent: {}
+[113.447955] (-) TimerEvent: {}
+[113.548212] (-) TimerEvent: {}
+[113.648487] (-) TimerEvent: {}
+[113.748782] (-) TimerEvent: {}
+[113.849131] (-) TimerEvent: {}
+[113.949398] (-) TimerEvent: {}
+[114.049676] (-) TimerEvent: {}
+[114.184116] (-) TimerEvent: {}
+[114.284375] (-) TimerEvent: {}
+[114.384645] (-) TimerEvent: {}
+[114.484992] (-) TimerEvent: {}
+[114.585244] (-) TimerEvent: {}
+[114.685510] (-) TimerEvent: {}
+[114.785769] (-) TimerEvent: {}
+[114.885993] (-) TimerEvent: {}
+[114.986267] (-) TimerEvent: {}
+[115.086456] (-) TimerEvent: {}
+[115.186701] (-) TimerEvent: {}
+[115.286985] (-) TimerEvent: {}
+[115.387256] (-) TimerEvent: {}
+[115.487524] (-) TimerEvent: {}
+[115.587788] (-) TimerEvent: {}
+[115.688075] (-) TimerEvent: {}
+[115.788297] (-) TimerEvent: {}
+[115.888569] (-) TimerEvent: {}
+[115.988831] (-) TimerEvent: {}
+[116.089151] (-) TimerEvent: {}
+[116.189387] (-) TimerEvent: {}
+[116.289665] (-) TimerEvent: {}
+[116.389925] (-) TimerEvent: {}
+[116.490173] (-) TimerEvent: {}
+[116.590461] (-) TimerEvent: {}
+[116.690726] (-) TimerEvent: {}
+[116.790954] (-) TimerEvent: {}
+[116.891197] (-) TimerEvent: {}
+[116.991479] (-) TimerEvent: {}
+[117.091738] (-) TimerEvent: {}
+[117.191995] (-) TimerEvent: {}
+[117.292256] (-) TimerEvent: {}
+[117.392495] (-) TimerEvent: {}
+[117.492765] (-) TimerEvent: {}
+[117.593025] (-) TimerEvent: {}
+[117.693282] (-) TimerEvent: {}
+[117.793533] (-) TimerEvent: {}
+[117.893865] (-) TimerEvent: {}
+[117.994136] (-) TimerEvent: {}
+[118.094425] (-) TimerEvent: {}
+[118.194654] (-) TimerEvent: {}
+[118.294938] (-) TimerEvent: {}
+[118.395164] (-) TimerEvent: {}
+[118.495388] (-) TimerEvent: {}
+[118.595654] (-) TimerEvent: {}
+[118.695928] (-) TimerEvent: {}
+[118.796189] (-) TimerEvent: {}
+[118.896449] (-) TimerEvent: {}
+[118.996694] (-) TimerEvent: {}
+[119.097017] (-) TimerEvent: {}
+[119.197293] (-) TimerEvent: {}
+[119.297568] (-) TimerEvent: {}
+[119.397809] (-) TimerEvent: {}
+[119.498133] (-) TimerEvent: {}
+[119.598403] (-) TimerEvent: {}
+[119.698679] (-) TimerEvent: {}
+[119.798906] (-) TimerEvent: {}
+[119.899134] (-) TimerEvent: {}
+[119.999416] (-) TimerEvent: {}
+[120.099690] (-) TimerEvent: {}
+[120.199952] (-) TimerEvent: {}
+[120.300214] (-) TimerEvent: {}
+[120.400500] (-) TimerEvent: {}
+[120.500757] (-) TimerEvent: {}
+[120.601012] (-) TimerEvent: {}
+[120.701247] (-) TimerEvent: {}
+[120.801484] (-) TimerEvent: {}
+[120.901739] (-) TimerEvent: {}
+[121.002060] (-) TimerEvent: {}
+[121.102383] (-) TimerEvent: {}
+[121.202683] (-) TimerEvent: {}
+[121.302993] (-) TimerEvent: {}
+[121.403309] (-) TimerEvent: {}
+[121.503603] (-) TimerEvent: {}
+[121.603917] (-) TimerEvent: {}
+[121.704226] (-) TimerEvent: {}
+[121.804503] (-) TimerEvent: {}
+[121.904768] (-) TimerEvent: {}
+[122.005035] (-) TimerEvent: {}
+[122.105282] (-) TimerEvent: {}
+[122.205599] (-) TimerEvent: {}
+[122.305858] (-) TimerEvent: {}
+[122.406099] (-) TimerEvent: {}
+[122.506392] (-) TimerEvent: {}
+[122.606642] (-) TimerEvent: {}
+[122.706871] (-) TimerEvent: {}
+[122.807137] (-) TimerEvent: {}
+[122.907361] (-) TimerEvent: {}
+[123.007621] (-) TimerEvent: {}
+[123.107881] (-) TimerEvent: {}
+[123.208122] (-) TimerEvent: {}
+[123.308350] (-) TimerEvent: {}
+[123.408623] (-) TimerEvent: {}
+[123.508821] (-) TimerEvent: {}
+[123.609032] (-) TimerEvent: {}
+[123.709243] (-) TimerEvent: {}
+[123.809535] (-) TimerEvent: {}
+[123.909765] (-) TimerEvent: {}
+[124.009966] (-) TimerEvent: {}
+[124.116743] (-) TimerEvent: {}
+[124.217000] (-) TimerEvent: {}
+[124.317246] (-) TimerEvent: {}
+[124.417537] (-) TimerEvent: {}
+[124.480324] (turtlebot3_tourguide) StderrLine: {'line': b'error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)\n'}
+[124.480533] (turtlebot3_tourguide) StderrLine: {'line': b'error: 177 bytes of body are still expected\n'}
+[124.483478] (turtlebot3_tourguide) StderrLine: {'line': b'fetch-pack: unexpected disconnect while reading sideband packet\n'}
+[124.483691] (turtlebot3_tourguide) StderrLine: {'line': b'fatal: early EOF\n'}
+[124.483864] (turtlebot3_tourguide) StderrLine: {'line': b'fatal: fetch-pack: invalid index-pack output\n'}
+[124.484450] (turtlebot3_tourguide) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/boringssl.dir/build.make:99: src/boringssl-stamp/boringssl-download] Error 128\n'}
+[124.484569] (turtlebot3_tourguide) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:149: CMakeFiles/boringssl.dir/all] Error 2\n'}
+[124.484661] (turtlebot3_tourguide) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[124.517601] (-) TimerEvent: {}
+[124.617870] (-) TimerEvent: {}
+[124.718091] (-) TimerEvent: {}
+[124.818346] (-) TimerEvent: {}
+[124.918643] (-) TimerEvent: {}
+[125.018952] (-) TimerEvent: {}
+[125.119197] (-) TimerEvent: {}
+[125.219431] (-) TimerEvent: {}
+[125.319727] (-) TimerEvent: {}
+[125.405963] (turtlebot3_tourguide) StderrLine: {'line': b'gmake: *** [Makefile:91: all] Error 2\n'}
+[125.406941] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Download complete.\n'}
+[125.407135] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Building external project dependencies...\n'}
+[125.407252] (turtlebot3_tourguide) StdoutLine: {'line': b'-- CMake generator: Unix Makefiles\n'}
+[125.407359] (turtlebot3_tourguide) StdoutLine: {'line': b'-- CMake generator platform: \n'}
+[125.407463] (turtlebot3_tourguide) StdoutLine: {'line': b'-- CMake toolchain file: \n'}
+[125.407566] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Sub-configure options: -G;Unix Makefiles;-DCMAKE_C_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_CXX_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_POSITION_INDEPENDENT_CODE=\n'}
+[125.407671] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Sub-build options: \n'}
+[125.407775] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Build of external project dependencies complete.\n'}
+[125.419813] (-) TimerEvent: {}
+[125.458244] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[125.519891] (-) TimerEvent: {}
+[125.523216] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[125.523574] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[125.603484] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[125.604499] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[125.605711] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.a (found version "3.0.2")  \n'}
+[125.606828] (turtlebot3_tourguide) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/CMakeLists.txt:40 (cmake_policy):\n'}
+[125.606990] (turtlebot3_tourguide) StderrLine: {'line': b'  The OLD behavior for policy CMP0058 will be removed from a future version\n'}
+[125.607100] (turtlebot3_tourguide) StderrLine: {'line': b'  of CMake.\n'}
+[125.607202] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[125.607301] (turtlebot3_tourguide) StderrLine: {'line': b'  The cmake-policies(7) manual explains that the OLD behaviors of all\n'}
+[125.607412] (turtlebot3_tourguide) StderrLine: {'line': b'  policies are deprecated and that a policy should be set to OLD only under\n'}
+[125.607510] (turtlebot3_tourguide) StderrLine: {'line': b'  specific short-term circumstances.  Projects should be ported to the NEW\n'}
+[125.607606] (turtlebot3_tourguide) StderrLine: {'line': b'  behavior and not rely on setting a policy to OLD.\n'}
+[125.607703] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[125.607800] (turtlebot3_tourguide) StderrLine: {'line': b'\x1b[0m\n'}
+[125.607897] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Found ccache: /usr/bin/ccache\n'}
+[125.608797] (turtlebot3_tourguide) StdoutLine: {'line': b'-- firebase_execute_process(): running command: /usr/bin/cmake -G Unix Makefiles -DFIREBASE_DOWNLOAD_DIR=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads -DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/opt -DFUZZING=OFF -DDOWNLOAD_BENCHMARK=OFF -DDOWNLOAD_GOOGLETEST=OFF -DEXTERNAL_PROJECT_HTTP_HEADER= /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)\n'}
+[125.619987] (-) TimerEvent: {}
+[125.665607] (turtlebot3_tourguide) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[125.716762] (turtlebot3_tourguide) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[125.720088] (-) TimerEvent: {}
+[125.723808] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[125.785772] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[125.793118] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[125.793347] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[125.793658] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[125.796547] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[125.820181] (-) TimerEvent: {}
+[125.865638] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[125.873833] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[125.874013] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[125.874417] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[125.920283] (-) TimerEvent: {}
+[126.020510] (-) TimerEvent: {}
+[126.107083] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[126.107487] (turtlebot3_tourguide) StdoutLine: {'line': b'-- FirebaseSetupPythonInterpreter(LevelDbPatch): Creating Python virtualenv in /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch using /usr/bin/python3.10\n'}
+[126.107654] (turtlebot3_tourguide) StdoutLine: {'line': b'-- firebase_execute_process(): running command: /usr/bin/python3.10 -m venv /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch\n'}
+[126.120602] (-) TimerEvent: {}
+[126.220815] (-) TimerEvent: {}
+[126.321053] (-) TimerEvent: {}
+[126.421269] (-) TimerEvent: {}
+[126.521564] (-) TimerEvent: {}
+[126.621785] (-) TimerEvent: {}
+[126.721963] (-) TimerEvent: {}
+[126.822150] (-) TimerEvent: {}
+[126.922425] (-) TimerEvent: {}
+[127.022634] (-) TimerEvent: {}
+[127.122851] (-) TimerEvent: {}
+[127.223071] (-) TimerEvent: {}
+[127.323305] (-) TimerEvent: {}
+[127.423574] (-) TimerEvent: {}
+[127.523825] (-) TimerEvent: {}
+[127.624082] (-) TimerEvent: {}
+[127.724354] (-) TimerEvent: {}
+[127.824590] (-) TimerEvent: {}
+[127.924808] (-) TimerEvent: {}
+[128.025061] (-) TimerEvent: {}
+[128.125305] (-) TimerEvent: {}
+[128.225532] (-) TimerEvent: {}
+[128.325764] (-) TimerEvent: {}
+[128.426002] (-) TimerEvent: {}
+[128.526230] (-) TimerEvent: {}
+[128.626438] (-) TimerEvent: {}
+[128.726669] (-) TimerEvent: {}
+[128.826959] (-) TimerEvent: {}
+[128.927252] (-) TimerEvent: {}
+[129.027484] (-) TimerEvent: {}
+[129.127703] (-) TimerEvent: {}
+[129.213449] (turtlebot3_tourguide) StdoutLine: {'line': b'-- FirebaseSetupPythonInterpreter(LevelDbPatch): Found Python executable in virtualenv: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch/bin/python3\n'}
+[129.227787] (-) TimerEvent: {}
+[129.303501] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[129.303728] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Configuring done\n'}
+[129.316654] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Generating done\n'}
+[129.318080] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Build files have been written to: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external\n'}
+[129.323331] (turtlebot3_tourguide) StdoutLine: {'line': b'-- firebase_execute_process(): running command: /usr/bin/cmake --build . -- -j (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)\n'}
+[129.327905] (-) TimerEvent: {}
+[129.374043] (turtlebot3_tourguide) StdoutLine: {'line': b"[  2%] Creating directories for 'GoogleUtilities'\n"}
+[129.374305] (turtlebot3_tourguide) StdoutLine: {'line': b"[  2%] Creating directories for 'abseil-cpp'\n"}
+[129.374494] (turtlebot3_tourguide) StdoutLine: {'line': b"[  3%] Creating directories for 'protobuf'\n"}
+[129.374738] (turtlebot3_tourguide) StdoutLine: {'line': b"[  4%] Creating directories for 'nanopb'\n"}
+[129.375434] (turtlebot3_tourguide) StdoutLine: {'line': b"[  8%] Creating directories for 're2'\n"}
+[129.375604] (turtlebot3_tourguide) StdoutLine: {'line': b"[  8%] Creating directories for 'boringssl'\n"}
+[129.375712] (turtlebot3_tourguide) StdoutLine: {'line': b"[  8%] Creating directories for 'snappy'\n"}
+[129.376016] (turtlebot3_tourguide) StdoutLine: {'line': b"[  8%] Creating directories for 'c-ares'\n"}
+[129.376399] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 10%] Creating directories for 'grpc'\n"}
+[129.428020] (-) TimerEvent: {}
+[129.460201] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 11%] Performing download step (download, verify and extract) for 'protobuf'\n"}
+[129.460623] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 13%] Performing download step (download, verify and extract) for 're2'\n"}
+[129.460937] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 15%] Performing download step (download, verify and extract) for 'snappy'\n"}
+[129.461123] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 15%] Performing download step (download, verify and extract) for 'abseil-cpp'\n"}
+[129.461632] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 16%] Performing download step (download, verify and extract) for 'c-ares'\n"}
+[129.461950] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 16%] Performing download step (download, verify and extract) for 'boringssl'\n"}
+[129.463713] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 17%] Performing download step (download, verify and extract) for 'nanopb'\n"}
+[129.465410] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 18%] Performing download step (download, verify and extract) for 'GoogleUtilities'\n"}
+[129.467750] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 20%] Performing download step (download, verify and extract) for 'grpc'\n"}
+[129.472010] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.472201] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'\n"}
+[129.472300] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.472412] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.472526] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/protocolbuffers/protobuf/archive/29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'\n"}
+[129.472703] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.472828] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'\n"}
+[129.472919] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.473010] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.473096] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/abseil/abseil-cpp/archive/20220623.0.tar.gz'\n"}
+[129.473182] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.473272] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'\n"}
+[129.473361] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.473447] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.473531] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/google/snappy/archive/refs/tags/1.1.9.tar.gz'\n"}
+[129.473683] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.473783] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'\n"}
+[129.473876] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.473966] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.474065] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/google/re2/archive/8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'\n"}
+[129.474802] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.474929] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'\n"}
+[129.475023] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.475086] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.475148] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/nanopb/nanopb/archive/nanopb-0.3.9.8.tar.gz'\n"}
+[129.475333] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.475472] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'\n"}
+[129.475584] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.475673] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.475761] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/c-ares/c-ares/archive/e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'\n"}
+[129.476052] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.476155] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'\n"}
+[129.476262] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.476354] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.476442] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/google/boringssl/archive/b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'\n"}
+[129.478106] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.478239] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'\n"}
+[129.478336] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.478434] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.478527] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/google/GoogleUtilities/archive/7.12.0.tar.gz'\n"}
+[129.478930] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading...\n'}
+[129.479043] (turtlebot3_tourguide) StdoutLine: {'line': b"   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'\n"}
+[129.479105] (turtlebot3_tourguide) StdoutLine: {'line': b"   timeout='none'\n"}
+[129.479160] (turtlebot3_tourguide) StdoutLine: {'line': b"   inactivity timeout='none'\n"}
+[129.479213] (turtlebot3_tourguide) StdoutLine: {'line': b"-- Using src='https://github.com/grpc/grpc/archive/v1.50.0.tar.gz'\n"}
+[129.528104] (-) TimerEvent: {}
+[129.628362] (-) TimerEvent: {}
+[129.728629] (-) TimerEvent: {}
+[129.828872] (-) TimerEvent: {}
+[129.929130] (-) TimerEvent: {}
+[130.029385] (-) TimerEvent: {}
+[130.129644] (-) TimerEvent: {}
+[130.229879] (-) TimerEvent: {}
+[130.330205] (-) TimerEvent: {}
+[130.430456] (-) TimerEvent: {}
+[130.530651] (-) TimerEvent: {}
+[130.630872] (-) TimerEvent: {}
+[130.731093] (-) TimerEvent: {}
+[130.831323] (-) TimerEvent: {}
+[130.931572] (-) TimerEvent: {}
+[131.027764] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 0% complete]\n'}
+[131.031672] (-) TimerEvent: {}
+[131.035409] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 1% complete]\n'}
+[131.131754] (-) TimerEvent: {}
+[131.143801] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 2% complete]\n'}
+[131.231845] (-) TimerEvent: {}
+[131.239567] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 3% complete]\n'}
+[131.273852] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 5% complete]\n'}
+[131.282835] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 0% complete]\n'}
+[131.331917] (-) TimerEvent: {}
+[131.384708] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 6% complete]\n'}
+[131.401659] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 7% complete]\n'}
+[131.432017] (-) TimerEvent: {}
+[131.483129] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 8% complete]\n'}
+[131.532098] (-) TimerEvent: {}
+[131.632359] (-) TimerEvent: {}
+[131.637974] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 9% complete]\n'}
+[131.714437] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 10% complete]\n'}
+[131.722292] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 11% complete]\n'}
+[131.727047] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 13% complete]\n'}
+[131.732450] (-) TimerEvent: {}
+[131.751045] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 1% complete]\n'}
+[131.784190] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 14% complete]\n'}
+[131.820010] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 15% complete]\n'}
+[131.832527] (-) TimerEvent: {}
+[131.838967] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 16% complete]\n'}
+[131.932642] (-) TimerEvent: {}
+[132.032867] (-) TimerEvent: {}
+[132.133120] (-) TimerEvent: {}
+[132.155096] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 18% complete]\n'}
+[132.189515] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 19% complete]\n'}
+[132.193005] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 20% complete]\n'}
+[132.233222] (-) TimerEvent: {}
+[132.333463] (-) TimerEvent: {}
+[132.414503] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 21% complete]\n'}
+[132.433536] (-) TimerEvent: {}
+[132.445238] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 22% complete]\n'}
+[132.514894] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 23% complete]\n'}
+[132.533601] (-) TimerEvent: {}
+[132.547851] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 2% complete]\n'}
+[132.633704] (-) TimerEvent: {}
+[132.734009] (-) TimerEvent: {}
+[132.737996] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 26% complete]\n'}
+[132.834104] (-) TimerEvent: {}
+[132.934378] (-) TimerEvent: {}
+[133.034652] (-) TimerEvent: {}
+[133.134968] (-) TimerEvent: {}
+[133.235216] (-) TimerEvent: {}
+[133.335468] (-) TimerEvent: {}
+[133.435746] (-) TimerEvent: {}
+[133.474755] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 28% complete]\n'}
+[133.535827] (-) TimerEvent: {}
+[133.596371] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[133.596513] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'\n"}
+[133.596865] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[133.613837] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[133.614039] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'\n"}
+[133.614155] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/GoogleUtilities'\n"}
+[133.615016] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[133.620932] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 29% complete]\n'}
+[133.629718] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[133.630001] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[133.630114] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[133.630217] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[133.635931] (-) TimerEvent: {}
+[133.645622] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 21%] No update step for 'GoogleUtilities'\n"}
+[133.668223] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 22%] No patch step for 'GoogleUtilities'\n"}
+[133.689921] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 23%] No configure step for 'GoogleUtilities'\n"}
+[133.712778] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 24%] No build step for 'GoogleUtilities'\n"}
+[133.736020] (-) TimerEvent: {}
+[133.737518] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 25%] No install step for 'GoogleUtilities'\n"}
+[133.761463] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 26%] No test step for 'GoogleUtilities'\n"}
+[133.793755] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 27%] Completed 'GoogleUtilities'\n"}
+[133.835091] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 27%] Built target GoogleUtilities\n'}
+[133.836098] (-) TimerEvent: {}
+[133.885295] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 30% complete]\n'}
+[133.936219] (-) TimerEvent: {}
+[133.959518] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 3% complete]\n'}
+[134.036320] (-) TimerEvent: {}
+[134.136593] (-) TimerEvent: {}
+[134.236888] (-) TimerEvent: {}
+[134.331053] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 32% complete]\n'}
+[134.336979] (-) TimerEvent: {}
+[134.437259] (-) TimerEvent: {}
+[134.501785] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 33% complete]\n'}
+[134.537375] (-) TimerEvent: {}
+[134.601568] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[134.601773] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'\n"}
+[134.602321] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[134.619178] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[134.619327] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'\n"}
+[134.619396] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/nanopb'\n"}
+[134.619546] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[134.637488] (-) TimerEvent: {}
+[134.641076] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[134.641319] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[134.641383] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[134.641440] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[134.656929] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 28%] No update step for 'nanopb'\n"}
+[134.679189] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 30%] Performing patch step for 'nanopb'\n"}
+[134.680745] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 34% complete]\n'}
+[134.681162] (turtlebot3_tourguide) StdoutLine: {'line': b'patching file CMakeLists.txt\n'}
+[134.681312] (turtlebot3_tourguide) StdoutLine: {'line': b'patching file generator/nanopb_generator.py\n'}
+[134.696946] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 31%] No configure step for 'nanopb'\n"}
+[134.721747] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 32%] No build step for 'nanopb'\n"}
+[134.737593] (-) TimerEvent: {}
+[134.749240] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 33%] No install step for 'nanopb'\n"}
+[134.775427] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 34%] No test step for 'nanopb'\n"}
+[134.777356] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 35% complete]\n'}
+[134.809362] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 35%] Completed 'nanopb'\n"}
+[134.837704] (-) TimerEvent: {}
+[134.839666] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 35%] Built target nanopb\n'}
+[134.937787] (-) TimerEvent: {}
+[134.983078] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[134.983212] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'\n"}
+[134.984153] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[135.001110] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[135.001318] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'\n"}
+[135.001384] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/re2'\n"}
+[135.001442] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[135.018244] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[135.018460] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[135.018528] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[135.018585] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[135.036442] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 36%] No update step for 're2'\n"}
+[135.037886] (-) TimerEvent: {}
+[135.045074] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 36% complete]\n'}
+[135.059399] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 37%] No patch step for 're2'\n"}
+[135.065085] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 37% complete]\n'}
+[135.081012] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 4% complete]\n'}
+[135.082325] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 38%] No configure step for 're2'\n"}
+[135.110604] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 40%] No build step for 're2'\n"}
+[135.136589] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 41%] No install step for 're2'\n"}
+[135.137977] (-) TimerEvent: {}
+[135.167569] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 42%] No test step for 're2'\n"}
+[135.194734] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 43%] Completed 're2'\n"}
+[135.206837] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 38% complete]\n'}
+[135.228773] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 43%] Built target re2\n'}
+[135.238098] (-) TimerEvent: {}
+[135.338352] (-) TimerEvent: {}
+[135.438649] (-) TimerEvent: {}
+[135.538927] (-) TimerEvent: {}
+[135.607400] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 39% complete]\n'}
+[135.638974] (-) TimerEvent: {}
+[135.675248] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 40% complete]\n'}
+[135.739087] (-) TimerEvent: {}
+[135.785480] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 41% complete]\n'}
+[135.839213] (-) TimerEvent: {}
+[135.901733] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 5% complete]\n'}
+[135.939333] (-) TimerEvent: {}
+[136.039595] (-) TimerEvent: {}
+[136.131755] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 42% complete]\n'}
+[136.139665] (-) TimerEvent: {}
+[136.239886] (-) TimerEvent: {}
+[136.340196] (-) TimerEvent: {}
+[136.355632] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 43% complete]\n'}
+[136.440320] (-) TimerEvent: {}
+[136.540610] (-) TimerEvent: {}
+[136.640857] (-) TimerEvent: {}
+[136.669998] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 44% complete]\n'}
+[136.740950] (-) TimerEvent: {}
+[136.841233] (-) TimerEvent: {}
+[136.941445] (-) TimerEvent: {}
+[137.041700] (-) TimerEvent: {}
+[137.141959] (-) TimerEvent: {}
+[137.144698] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 45% complete]\n'}
+[137.242069] (-) TimerEvent: {}
+[137.342279] (-) TimerEvent: {}
+[137.361178] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 46% complete]\n'}
+[137.442351] (-) TimerEvent: {}
+[137.489128] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 47% complete]\n'}
+[137.533276] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 6% complete]\n'}
+[137.542456] (-) TimerEvent: {}
+[137.642709] (-) TimerEvent: {}
+[137.646361] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 48% complete]\n'}
+[137.707928] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 49% complete]\n'}
+[137.742798] (-) TimerEvent: {}
+[137.843017] (-) TimerEvent: {}
+[137.859035] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 50% complete]\n'}
+[137.943124] (-) TimerEvent: {}
+[138.043411] (-) TimerEvent: {}
+[138.143699] (-) TimerEvent: {}
+[138.226934] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 51% complete]\n'}
+[138.243798] (-) TimerEvent: {}
+[138.344082] (-) TimerEvent: {}
+[138.444365] (-) TimerEvent: {}
+[138.454614] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 52% complete]\n'}
+[138.468925] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 7% complete]\n'}
+[138.544458] (-) TimerEvent: {}
+[138.563060] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 53% complete]\n'}
+[138.630920] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 54% complete]\n'}
+[138.644579] (-) TimerEvent: {}
+[138.736477] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 55% complete]\n'}
+[138.744688] (-) TimerEvent: {}
+[138.844927] (-) TimerEvent: {}
+[138.945144] (-) TimerEvent: {}
+[138.979627] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 56% complete]\n'}
+[139.045266] (-) TimerEvent: {}
+[139.145524] (-) TimerEvent: {}
+[139.245774] (-) TimerEvent: {}
+[139.306875] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 57% complete]\n'}
+[139.345930] (-) TimerEvent: {}
+[139.446309] (-) TimerEvent: {}
+[139.507819] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 8% complete]\n'}
+[139.535712] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 58% complete]\n'}
+[139.546435] (-) TimerEvent: {}
+[139.646657] (-) TimerEvent: {}
+[139.703618] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 59% complete]\n'}
+[139.746767] (-) TimerEvent: {}
+[139.847069] (-) TimerEvent: {}
+[139.896497] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 60% complete]\n'}
+[139.947159] (-) TimerEvent: {}
+[140.002607] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 61% complete]\n'}
+[140.042976] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 62% complete]\n'}
+[140.047259] (-) TimerEvent: {}
+[140.147468] (-) TimerEvent: {}
+[140.151401] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 63% complete]\n'}
+[140.211880] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 64% complete]\n'}
+[140.247555] (-) TimerEvent: {}
+[140.316363] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 65% complete]\n'}
+[140.324068] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 9% complete]\n'}
+[140.347676] (-) TimerEvent: {}
+[140.447932] (-) TimerEvent: {}
+[140.548156] (-) TimerEvent: {}
+[140.607146] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 66% complete]\n'}
+[140.648287] (-) TimerEvent: {}
+[140.748528] (-) TimerEvent: {}
+[140.848836] (-) TimerEvent: {}
+[140.949056] (-) TimerEvent: {}
+[141.049288] (-) TimerEvent: {}
+[141.149598] (-) TimerEvent: {}
+[141.230309] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 68% complete]\n'}
+[141.249709] (-) TimerEvent: {}
+[141.349969] (-) TimerEvent: {}
+[141.450233] (-) TimerEvent: {}
+[141.535424] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 69% complete]\n'}
+[141.550347] (-) TimerEvent: {}
+[141.650577] (-) TimerEvent: {}
+[141.750775] (-) TimerEvent: {}
+[141.781831] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 70% complete]\n'}
+[141.850886] (-) TimerEvent: {}
+[141.934385] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 10% complete]\n'}
+[141.950992] (-) TimerEvent: {}
+[141.957786] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 71% complete]\n'}
+[142.051051] (-) TimerEvent: {}
+[142.151301] (-) TimerEvent: {}
+[142.151522] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 72% complete]\n'}
+[142.251409] (-) TimerEvent: {}
+[142.318985] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 73% complete]\n'}
+[142.319254] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[142.319371] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'\n"}
+[142.322122] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[142.339113] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[142.339249] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'\n"}
+[142.339315] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/snappy'\n"}
+[142.339382] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[142.351528] (-) TimerEvent: {}
+[142.360778] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[142.360963] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[142.361106] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[142.361218] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[142.377174] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 44%] No update step for 'snappy'\n"}
+[142.406703] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 45%] Performing patch step for 'snappy'\n"}
+[142.408904] (turtlebot3_tourguide) StdoutLine: {'line': b'patching file snappy.cc\n'}
+[142.424612] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 46%] No configure step for 'snappy'\n"}
+[142.451638] (-) TimerEvent: {}
+[142.452797] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 47%] No build step for 'snappy'\n"}
+[142.479163] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 48%] No install step for 'snappy'\n"}
+[142.503279] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 50%] No test step for 'snappy'\n"}
+[142.525716] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 51%] Completed 'snappy'\n"}
+[142.551750] (-) TimerEvent: {}
+[142.554202] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 51%] Built target snappy\n'}
+[142.573023] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 52%] Creating directories for 'leveldb'\n"}
+[142.636476] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 53%] Performing download step (git clone) for 'leveldb'\n"}
+[142.651866] (-) TimerEvent: {}
+[142.653499] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into 'leveldb'...\n"}
+[142.751969] (-) TimerEvent: {}
+[142.852238] (-) TimerEvent: {}
+[142.952474] (-) TimerEvent: {}
+[142.963764] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 74% complete]\n'}
+[143.052570] (-) TimerEvent: {}
+[143.119448] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 11% complete]\n'}
+[143.152659] (-) TimerEvent: {}
+[143.166937] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 75% complete]\n'}
+[143.252776] (-) TimerEvent: {}
+[143.323210] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 76% complete]\n'}
+[143.352894] (-) TimerEvent: {}
+[143.453141] (-) TimerEvent: {}
+[143.553370] (-) TimerEvent: {}
+[143.653677] (-) TimerEvent: {}
+[143.753917] (-) TimerEvent: {}
+[143.810804] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 77% complete]\n'}
+[143.854040] (-) TimerEvent: {}
+[143.954289] (-) TimerEvent: {}
+[144.054569] (-) TimerEvent: {}
+[144.154826] (-) TimerEvent: {}
+[144.255049] (-) TimerEvent: {}
+[144.355282] (-) TimerEvent: {}
+[144.455563] (-) TimerEvent: {}
+[144.555810] (-) TimerEvent: {}
+[144.656071] (-) TimerEvent: {}
+[144.756313] (-) TimerEvent: {}
+[144.856636] (-) TimerEvent: {}
+[144.886817] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 78% complete]\n'}
+[144.956734] (-) TimerEvent: {}
+[145.056965] (-) TimerEvent: {}
+[145.157230] (-) TimerEvent: {}
+[145.257446] (-) TimerEvent: {}
+[145.357693] (-) TimerEvent: {}
+[145.457941] (-) TimerEvent: {}
+[145.558163] (-) TimerEvent: {}
+[145.658447] (-) TimerEvent: {}
+[145.758701] (-) TimerEvent: {}
+[145.858943] (-) TimerEvent: {}
+[145.896559] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 79% complete]\n'}
+[145.959026] (-) TimerEvent: {}
+[146.059288] (-) TimerEvent: {}
+[146.102785] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 80% complete]\n'}
+[146.159395] (-) TimerEvent: {}
+[146.259711] (-) TimerEvent: {}
+[146.339149] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 12% complete]\n'}
+[146.356079] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 81% complete]\n'}
+[146.359807] (-) TimerEvent: {}
+[146.460032] (-) TimerEvent: {}
+[146.560298] (-) TimerEvent: {}
+[146.660568] (-) TimerEvent: {}
+[146.760829] (-) TimerEvent: {}
+[146.790939] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 82% complete]\n'}
+[146.860942] (-) TimerEvent: {}
+[146.961234] (-) TimerEvent: {}
+[147.061504] (-) TimerEvent: {}
+[147.161784] (-) TimerEvent: {}
+[147.262083] (-) TimerEvent: {}
+[147.362368] (-) TimerEvent: {}
+[147.462689] (-) TimerEvent: {}
+[147.553817] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 83% complete]\n'}
+[147.562772] (-) TimerEvent: {}
+[147.622968] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 84% complete]\n'}
+[147.662861] (-) TimerEvent: {}
+[147.763100] (-) TimerEvent: {}
+[147.858679] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 85% complete]\n'}
+[147.863169] (-) TimerEvent: {}
+[147.963393] (-) TimerEvent: {}
+[148.063663] (-) TimerEvent: {}
+[148.163889] (-) TimerEvent: {}
+[148.264118] (-) TimerEvent: {}
+[148.364340] (-) TimerEvent: {}
+[148.453613] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 86% complete]\n'}
+[148.464467] (-) TimerEvent: {}
+[148.564719] (-) TimerEvent: {}
+[148.664969] (-) TimerEvent: {}
+[148.765230] (-) TimerEvent: {}
+[148.865470] (-) TimerEvent: {}
+[148.965772] (-) TimerEvent: {}
+[149.066020] (-) TimerEvent: {}
+[149.166248] (-) TimerEvent: {}
+[149.205970] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 87% complete]\n'}
+[149.206179] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 13% complete]\n'}
+[149.266362] (-) TimerEvent: {}
+[149.366593] (-) TimerEvent: {}
+[149.466824] (-) TimerEvent: {}
+[149.516482] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 88% complete]\n'}
+[149.566907] (-) TimerEvent: {}
+[149.667169] (-) TimerEvent: {}
+[149.700997] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 89% complete]\n'}
+[149.767295] (-) TimerEvent: {}
+[149.867547] (-) TimerEvent: {}
+[149.877977] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 90% complete]\n'}
+[149.967668] (-) TimerEvent: {}
+[150.067925] (-) TimerEvent: {}
+[150.071811] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 91% complete]\n'}
+[150.168046] (-) TimerEvent: {}
+[150.210223] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 92% complete]\n'}
+[150.247427] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 14% complete]\n'}
+[150.268151] (-) TimerEvent: {}
+[150.306331] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 93% complete]\n'}
+[150.368274] (-) TimerEvent: {}
+[150.405569] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 94% complete]\n'}
+[150.468361] (-) TimerEvent: {}
+[150.525668] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 95% complete]\n'}
+[150.568458] (-) TimerEvent: {}
+[150.644837] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 96% complete]\n'}
+[150.648605] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[150.648741] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'\n"}
+[150.650589] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[150.667474] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[150.667697] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'\n"}
+[150.667765] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/cares'\n"}
+[150.667825] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[150.668517] (-) TimerEvent: {}
+[150.696506] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[150.696758] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[150.696825] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[150.696885] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[150.713112] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 54%] No update step for 'c-ares'\n"}
+[150.734190] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 55%] No patch step for 'c-ares'\n"}
+[150.755655] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 56%] No configure step for 'c-ares'\n"}
+[150.768631] (-) TimerEvent: {}
+[150.779174] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 57%] No build step for 'c-ares'\n"}
+[150.800333] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 97% complete]\n'}
+[150.805368] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 58%] No install step for 'c-ares'\n"}
+[150.829136] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 60%] No test step for 'c-ares'\n"}
+[150.851889] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 61%] Completed 'c-ares'\n"}
+[150.868730] (-) TimerEvent: {}
+[150.889935] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 61%] Built target c-ares\n'}
+[150.915855] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 98% complete]\n'}
+[150.968852] (-) TimerEvent: {}
+[150.991380] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 15% complete]\n'}
+[151.013873] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 99% complete]\n'}
+[151.068975] (-) TimerEvent: {}
+[151.169226] (-) TimerEvent: {}
+[151.241236] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 100% complete]\n'}
+[151.269319] (-) TimerEvent: {}
+[151.369579] (-) TimerEvent: {}
+[151.399272] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[151.399418] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'\n"}
+[151.404167] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[151.421172] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[151.421387] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'\n"}
+[151.421459] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp'\n"}
+[151.421519] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[151.469691] (-) TimerEvent: {}
+[151.490879] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[151.491215] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[151.491284] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[151.491340] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[151.510544] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 62%] No update step for 'abseil-cpp'\n"}
+[151.541921] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 63%] No patch step for 'abseil-cpp'\n"}
+[151.569801] (-) TimerEvent: {}
+[151.573128] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 64%] No configure step for 'abseil-cpp'\n"}
+[151.598796] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 65%] No build step for 'abseil-cpp'\n"}
+[151.623005] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 66%] No install step for 'abseil-cpp'\n"}
+[151.646464] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 67%] No test step for 'abseil-cpp'\n"}
+[151.669789] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 68%] Completed 'abseil-cpp'\n"}
+[151.669933] (-) TimerEvent: {}
+[151.677977] (turtlebot3_tourguide) StderrLine: {'line': b'HEAD is now at 99b3c03 Change version to 1.23.\n'}
+[151.700373] (turtlebot3_tourguide) StderrLine: {'line': b"Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'\n"}
+[151.700577] (turtlebot3_tourguide) StderrLine: {'line': b"Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'\n"}
+[151.701040] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 68%] Built target abseil-cpp\n'}
+[151.704862] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/benchmark'...\n"}
+[151.712601] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 16% complete]\n'}
+[151.770073] (-) TimerEvent: {}
+[151.870342] (-) TimerEvent: {}
+[151.970596] (-) TimerEvent: {}
+[152.070880] (-) TimerEvent: {}
+[152.171155] (-) TimerEvent: {}
+[152.271459] (-) TimerEvent: {}
+[152.371742] (-) TimerEvent: {}
+[152.458825] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 17% complete]\n'}
+[152.471860] (-) TimerEvent: {}
+[152.572091] (-) TimerEvent: {}
+[152.672384] (-) TimerEvent: {}
+[152.772671] (-) TimerEvent: {}
+[152.774541] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 18% complete]\n'}
+[152.872790] (-) TimerEvent: {}
+[152.973048] (-) TimerEvent: {}
+[153.073303] (-) TimerEvent: {}
+[153.165562] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 19% complete]\n'}
+[153.173408] (-) TimerEvent: {}
+[153.273695] (-) TimerEvent: {}
+[153.374019] (-) TimerEvent: {}
+[153.474293] (-) TimerEvent: {}
+[153.574536] (-) TimerEvent: {}
+[153.620066] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 20% complete]\n'}
+[153.674618] (-) TimerEvent: {}
+[153.774860] (-) TimerEvent: {}
+[153.875120] (-) TimerEvent: {}
+[153.975390] (-) TimerEvent: {}
+[154.075645] (-) TimerEvent: {}
+[154.175882] (-) TimerEvent: {}
+[154.276185] (-) TimerEvent: {}
+[154.376444] (-) TimerEvent: {}
+[154.476696] (-) TimerEvent: {}
+[154.576949] (-) TimerEvent: {}
+[154.677172] (-) TimerEvent: {}
+[154.777431] (-) TimerEvent: {}
+[154.877691] (-) TimerEvent: {}
+[154.977940] (-) TimerEvent: {}
+[154.991517] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 21% complete]\n'}
+[155.078056] (-) TimerEvent: {}
+[155.178310] (-) TimerEvent: {}
+[155.278547] (-) TimerEvent: {}
+[155.378819] (-) TimerEvent: {}
+[155.479093] (-) TimerEvent: {}
+[155.579356] (-) TimerEvent: {}
+[155.679581] (-) TimerEvent: {}
+[155.766554] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 22% complete]\n'}
+[155.779674] (-) TimerEvent: {}
+[155.879944] (-) TimerEvent: {}
+[155.980201] (-) TimerEvent: {}
+[156.080437] (-) TimerEvent: {}
+[156.180750] (-) TimerEvent: {}
+[156.280999] (-) TimerEvent: {}
+[156.381227] (-) TimerEvent: {}
+[156.481540] (-) TimerEvent: {}
+[156.581811] (-) TimerEvent: {}
+[156.682073] (-) TimerEvent: {}
+[156.782326] (-) TimerEvent: {}
+[156.852768] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 23% complete]\n'}
+[156.882462] (-) TimerEvent: {}
+[156.982707] (-) TimerEvent: {}
+[157.082918] (-) TimerEvent: {}
+[157.183153] (-) TimerEvent: {}
+[157.283422] (-) TimerEvent: {}
+[157.383671] (-) TimerEvent: {}
+[157.402633] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 24% complete]\n'}
+[157.483774] (-) TimerEvent: {}
+[157.584073] (-) TimerEvent: {}
+[157.684327] (-) TimerEvent: {}
+[157.784555] (-) TimerEvent: {}
+[157.884843] (-) TimerEvent: {}
+[157.887095] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 25% complete]\n'}
+[157.984965] (-) TimerEvent: {}
+[158.085222] (-) TimerEvent: {}
+[158.185453] (-) TimerEvent: {}
+[158.285756] (-) TimerEvent: {}
+[158.320972] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 26% complete]\n'}
+[158.385875] (-) TimerEvent: {}
+[158.486126] (-) TimerEvent: {}
+[158.586388] (-) TimerEvent: {}
+[158.686639] (-) TimerEvent: {}
+[158.786882] (-) TimerEvent: {}
+[158.887160] (-) TimerEvent: {}
+[158.987382] (-) TimerEvent: {}
+[159.087645] (-) TimerEvent: {}
+[159.187896] (-) TimerEvent: {}
+[159.288159] (-) TimerEvent: {}
+[159.388415] (-) TimerEvent: {}
+[159.395976] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 27% complete]\n'}
+[159.488538] (-) TimerEvent: {}
+[159.588791] (-) TimerEvent: {}
+[159.689055] (-) TimerEvent: {}
+[159.778786] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 28% complete]\n'}
+[159.789168] (-) TimerEvent: {}
+[159.889410] (-) TimerEvent: {}
+[159.989659] (-) TimerEvent: {}
+[160.089878] (-) TimerEvent: {}
+[160.190134] (-) TimerEvent: {}
+[160.290383] (-) TimerEvent: {}
+[160.350020] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 29% complete]\n'}
+[160.390494] (-) TimerEvent: {}
+[160.490763] (-) TimerEvent: {}
+[160.591066] (-) TimerEvent: {}
+[160.691338] (-) TimerEvent: {}
+[160.762737] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[160.762947] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'\n"}
+[160.778376] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[160.791447] (-) TimerEvent: {}
+[160.802474] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[160.802774] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'\n"}
+[160.802881] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/protobuf'\n"}
+[160.802972] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[160.880548] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 30% complete]\n'}
+[160.891532] (-) TimerEvent: {}
+[160.965359] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[160.965650] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[160.965719] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[160.965776] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[160.980846] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 70%] No update step for 'protobuf'\n"}
+[160.991764] (-) TimerEvent: {}
+[161.002224] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 71%] No patch step for 'protobuf'\n"}
+[161.024873] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 72%] No configure step for 'protobuf'\n"}
+[161.048141] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 73%] No build step for 'protobuf'\n"}
+[161.071349] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 74%] No install step for 'protobuf'\n"}
+[161.091866] (-) TimerEvent: {}
+[161.094364] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 75%] No test step for 'protobuf'\n"}
+[161.118114] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 76%] Completed 'protobuf'\n"}
+[161.191965] (-) TimerEvent: {}
+[161.195682] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 76%] Built target protobuf\n'}
+[161.292063] (-) TimerEvent: {}
+[161.293396] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 31% complete]\n'}
+[161.392179] (-) TimerEvent: {}
+[161.492434] (-) TimerEvent: {}
+[161.592658] (-) TimerEvent: {}
+[161.692924] (-) TimerEvent: {}
+[161.791925] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 32% complete]\n'}
+[161.792992] (-) TimerEvent: {}
+[161.893215] (-) TimerEvent: {}
+[161.993432] (-) TimerEvent: {}
+[162.093670] (-) TimerEvent: {}
+[162.193977] (-) TimerEvent: {}
+[162.294225] (-) TimerEvent: {}
+[162.358972] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 33% complete]\n'}
+[162.394312] (-) TimerEvent: {}
+[162.494558] (-) TimerEvent: {}
+[162.594778] (-) TimerEvent: {}
+[162.695035] (-) TimerEvent: {}
+[162.795318] (-) TimerEvent: {}
+[162.895568] (-) TimerEvent: {}
+[162.904211] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 34% complete]\n'}
+[162.995698] (-) TimerEvent: {}
+[163.095938] (-) TimerEvent: {}
+[163.196192] (-) TimerEvent: {}
+[163.296456] (-) TimerEvent: {}
+[163.396714] (-) TimerEvent: {}
+[163.496987] (-) TimerEvent: {}
+[163.597208] (-) TimerEvent: {}
+[163.697449] (-) TimerEvent: {}
+[163.727388] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 35% complete]\n'}
+[163.797569] (-) TimerEvent: {}
+[163.897815] (-) TimerEvent: {}
+[163.998109] (-) TimerEvent: {}
+[164.098352] (-) TimerEvent: {}
+[164.198660] (-) TimerEvent: {}
+[164.298932] (-) TimerEvent: {}
+[164.399153] (-) TimerEvent: {}
+[164.499405] (-) TimerEvent: {}
+[164.599670] (-) TimerEvent: {}
+[164.699928] (-) TimerEvent: {}
+[164.800166] (-) TimerEvent: {}
+[164.900478] (-) TimerEvent: {}
+[164.993198] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 36% complete]\n'}
+[165.000596] (-) TimerEvent: {}
+[165.100825] (-) TimerEvent: {}
+[165.201109] (-) TimerEvent: {}
+[165.301387] (-) TimerEvent: {}
+[165.401626] (-) TimerEvent: {}
+[165.501931] (-) TimerEvent: {}
+[165.602188] (-) TimerEvent: {}
+[165.665830] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 37% complete]\n'}
+[165.702247] (-) TimerEvent: {}
+[165.802533] (-) TimerEvent: {}
+[165.902778] (-) TimerEvent: {}
+[166.003014] (-) TimerEvent: {}
+[166.103321] (-) TimerEvent: {}
+[166.203570] (-) TimerEvent: {}
+[166.303824] (-) TimerEvent: {}
+[166.404087] (-) TimerEvent: {}
+[166.504347] (-) TimerEvent: {}
+[166.604585] (-) TimerEvent: {}
+[166.704888] (-) TimerEvent: {}
+[166.805137] (-) TimerEvent: {}
+[166.902190] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 38% complete]\n'}
+[166.905210] (-) TimerEvent: {}
+[167.005446] (-) TimerEvent: {}
+[167.105695] (-) TimerEvent: {}
+[167.205922] (-) TimerEvent: {}
+[167.306152] (-) TimerEvent: {}
+[167.384605] (turtlebot3_tourguide) StderrLine: {'line': b"Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/googletest'...\n"}
+[167.406279] (-) TimerEvent: {}
+[167.506479] (-) TimerEvent: {}
+[167.570957] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 39% complete]\n'}
+[167.606568] (-) TimerEvent: {}
+[167.706806] (-) TimerEvent: {}
+[167.807029] (-) TimerEvent: {}
+[167.907288] (-) TimerEvent: {}
+[168.007528] (-) TimerEvent: {}
+[168.107838] (-) TimerEvent: {}
+[168.208084] (-) TimerEvent: {}
+[168.308346] (-) TimerEvent: {}
+[168.408622] (-) TimerEvent: {}
+[168.409124] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 40% complete]\n'}
+[168.508746] (-) TimerEvent: {}
+[168.608978] (-) TimerEvent: {}
+[168.709296] (-) TimerEvent: {}
+[168.809547] (-) TimerEvent: {}
+[168.909789] (-) TimerEvent: {}
+[168.932282] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 41% complete]\n'}
+[169.009895] (-) TimerEvent: {}
+[169.110197] (-) TimerEvent: {}
+[169.210451] (-) TimerEvent: {}
+[169.310671] (-) TimerEvent: {}
+[169.410921] (-) TimerEvent: {}
+[169.511148] (-) TimerEvent: {}
+[169.571797] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 42% complete]\n'}
+[169.611271] (-) TimerEvent: {}
+[169.711507] (-) TimerEvent: {}
+[169.811818] (-) TimerEvent: {}
+[169.912087] (-) TimerEvent: {}
+[170.012364] (-) TimerEvent: {}
+[170.112605] (-) TimerEvent: {}
+[170.192358] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 43% complete]\n'}
+[170.212720] (-) TimerEvent: {}
+[170.312975] (-) TimerEvent: {}
+[170.413212] (-) TimerEvent: {}
+[170.513471] (-) TimerEvent: {}
+[170.613698] (-) TimerEvent: {}
+[170.713960] (-) TimerEvent: {}
+[170.814214] (-) TimerEvent: {}
+[170.914454] (-) TimerEvent: {}
+[171.014729] (-) TimerEvent: {}
+[171.114949] (-) TimerEvent: {}
+[171.215183] (-) TimerEvent: {}
+[171.315491] (-) TimerEvent: {}
+[171.364501] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 44% complete]\n'}
+[171.415636] (-) TimerEvent: {}
+[171.515882] (-) TimerEvent: {}
+[171.616181] (-) TimerEvent: {}
+[171.716442] (-) TimerEvent: {}
+[171.816679] (-) TimerEvent: {}
+[171.916984] (-) TimerEvent: {}
+[172.017246] (-) TimerEvent: {}
+[172.108777] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 45% complete]\n'}
+[172.117351] (-) TimerEvent: {}
+[172.217654] (-) TimerEvent: {}
+[172.317912] (-) TimerEvent: {}
+[172.418149] (-) TimerEvent: {}
+[172.518449] (-) TimerEvent: {}
+[172.618690] (-) TimerEvent: {}
+[172.718918] (-) TimerEvent: {}
+[172.819162] (-) TimerEvent: {}
+[172.919481] (-) TimerEvent: {}
+[173.019728] (-) TimerEvent: {}
+[173.120055] (-) TimerEvent: {}
+[173.220308] (-) TimerEvent: {}
+[173.320571] (-) TimerEvent: {}
+[173.420837] (-) TimerEvent: {}
+[173.521126] (-) TimerEvent: {}
+[173.621380] (-) TimerEvent: {}
+[173.721636] (-) TimerEvent: {}
+[173.821891] (-) TimerEvent: {}
+[173.922159] (-) TimerEvent: {}
+[174.022413] (-) TimerEvent: {}
+[174.122632] (-) TimerEvent: {}
+[174.222875] (-) TimerEvent: {}
+[174.323176] (-) TimerEvent: {}
+[174.340832] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 46% complete]\n'}
+[174.423297] (-) TimerEvent: {}
+[174.523541] (-) TimerEvent: {}
+[174.561699] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 47% complete]\n'}
+[174.623668] (-) TimerEvent: {}
+[174.723915] (-) TimerEvent: {}
+[174.824169] (-) TimerEvent: {}
+[174.924408] (-) TimerEvent: {}
+[175.024681] (-) TimerEvent: {}
+[175.124931] (-) TimerEvent: {}
+[175.225189] (-) TimerEvent: {}
+[175.325448] (-) TimerEvent: {}
+[175.425705] (-) TimerEvent: {}
+[175.525987] (-) TimerEvent: {}
+[175.626236] (-) TimerEvent: {}
+[175.726534] (-) TimerEvent: {}
+[175.826815] (-) TimerEvent: {}
+[175.927099] (-) TimerEvent: {}
+[176.027405] (-) TimerEvent: {}
+[176.127673] (-) TimerEvent: {}
+[176.227938] (-) TimerEvent: {}
+[176.328186] (-) TimerEvent: {}
+[176.428449] (-) TimerEvent: {}
+[176.528692] (-) TimerEvent: {}
+[176.628944] (-) TimerEvent: {}
+[176.729190] (-) TimerEvent: {}
+[176.829427] (-) TimerEvent: {}
+[176.929664] (-) TimerEvent: {}
+[177.029916] (-) TimerEvent: {}
+[177.130166] (-) TimerEvent: {}
+[177.230400] (-) TimerEvent: {}
+[177.330684] (-) TimerEvent: {}
+[177.370774] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 48% complete]\n'}
+[177.430791] (-) TimerEvent: {}
+[177.531025] (-) TimerEvent: {}
+[177.631298] (-) TimerEvent: {}
+[177.731562] (-) TimerEvent: {}
+[177.831804] (-) TimerEvent: {}
+[177.932110] (-) TimerEvent: {}
+[178.032331] (-) TimerEvent: {}
+[178.132591] (-) TimerEvent: {}
+[178.146155] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 49% complete]\n'}
+[178.232700] (-) TimerEvent: {}
+[178.333007] (-) TimerEvent: {}
+[178.433254] (-) TimerEvent: {}
+[178.533508] (-) TimerEvent: {}
+[178.633749] (-) TimerEvent: {}
+[178.734029] (-) TimerEvent: {}
+[178.834287] (-) TimerEvent: {}
+[178.934535] (-) TimerEvent: {}
+[179.034818] (-) TimerEvent: {}
+[179.135039] (-) TimerEvent: {}
+[179.235277] (-) TimerEvent: {}
+[179.335586] (-) TimerEvent: {}
+[179.435840] (-) TimerEvent: {}
+[179.536076] (-) TimerEvent: {}
+[179.554576] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 50% complete]\n'}
+[179.636199] (-) TimerEvent: {}
+[179.736470] (-) TimerEvent: {}
+[179.836719] (-) TimerEvent: {}
+[179.936975] (-) TimerEvent: {}
+[180.037220] (-) TimerEvent: {}
+[180.137484] (-) TimerEvent: {}
+[180.237733] (-) TimerEvent: {}
+[180.337938] (-) TimerEvent: {}
+[180.438194] (-) TimerEvent: {}
+[180.538505] (-) TimerEvent: {}
+[180.566138] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 51% complete]\n'}
+[180.638593] (-) TimerEvent: {}
+[180.738812] (-) TimerEvent: {}
+[180.839050] (-) TimerEvent: {}
+[180.939349] (-) TimerEvent: {}
+[181.039656] (-) TimerEvent: {}
+[181.139913] (-) TimerEvent: {}
+[181.240137] (-) TimerEvent: {}
+[181.340353] (-) TimerEvent: {}
+[181.440570] (-) TimerEvent: {}
+[181.540822] (-) TimerEvent: {}
+[181.578388] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 52% complete]\n'}
+[181.640914] (-) TimerEvent: {}
+[181.741175] (-) TimerEvent: {}
+[181.841393] (-) TimerEvent: {}
+[181.941624] (-) TimerEvent: {}
+[182.005012] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 53% complete]\n'}
+[182.041746] (-) TimerEvent: {}
+[182.142005] (-) TimerEvent: {}
+[182.242240] (-) TimerEvent: {}
+[182.342454] (-) TimerEvent: {}
+[182.442675] (-) TimerEvent: {}
+[182.542934] (-) TimerEvent: {}
+[182.643175] (-) TimerEvent: {}
+[182.743439] (-) TimerEvent: {}
+[182.838470] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 54% complete]\n'}
+[182.843545] (-) TimerEvent: {}
+[182.943857] (-) TimerEvent: {}
+[183.044112] (-) TimerEvent: {}
+[183.144371] (-) TimerEvent: {}
+[183.231071] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 55% complete]\n'}
+[183.244489] (-) TimerEvent: {}
+[183.344738] (-) TimerEvent: {}
+[183.444992] (-) TimerEvent: {}
+[183.455055] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 56% complete]\n'}
+[183.545109] (-) TimerEvent: {}
+[183.645320] (-) TimerEvent: {}
+[183.745579] (-) TimerEvent: {}
+[183.845851] (-) TimerEvent: {}
+[183.946100] (-) TimerEvent: {}
+[184.046330] (-) TimerEvent: {}
+[184.056730] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 57% complete]\n'}
+[184.146455] (-) TimerEvent: {}
+[184.246687] (-) TimerEvent: {}
+[184.306583] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 58% complete]\n'}
+[184.346809] (-) TimerEvent: {}
+[184.447056] (-) TimerEvent: {}
+[184.516585] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 59% complete]\n'}
+[184.547175] (-) TimerEvent: {}
+[184.647429] (-) TimerEvent: {}
+[184.747667] (-) TimerEvent: {}
+[184.774552] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 60% complete]\n'}
+[184.847786] (-) TimerEvent: {}
+[184.948039] (-) TimerEvent: {}
+[185.048297] (-) TimerEvent: {}
+[185.076122] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 61% complete]\n'}
+[185.148403] (-) TimerEvent: {}
+[185.248640] (-) TimerEvent: {}
+[185.348950] (-) TimerEvent: {}
+[185.449259] (-) TimerEvent: {}
+[185.549514] (-) TimerEvent: {}
+[185.617192] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 62% complete]\n'}
+[185.649619] (-) TimerEvent: {}
+[185.749925] (-) TimerEvent: {}
+[185.850184] (-) TimerEvent: {}
+[185.950448] (-) TimerEvent: {}
+[185.953789] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 63% complete]\n'}
+[186.001284] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 64% complete]\n'}
+[186.050533] (-) TimerEvent: {}
+[186.150787] (-) TimerEvent: {}
+[186.251029] (-) TimerEvent: {}
+[186.351318] (-) TimerEvent: {}
+[186.451596] (-) TimerEvent: {}
+[186.551869] (-) TimerEvent: {}
+[186.652152] (-) TimerEvent: {}
+[186.752379] (-) TimerEvent: {}
+[186.825597] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 65% complete]\n'}
+[186.852486] (-) TimerEvent: {}
+[186.857710] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 66% complete]\n'}
+[186.952578] (-) TimerEvent: {}
+[187.052811] (-) TimerEvent: {}
+[187.153058] (-) TimerEvent: {}
+[187.189475] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 67% complete]\n'}
+[187.253183] (-) TimerEvent: {}
+[187.353461] (-) TimerEvent: {}
+[187.453686] (-) TimerEvent: {}
+[187.553940] (-) TimerEvent: {}
+[187.629554] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 68% complete]\n'}
+[187.654059] (-) TimerEvent: {}
+[187.757738] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 69% complete]\n'}
+[187.757938] (-) TimerEvent: {}
+[187.858198] (-) TimerEvent: {}
+[187.958473] (-) TimerEvent: {}
+[188.058724] (-) TimerEvent: {}
+[188.159045] (-) TimerEvent: {}
+[188.259385] (-) TimerEvent: {}
+[188.359643] (-) TimerEvent: {}
+[188.459864] (-) TimerEvent: {}
+[188.560133] (-) TimerEvent: {}
+[188.660403] (-) TimerEvent: {}
+[188.733718] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 70% complete]\n'}
+[188.760516] (-) TimerEvent: {}
+[188.860885] (-) TimerEvent: {}
+[188.961219] (-) TimerEvent: {}
+[189.061538] (-) TimerEvent: {}
+[189.161842] (-) TimerEvent: {}
+[189.253247] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 71% complete]\n'}
+[189.261968] (-) TimerEvent: {}
+[189.362200] (-) TimerEvent: {}
+[189.462484] (-) TimerEvent: {}
+[189.562766] (-) TimerEvent: {}
+[189.663008] (-) TimerEvent: {}
+[189.763389] (-) TimerEvent: {}
+[189.863677] (-) TimerEvent: {}
+[189.963937] (-) TimerEvent: {}
+[190.064199] (-) TimerEvent: {}
+[190.143083] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 72% complete]\n'}
+[190.164289] (-) TimerEvent: {}
+[190.264550] (-) TimerEvent: {}
+[190.364780] (-) TimerEvent: {}
+[190.465049] (-) TimerEvent: {}
+[190.565314] (-) TimerEvent: {}
+[190.665650] (-) TimerEvent: {}
+[190.765899] (-) TimerEvent: {}
+[190.866189] (-) TimerEvent: {}
+[190.966517] (-) TimerEvent: {}
+[191.066848] (-) TimerEvent: {}
+[191.167098] (-) TimerEvent: {}
+[191.267424] (-) TimerEvent: {}
+[191.301577] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 73% complete]\n'}
+[191.367555] (-) TimerEvent: {}
+[191.442964] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 74% complete]\n'}
+[191.467677] (-) TimerEvent: {}
+[191.567946] (-) TimerEvent: {}
+[191.668192] (-) TimerEvent: {}
+[191.768577] (-) TimerEvent: {}
+[191.868845] (-) TimerEvent: {}
+[191.969104] (-) TimerEvent: {}
+[192.069347] (-) TimerEvent: {}
+[192.169665] (-) TimerEvent: {}
+[192.269929] (-) TimerEvent: {}
+[192.292499] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 75% complete]\n'}
+[192.370058] (-) TimerEvent: {}
+[192.470331] (-) TimerEvent: {}
+[192.570581] (-) TimerEvent: {}
+[192.670807] (-) TimerEvent: {}
+[192.770468] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 76% complete]\n'}
+[192.770865] (-) TimerEvent: {}
+[192.871042] (-) TimerEvent: {}
+[192.971292] (-) TimerEvent: {}
+[193.071624] (-) TimerEvent: {}
+[193.171900] (-) TimerEvent: {}
+[193.272163] (-) TimerEvent: {}
+[193.372410] (-) TimerEvent: {}
+[193.472784] (-) TimerEvent: {}
+[193.573051] (-) TimerEvent: {}
+[193.673307] (-) TimerEvent: {}
+[193.773539] (-) TimerEvent: {}
+[193.873822] (-) TimerEvent: {}
+[193.924838] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 77% complete]\n'}
+[193.973953] (-) TimerEvent: {}
+[194.074228] (-) TimerEvent: {}
+[194.080400] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 78% complete]\n'}
+[194.174327] (-) TimerEvent: {}
+[194.274570] (-) TimerEvent: {}
+[194.374796] (-) TimerEvent: {}
+[194.475070] (-) TimerEvent: {}
+[194.575294] (-) TimerEvent: {}
+[194.675575] (-) TimerEvent: {}
+[194.775841] (-) TimerEvent: {}
+[194.876109] (-) TimerEvent: {}
+[194.976355] (-) TimerEvent: {}
+[195.024872] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 79% complete]\n'}
+[195.076474] (-) TimerEvent: {}
+[195.176739] (-) TimerEvent: {}
+[195.277020] (-) TimerEvent: {}
+[195.377290] (-) TimerEvent: {}
+[195.477525] (-) TimerEvent: {}
+[195.577797] (-) TimerEvent: {}
+[195.678060] (-) TimerEvent: {}
+[195.778304] (-) TimerEvent: {}
+[195.878572] (-) TimerEvent: {}
+[195.978859] (-) TimerEvent: {}
+[196.079148] (-) TimerEvent: {}
+[196.179393] (-) TimerEvent: {}
+[196.279708] (-) TimerEvent: {}
+[196.379997] (-) TimerEvent: {}
+[196.480331] (-) TimerEvent: {}
+[196.580622] (-) TimerEvent: {}
+[196.680916] (-) TimerEvent: {}
+[196.781199] (-) TimerEvent: {}
+[196.881460] (-) TimerEvent: {}
+[196.981708] (-) TimerEvent: {}
+[197.082033] (-) TimerEvent: {}
+[197.182279] (-) TimerEvent: {}
+[197.282538] (-) TimerEvent: {}
+[197.382815] (-) TimerEvent: {}
+[197.483095] (-) TimerEvent: {}
+[197.583349] (-) TimerEvent: {}
+[197.683593] (-) TimerEvent: {}
+[197.783917] (-) TimerEvent: {}
+[197.884150] (-) TimerEvent: {}
+[197.984415] (-) TimerEvent: {}
+[198.084668] (-) TimerEvent: {}
+[198.185010] (-) TimerEvent: {}
+[198.285286] (-) TimerEvent: {}
+[198.385530] (-) TimerEvent: {}
+[198.485853] (-) TimerEvent: {}
+[198.586125] (-) TimerEvent: {}
+[198.686353] (-) TimerEvent: {}
+[198.786597] (-) TimerEvent: {}
+[198.886872] (-) TimerEvent: {}
+[198.987101] (-) TimerEvent: {}
+[199.087410] (-) TimerEvent: {}
+[199.187686] (-) TimerEvent: {}
+[199.287927] (-) TimerEvent: {}
+[199.388252] (-) TimerEvent: {}
+[199.488529] (-) TimerEvent: {}
+[199.588774] (-) TimerEvent: {}
+[199.689090] (-) TimerEvent: {}
+[199.789370] (-) TimerEvent: {}
+[199.889633] (-) TimerEvent: {}
+[199.989890] (-) TimerEvent: {}
+[200.090242] (-) TimerEvent: {}
+[200.190488] (-) TimerEvent: {}
+[200.290761] (-) TimerEvent: {}
+[200.390985] (-) TimerEvent: {}
+[200.491207] (-) TimerEvent: {}
+[200.591467] (-) TimerEvent: {}
+[200.691752] (-) TimerEvent: {}
+[200.792015] (-) TimerEvent: {}
+[200.892256] (-) TimerEvent: {}
+[200.992570] (-) TimerEvent: {}
+[201.092837] (-) TimerEvent: {}
+[201.193109] (-) TimerEvent: {}
+[201.293389] (-) TimerEvent: {}
+[201.393650] (-) TimerEvent: {}
+[201.493906] (-) TimerEvent: {}
+[201.594223] (-) TimerEvent: {}
+[201.694499] (-) TimerEvent: {}
+[201.794732] (-) TimerEvent: {}
+[201.894964] (-) TimerEvent: {}
+[201.995204] (-) TimerEvent: {}
+[202.095481] (-) TimerEvent: {}
+[202.195765] (-) TimerEvent: {}
+[202.296022] (-) TimerEvent: {}
+[202.396314] (-) TimerEvent: {}
+[202.496536] (-) TimerEvent: {}
+[202.596800] (-) TimerEvent: {}
+[202.697058] (-) TimerEvent: {}
+[202.797338] (-) TimerEvent: {}
+[202.897607] (-) TimerEvent: {}
+[202.997894] (-) TimerEvent: {}
+[203.098240] (-) TimerEvent: {}
+[203.198473] (-) TimerEvent: {}
+[203.298782] (-) TimerEvent: {}
+[203.399132] (-) TimerEvent: {}
+[203.499403] (-) TimerEvent: {}
+[203.599738] (-) TimerEvent: {}
+[203.700030] (-) TimerEvent: {}
+[203.800327] (-) TimerEvent: {}
+[203.818835] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 80% complete]\n'}
+[203.900434] (-) TimerEvent: {}
+[204.000757] (-) TimerEvent: {}
+[204.100975] (-) TimerEvent: {}
+[204.201237] (-) TimerEvent: {}
+[204.301499] (-) TimerEvent: {}
+[204.401764] (-) TimerEvent: {}
+[204.472357] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 81% complete]\n'}
+[204.501890] (-) TimerEvent: {}
+[204.602132] (-) TimerEvent: {}
+[204.702457] (-) TimerEvent: {}
+[204.802680] (-) TimerEvent: {}
+[204.902928] (-) TimerEvent: {}
+[205.003262] (-) TimerEvent: {}
+[205.103534] (-) TimerEvent: {}
+[205.203795] (-) TimerEvent: {}
+[205.285877] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 82% complete]\n'}
+[205.303917] (-) TimerEvent: {}
+[205.404175] (-) TimerEvent: {}
+[205.504459] (-) TimerEvent: {}
+[205.604708] (-) TimerEvent: {}
+[205.704944] (-) TimerEvent: {}
+[205.728803] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 83% complete]\n'}
+[205.805033] (-) TimerEvent: {}
+[205.905279] (-) TimerEvent: {}
+[206.005520] (-) TimerEvent: {}
+[206.105796] (-) TimerEvent: {}
+[206.206049] (-) TimerEvent: {}
+[206.220335] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 84% complete]\n'}
+[206.306177] (-) TimerEvent: {}
+[206.406447] (-) TimerEvent: {}
+[206.506687] (-) TimerEvent: {}
+[206.606990] (-) TimerEvent: {}
+[206.669254] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 85% complete]\n'}
+[206.707121] (-) TimerEvent: {}
+[206.807340] (-) TimerEvent: {}
+[206.907617] (-) TimerEvent: {}
+[207.007843] (-) TimerEvent: {}
+[207.108057] (-) TimerEvent: {}
+[207.208322] (-) TimerEvent: {}
+[207.308592] (-) TimerEvent: {}
+[207.408849] (-) TimerEvent: {}
+[207.509091] (-) TimerEvent: {}
+[207.521777] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 86% complete]\n'}
+[207.609197] (-) TimerEvent: {}
+[207.709492] (-) TimerEvent: {}
+[207.809784] (-) TimerEvent: {}
+[207.910064] (-) TimerEvent: {}
+[208.010344] (-) TimerEvent: {}
+[208.110625] (-) TimerEvent: {}
+[208.210879] (-) TimerEvent: {}
+[208.311162] (-) TimerEvent: {}
+[208.357373] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 87% complete]\n'}
+[208.411282] (-) TimerEvent: {}
+[208.511533] (-) TimerEvent: {}
+[208.611771] (-) TimerEvent: {}
+[208.712083] (-) TimerEvent: {}
+[208.812346] (-) TimerEvent: {}
+[208.912615] (-) TimerEvent: {}
+[209.012865] (-) TimerEvent: {}
+[209.113194] (-) TimerEvent: {}
+[209.213464] (-) TimerEvent: {}
+[209.279682] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 88% complete]\n'}
+[209.313579] (-) TimerEvent: {}
+[209.413898] (-) TimerEvent: {}
+[209.514206] (-) TimerEvent: {}
+[209.614512] (-) TimerEvent: {}
+[209.714833] (-) TimerEvent: {}
+[209.815112] (-) TimerEvent: {}
+[209.915402] (-) TimerEvent: {}
+[210.015627] (-) TimerEvent: {}
+[210.115896] (-) TimerEvent: {}
+[210.216143] (-) TimerEvent: {}
+[210.281253] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 89% complete]\n'}
+[210.316245] (-) TimerEvent: {}
+[210.416513] (-) TimerEvent: {}
+[210.516761] (-) TimerEvent: {}
+[210.617036] (-) TimerEvent: {}
+[210.717291] (-) TimerEvent: {}
+[210.817524] (-) TimerEvent: {}
+[210.917782] (-) TimerEvent: {}
+[211.018038] (-) TimerEvent: {}
+[211.118284] (-) TimerEvent: {}
+[211.218584] (-) TimerEvent: {}
+[211.318807] (-) TimerEvent: {}
+[211.402514] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 90% complete]\n'}
+[211.418901] (-) TimerEvent: {}
+[211.519180] (-) TimerEvent: {}
+[211.619446] (-) TimerEvent: {}
+[211.719708] (-) TimerEvent: {}
+[211.819963] (-) TimerEvent: {}
+[211.920249] (-) TimerEvent: {}
+[212.020541] (-) TimerEvent: {}
+[212.120864] (-) TimerEvent: {}
+[212.221118] (-) TimerEvent: {}
+[212.222114] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 91% complete]\n'}
+[212.321222] (-) TimerEvent: {}
+[212.421540] (-) TimerEvent: {}
+[212.521806] (-) TimerEvent: {}
+[212.622075] (-) TimerEvent: {}
+[212.722337] (-) TimerEvent: {}
+[212.822596] (-) TimerEvent: {}
+[212.922859] (-) TimerEvent: {}
+[213.023090] (-) TimerEvent: {}
+[213.123365] (-) TimerEvent: {}
+[213.136635] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 92% complete]\n'}
+[213.223494] (-) TimerEvent: {}
+[213.323725] (-) TimerEvent: {}
+[213.424010] (-) TimerEvent: {}
+[213.524277] (-) TimerEvent: {}
+[213.624500] (-) TimerEvent: {}
+[213.724748] (-) TimerEvent: {}
+[213.825037] (-) TimerEvent: {}
+[213.925327] (-) TimerEvent: {}
+[214.025637] (-) TimerEvent: {}
+[214.125910] (-) TimerEvent: {}
+[214.226138] (-) TimerEvent: {}
+[214.287579] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 93% complete]\n'}
+[214.326247] (-) TimerEvent: {}
+[214.426531] (-) TimerEvent: {}
+[214.526752] (-) TimerEvent: {}
+[214.586128] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 94% complete]\n'}
+[214.626841] (-) TimerEvent: {}
+[214.727098] (-) TimerEvent: {}
+[214.827359] (-) TimerEvent: {}
+[214.901648] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 95% complete]\n'}
+[214.927480] (-) TimerEvent: {}
+[215.027740] (-) TimerEvent: {}
+[215.127982] (-) TimerEvent: {}
+[215.184994] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 96% complete]\n'}
+[215.228099] (-) TimerEvent: {}
+[215.328367] (-) TimerEvent: {}
+[215.428641] (-) TimerEvent: {}
+[215.474957] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 97% complete]\n'}
+[215.528738] (-) TimerEvent: {}
+[215.628981] (-) TimerEvent: {}
+[215.729235] (-) TimerEvent: {}
+[215.829497] (-) TimerEvent: {}
+[215.929717] (-) TimerEvent: {}
+[216.029957] (-) TimerEvent: {}
+[216.130278] (-) TimerEvent: {}
+[216.167106] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 98% complete]\n'}
+[216.230402] (-) TimerEvent: {}
+[216.330639] (-) TimerEvent: {}
+[216.430870] (-) TimerEvent: {}
+[216.531125] (-) TimerEvent: {}
+[216.631463] (-) TimerEvent: {}
+[216.731734] (-) TimerEvent: {}
+[216.831988] (-) TimerEvent: {}
+[216.932291] (-) TimerEvent: {}
+[217.032581] (-) TimerEvent: {}
+[217.132841] (-) TimerEvent: {}
+[217.152373] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 99% complete]\n'}
+[217.232985] (-) TimerEvent: {}
+[217.333357] (-) TimerEvent: {}
+[217.433590] (-) TimerEvent: {}
+[217.472474] (turtlebot3_tourguide) StdoutLine: {'line': b'-- [download 100% complete]\n'}
+[217.533680] (-) TimerEvent: {}
+[217.634069] (-) TimerEvent: {}
+[217.734533] (-) TimerEvent: {}
+[217.835273] (-) TimerEvent: {}
+[217.935709] (-) TimerEvent: {}
+[218.036031] (-) TimerEvent: {}
+[218.136314] (-) TimerEvent: {}
+[218.236813] (-) TimerEvent: {}
+[218.337328] (-) TimerEvent: {}
+[218.437537] (-) TimerEvent: {}
+[218.537798] (-) TimerEvent: {}
+[218.638081] (-) TimerEvent: {}
+[218.738326] (-) TimerEvent: {}
+[218.838628] (-) TimerEvent: {}
+[218.881464] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[218.881636] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'\n"}
+[218.902471] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[218.919185] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[218.919384] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'\n"}
+[218.919451] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/grpc'\n"}
+[218.919519] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[218.938714] (-) TimerEvent: {}
+[219.038933] (-) TimerEvent: {}
+[219.139161] (-) TimerEvent: {}
+[219.239438] (-) TimerEvent: {}
+[219.297087] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[219.297234] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[219.297329] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[219.297387] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[219.313768] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 77%] No update step for 'grpc'\n"}
+[219.337333] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 78%] No patch step for 'grpc'\n"}
+[219.339544] (-) TimerEvent: {}
+[219.360559] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 80%] No configure step for 'grpc'\n"}
+[219.383905] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 81%] No build step for 'grpc'\n"}
+[219.408325] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 82%] No install step for 'grpc'\n"}
+[219.434425] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 83%] No test step for 'grpc'\n"}
+[219.443766] (-) TimerEvent: {}
+[219.469252] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 84%] Completed 'grpc'\n"}
+[219.501914] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 84%] Built target grpc\n'}
+[219.543853] (-) TimerEvent: {}
+[219.644098] (-) TimerEvent: {}
+[219.744363] (-) TimerEvent: {}
+[219.844626] (-) TimerEvent: {}
+[219.944891] (-) TimerEvent: {}
+[220.045154] (-) TimerEvent: {}
+[220.145398] (-) TimerEvent: {}
+[220.245705] (-) TimerEvent: {}
+[220.345966] (-) TimerEvent: {}
+[220.446222] (-) TimerEvent: {}
+[220.546477] (-) TimerEvent: {}
+[220.646696] (-) TimerEvent: {}
+[220.746926] (-) TimerEvent: {}
+[220.847156] (-) TimerEvent: {}
+[220.947421] (-) TimerEvent: {}
+[221.047697] (-) TimerEvent: {}
+[221.147959] (-) TimerEvent: {}
+[221.248226] (-) TimerEvent: {}
+[221.348485] (-) TimerEvent: {}
+[221.448745] (-) TimerEvent: {}
+[221.548996] (-) TimerEvent: {}
+[221.649218] (-) TimerEvent: {}
+[221.749478] (-) TimerEvent: {}
+[221.849733] (-) TimerEvent: {}
+[221.949955] (-) TimerEvent: {}
+[222.050180] (-) TimerEvent: {}
+[222.150429] (-) TimerEvent: {}
+[222.250656] (-) TimerEvent: {}
+[222.350913] (-) TimerEvent: {}
+[222.451165] (-) TimerEvent: {}
+[222.551427] (-) TimerEvent: {}
+[222.651658] (-) TimerEvent: {}
+[222.751880] (-) TimerEvent: {}
+[222.852132] (-) TimerEvent: {}
+[222.952355] (-) TimerEvent: {}
+[223.052639] (-) TimerEvent: {}
+[223.152900] (-) TimerEvent: {}
+[223.253167] (-) TimerEvent: {}
+[223.353432] (-) TimerEvent: {}
+[223.453700] (-) TimerEvent: {}
+[223.553927] (-) TimerEvent: {}
+[223.654193] (-) TimerEvent: {}
+[223.754457] (-) TimerEvent: {}
+[223.854679] (-) TimerEvent: {}
+[223.954908] (-) TimerEvent: {}
+[224.055136] (-) TimerEvent: {}
+[224.155398] (-) TimerEvent: {}
+[224.255655] (-) TimerEvent: {}
+[224.355902] (-) TimerEvent: {}
+[224.456167] (-) TimerEvent: {}
+[224.556435] (-) TimerEvent: {}
+[224.656702] (-) TimerEvent: {}
+[224.756970] (-) TimerEvent: {}
+[224.857278] (-) TimerEvent: {}
+[224.957520] (-) TimerEvent: {}
+[225.057777] (-) TimerEvent: {}
+[225.158038] (-) TimerEvent: {}
+[225.258297] (-) TimerEvent: {}
+[225.358536] (-) TimerEvent: {}
+[225.458809] (-) TimerEvent: {}
+[225.559062] (-) TimerEvent: {}
+[225.659317] (-) TimerEvent: {}
+[225.759543] (-) TimerEvent: {}
+[225.859798] (-) TimerEvent: {}
+[225.960025] (-) TimerEvent: {}
+[226.060269] (-) TimerEvent: {}
+[226.160504] (-) TimerEvent: {}
+[226.260767] (-) TimerEvent: {}
+[226.361032] (-) TimerEvent: {}
+[226.461295] (-) TimerEvent: {}
+[226.561557] (-) TimerEvent: {}
+[226.661805] (-) TimerEvent: {}
+[226.762085] (-) TimerEvent: {}
+[226.862391] (-) TimerEvent: {}
+[226.962826] (-) TimerEvent: {}
+[227.063078] (-) TimerEvent: {}
+[227.163348] (-) TimerEvent: {}
+[227.263707] (-) TimerEvent: {}
+[227.363958] (-) TimerEvent: {}
+[227.464186] (-) TimerEvent: {}
+[227.564419] (-) TimerEvent: {}
+[227.664671] (-) TimerEvent: {}
+[227.764956] (-) TimerEvent: {}
+[227.865204] (-) TimerEvent: {}
+[227.965485] (-) TimerEvent: {}
+[228.065797] (-) TimerEvent: {}
+[228.166050] (-) TimerEvent: {}
+[228.266315] (-) TimerEvent: {}
+[228.366587] (-) TimerEvent: {}
+[228.466818] (-) TimerEvent: {}
+[228.567067] (-) TimerEvent: {}
+[228.667399] (-) TimerEvent: {}
+[228.767638] (-) TimerEvent: {}
+[228.867865] (-) TimerEvent: {}
+[228.968127] (-) TimerEvent: {}
+[229.068366] (-) TimerEvent: {}
+[229.168634] (-) TimerEvent: {}
+[229.268889] (-) TimerEvent: {}
+[229.369153] (-) TimerEvent: {}
+[229.469407] (-) TimerEvent: {}
+[229.569657] (-) TimerEvent: {}
+[229.669868] (-) TimerEvent: {}
+[229.770106] (-) TimerEvent: {}
+[229.870384] (-) TimerEvent: {}
+[229.970688] (-) TimerEvent: {}
+[230.071016] (-) TimerEvent: {}
+[230.171243] (-) TimerEvent: {}
+[230.271499] (-) TimerEvent: {}
+[230.371753] (-) TimerEvent: {}
+[230.472005] (-) TimerEvent: {}
+[230.572262] (-) TimerEvent: {}
+[230.672522] (-) TimerEvent: {}
+[230.772784] (-) TimerEvent: {}
+[230.873042] (-) TimerEvent: {}
+[230.973297] (-) TimerEvent: {}
+[231.073553] (-) TimerEvent: {}
+[231.173806] (-) TimerEvent: {}
+[231.274055] (-) TimerEvent: {}
+[231.374273] (-) TimerEvent: {}
+[231.474491] (-) TimerEvent: {}
+[231.574741] (-) TimerEvent: {}
+[231.674966] (-) TimerEvent: {}
+[231.775222] (-) TimerEvent: {}
+[231.875444] (-) TimerEvent: {}
+[231.975698] (-) TimerEvent: {}
+[232.075955] (-) TimerEvent: {}
+[232.176212] (-) TimerEvent: {}
+[232.276466] (-) TimerEvent: {}
+[232.376719] (-) TimerEvent: {}
+[232.476962] (-) TimerEvent: {}
+[232.577225] (-) TimerEvent: {}
+[232.677478] (-) TimerEvent: {}
+[232.777733] (-) TimerEvent: {}
+[232.877993] (-) TimerEvent: {}
+[232.978259] (-) TimerEvent: {}
+[233.078497] (-) TimerEvent: {}
+[233.178718] (-) TimerEvent: {}
+[233.278940] (-) TimerEvent: {}
+[233.379188] (-) TimerEvent: {}
+[233.479410] (-) TimerEvent: {}
+[233.579660] (-) TimerEvent: {}
+[233.679910] (-) TimerEvent: {}
+[233.780158] (-) TimerEvent: {}
+[233.880415] (-) TimerEvent: {}
+[233.980671] (-) TimerEvent: {}
+[234.080922] (-) TimerEvent: {}
+[234.181182] (-) TimerEvent: {}
+[234.281441] (-) TimerEvent: {}
+[234.381668] (-) TimerEvent: {}
+[234.481939] (-) TimerEvent: {}
+[234.582181] (-) TimerEvent: {}
+[234.682488] (-) TimerEvent: {}
+[234.782780] (-) TimerEvent: {}
+[234.882999] (-) TimerEvent: {}
+[234.983257] (-) TimerEvent: {}
+[235.083479] (-) TimerEvent: {}
+[235.183734] (-) TimerEvent: {}
+[235.283989] (-) TimerEvent: {}
+[235.384241] (-) TimerEvent: {}
+[235.484496] (-) TimerEvent: {}
+[235.584745] (-) TimerEvent: {}
+[235.685066] (-) TimerEvent: {}
+[235.785299] (-) TimerEvent: {}
+[235.885560] (-) TimerEvent: {}
+[235.985825] (-) TimerEvent: {}
+[236.086084] (-) TimerEvent: {}
+[236.186340] (-) TimerEvent: {}
+[236.286577] (-) TimerEvent: {}
+[236.386798] (-) TimerEvent: {}
+[236.487014] (-) TimerEvent: {}
+[236.587235] (-) TimerEvent: {}
+[236.687448] (-) TimerEvent: {}
+[236.787668] (-) TimerEvent: {}
+[236.887919] (-) TimerEvent: {}
+[236.988181] (-) TimerEvent: {}
+[237.088434] (-) TimerEvent: {}
+[237.188688] (-) TimerEvent: {}
+[237.288942] (-) TimerEvent: {}
+[237.389190] (-) TimerEvent: {}
+[237.489439] (-) TimerEvent: {}
+[237.589691] (-) TimerEvent: {}
+[237.689948] (-) TimerEvent: {}
+[237.790200] (-) TimerEvent: {}
+[237.890455] (-) TimerEvent: {}
+[237.990709] (-) TimerEvent: {}
+[238.090921] (-) TimerEvent: {}
+[238.191169] (-) TimerEvent: {}
+[238.291422] (-) TimerEvent: {}
+[238.391672] (-) TimerEvent: {}
+[238.491930] (-) TimerEvent: {}
+[238.592184] (-) TimerEvent: {}
+[238.692422] (-) TimerEvent: {}
+[238.792743] (-) TimerEvent: {}
+[238.892999] (-) TimerEvent: {}
+[238.993254] (-) TimerEvent: {}
+[239.093506] (-) TimerEvent: {}
+[239.193750] (-) TimerEvent: {}
+[239.294002] (-) TimerEvent: {}
+[239.394268] (-) TimerEvent: {}
+[239.494619] (-) TimerEvent: {}
+[239.594845] (-) TimerEvent: {}
+[239.695100] (-) TimerEvent: {}
+[239.795357] (-) TimerEvent: {}
+[239.895611] (-) TimerEvent: {}
+[239.995866] (-) TimerEvent: {}
+[240.096121] (-) TimerEvent: {}
+[240.196394] (-) TimerEvent: {}
+[240.296644] (-) TimerEvent: {}
+[240.396896] (-) TimerEvent: {}
+[240.497143] (-) TimerEvent: {}
+[240.597366] (-) TimerEvent: {}
+[240.697616] (-) TimerEvent: {}
+[240.797830] (-) TimerEvent: {}
+[240.898076] (-) TimerEvent: {}
+[240.998326] (-) TimerEvent: {}
+[241.098551] (-) TimerEvent: {}
+[241.198763] (-) TimerEvent: {}
+[241.298978] (-) TimerEvent: {}
+[241.399231] (-) TimerEvent: {}
+[241.499478] (-) TimerEvent: {}
+[241.599729] (-) TimerEvent: {}
+[241.699984] (-) TimerEvent: {}
+[241.800241] (-) TimerEvent: {}
+[241.900502] (-) TimerEvent: {}
+[242.000747] (-) TimerEvent: {}
+[242.100992] (-) TimerEvent: {}
+[242.201205] (-) TimerEvent: {}
+[242.301450] (-) TimerEvent: {}
+[242.401698] (-) TimerEvent: {}
+[242.501948] (-) TimerEvent: {}
+[242.602199] (-) TimerEvent: {}
+[242.702449] (-) TimerEvent: {}
+[242.802674] (-) TimerEvent: {}
+[242.902894] (-) TimerEvent: {}
+[243.003114] (-) TimerEvent: {}
+[243.103355] (-) TimerEvent: {}
+[243.203603] (-) TimerEvent: {}
+[243.303852] (-) TimerEvent: {}
+[243.404107] (-) TimerEvent: {}
+[243.504363] (-) TimerEvent: {}
+[243.604621] (-) TimerEvent: {}
+[243.704880] (-) TimerEvent: {}
+[243.805127] (-) TimerEvent: {}
+[243.905377] (-) TimerEvent: {}
+[244.005643] (-) TimerEvent: {}
+[244.105904] (-) TimerEvent: {}
+[244.206154] (-) TimerEvent: {}
+[244.306403] (-) TimerEvent: {}
+[244.406642] (-) TimerEvent: {}
+[244.506863] (-) TimerEvent: {}
+[244.607084] (-) TimerEvent: {}
+[244.707336] (-) TimerEvent: {}
+[244.807588] (-) TimerEvent: {}
+[244.907835] (-) TimerEvent: {}
+[245.008084] (-) TimerEvent: {}
+[245.108314] (-) TimerEvent: {}
+[245.208552] (-) TimerEvent: {}
+[245.308778] (-) TimerEvent: {}
+[245.409072] (-) TimerEvent: {}
+[245.509327] (-) TimerEvent: {}
+[245.609580] (-) TimerEvent: {}
+[245.709834] (-) TimerEvent: {}
+[245.810056] (-) TimerEvent: {}
+[245.910274] (-) TimerEvent: {}
+[246.010516] (-) TimerEvent: {}
+[246.110956] (-) TimerEvent: {}
+[246.211174] (-) TimerEvent: {}
+[246.311399] (-) TimerEvent: {}
+[246.411658] (-) TimerEvent: {}
+[246.511872] (-) TimerEvent: {}
+[246.612140] (-) TimerEvent: {}
+[246.712360] (-) TimerEvent: {}
+[246.812613] (-) TimerEvent: {}
+[246.912934] (-) TimerEvent: {}
+[247.013180] (-) TimerEvent: {}
+[247.113424] (-) TimerEvent: {}
+[247.213675] (-) TimerEvent: {}
+[247.313921] (-) TimerEvent: {}
+[247.414172] (-) TimerEvent: {}
+[247.514430] (-) TimerEvent: {}
+[247.614652] (-) TimerEvent: {}
+[247.714871] (-) TimerEvent: {}
+[247.815094] (-) TimerEvent: {}
+[247.915336] (-) TimerEvent: {}
+[248.015701] (-) TimerEvent: {}
+[248.115958] (-) TimerEvent: {}
+[248.216213] (-) TimerEvent: {}
+[248.316469] (-) TimerEvent: {}
+[248.416723] (-) TimerEvent: {}
+[248.516953] (-) TimerEvent: {}
+[248.617232] (-) TimerEvent: {}
+[248.717547] (-) TimerEvent: {}
+[248.736114] (turtlebot3_tourguide) StdoutLine: {'line': b"Submodule path 'third_party/benchmark': checked out 'bf585a2789e30585b4e3ce6baf11ef2750b54677'\n"}
+[248.803558] (turtlebot3_tourguide) StdoutLine: {'line': b"Submodule path 'third_party/googletest': checked out 'c27acebba3b3c7d94209e0467b0a801db4af73ed'\n"}
+[248.817655] (-) TimerEvent: {}
+[248.834788] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 85%] Performing update step for 'leveldb'\n"}
+[248.857808] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 86%] Performing patch step for 'leveldb'\n"}
+[248.897462] (turtlebot3_tourguide) StderrLine: {'line': b'Checking patch util/env_windows.cc...\n'}
+[248.897682] (turtlebot3_tourguide) StderrLine: {'line': b'Checking patch util/env_windows_test.cc...\n'}
+[248.897764] (turtlebot3_tourguide) StderrLine: {'line': b'Applied patch util/env_windows.cc cleanly.\n'}
+[248.897823] (turtlebot3_tourguide) StderrLine: {'line': b'Applied patch util/env_windows_test.cc cleanly.\n'}
+[248.897920] (turtlebot3_tourguide) StdoutLine: {'line': b'Applying patch /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external/leveldb-1.23_windows_paths.patch\n'}
+[248.917737] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 87%] No configure step for 'leveldb'\n"}
+[248.917879] (-) TimerEvent: {}
+[248.941829] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 88%] No build step for 'leveldb'\n"}
+[248.964698] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 90%] No install step for 'leveldb'\n"}
+[248.988272] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 91%] No test step for 'leveldb'\n"}
+[249.011103] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 92%] Completed 'leveldb'\n"}
+[249.018008] (-) TimerEvent: {}
+[249.042199] (turtlebot3_tourguide) StdoutLine: {'line': b'[ 92%] Built target leveldb\n'}
+[249.118130] (-) TimerEvent: {}
+[249.218388] (-) TimerEvent: {}
+[249.318637] (-) TimerEvent: {}
+[249.418912] (-) TimerEvent: {}
+[249.519191] (-) TimerEvent: {}
+[249.619473] (-) TimerEvent: {}
+[249.719751] (-) TimerEvent: {}
+[249.820028] (-) TimerEvent: {}
+[249.920297] (-) TimerEvent: {}
+[250.020567] (-) TimerEvent: {}
+[250.120854] (-) TimerEvent: {}
+[250.221146] (-) TimerEvent: {}
+[250.321446] (-) TimerEvent: {}
+[250.421729] (-) TimerEvent: {}
+[250.522009] (-) TimerEvent: {}
+[250.622295] (-) TimerEvent: {}
+[250.722625] (-) TimerEvent: {}
+[250.822975] (-) TimerEvent: {}
+[250.923315] (-) TimerEvent: {}
+[251.023694] (-) TimerEvent: {}
+[251.123971] (-) TimerEvent: {}
+[251.224298] (-) TimerEvent: {}
+[251.324567] (-) TimerEvent: {}
+[251.424807] (-) TimerEvent: {}
+[251.525056] (-) TimerEvent: {}
+[251.625313] (-) TimerEvent: {}
+[251.725537] (-) TimerEvent: {}
+[251.825763] (-) TimerEvent: {}
+[251.925994] (-) TimerEvent: {}
+[252.026220] (-) TimerEvent: {}
+[252.126481] (-) TimerEvent: {}
+[252.226722] (-) TimerEvent: {}
+[252.327014] (-) TimerEvent: {}
+[252.427316] (-) TimerEvent: {}
+[252.527646] (-) TimerEvent: {}
+[252.627938] (-) TimerEvent: {}
+[252.728226] (-) TimerEvent: {}
+[252.828543] (-) TimerEvent: {}
+[252.928798] (-) TimerEvent: {}
+[253.029053] (-) TimerEvent: {}
+[253.129307] (-) TimerEvent: {}
+[253.229526] (-) TimerEvent: {}
+[253.329753] (-) TimerEvent: {}
+[253.430016] (-) TimerEvent: {}
+[253.530277] (-) TimerEvent: {}
+[253.630491] (-) TimerEvent: {}
+[253.730713] (-) TimerEvent: {}
+[253.830952] (-) TimerEvent: {}
+[253.931289] (-) TimerEvent: {}
+[254.031608] (-) TimerEvent: {}
+[254.131900] (-) TimerEvent: {}
+[254.232195] (-) TimerEvent: {}
+[254.332489] (-) TimerEvent: {}
+[254.432792] (-) TimerEvent: {}
+[254.533051] (-) TimerEvent: {}
+[254.633309] (-) TimerEvent: {}
+[254.733568] (-) TimerEvent: {}
+[254.833829] (-) TimerEvent: {}
+[254.934090] (-) TimerEvent: {}
+[255.034352] (-) TimerEvent: {}
+[255.134583] (-) TimerEvent: {}
+[255.234806] (-) TimerEvent: {}
+[255.335023] (-) TimerEvent: {}
+[255.435282] (-) TimerEvent: {}
+[255.535534] (-) TimerEvent: {}
+[255.635791] (-) TimerEvent: {}
+[255.736042] (-) TimerEvent: {}
+[255.836301] (-) TimerEvent: {}
+[255.936560] (-) TimerEvent: {}
+[256.036820] (-) TimerEvent: {}
+[256.137043] (-) TimerEvent: {}
+[256.237292] (-) TimerEvent: {}
+[256.337551] (-) TimerEvent: {}
+[256.437813] (-) TimerEvent: {}
+[256.538084] (-) TimerEvent: {}
+[256.638341] (-) TimerEvent: {}
+[256.738579] (-) TimerEvent: {}
+[256.838817] (-) TimerEvent: {}
+[256.939046] (-) TimerEvent: {}
+[257.039310] (-) TimerEvent: {}
+[257.139573] (-) TimerEvent: {}
+[257.239813] (-) TimerEvent: {}
+[257.340119] (-) TimerEvent: {}
+[257.440368] (-) TimerEvent: {}
+[257.540625] (-) TimerEvent: {}
+[257.640884] (-) TimerEvent: {}
+[257.741147] (-) TimerEvent: {}
+[257.841402] (-) TimerEvent: {}
+[257.941670] (-) TimerEvent: {}
+[258.041936] (-) TimerEvent: {}
+[258.142210] (-) TimerEvent: {}
+[258.242482] (-) TimerEvent: {}
+[258.342709] (-) TimerEvent: {}
+[258.442931] (-) TimerEvent: {}
+[258.543188] (-) TimerEvent: {}
+[258.643417] (-) TimerEvent: {}
+[258.743678] (-) TimerEvent: {}
+[258.843936] (-) TimerEvent: {}
+[258.944192] (-) TimerEvent: {}
+[259.044492] (-) TimerEvent: {}
+[259.144756] (-) TimerEvent: {}
+[259.245011] (-) TimerEvent: {}
+[259.345289] (-) TimerEvent: {}
+[259.445590] (-) TimerEvent: {}
+[259.545860] (-) TimerEvent: {}
+[259.646086] (-) TimerEvent: {}
+[259.746345] (-) TimerEvent: {}
+[259.846574] (-) TimerEvent: {}
+[259.946905] (-) TimerEvent: {}
+[260.047178] (-) TimerEvent: {}
+[260.147439] (-) TimerEvent: {}
+[260.247699] (-) TimerEvent: {}
+[260.347966] (-) TimerEvent: {}
+[260.448229] (-) TimerEvent: {}
+[260.548492] (-) TimerEvent: {}
+[260.648747] (-) TimerEvent: {}
+[260.749003] (-) TimerEvent: {}
+[260.849269] (-) TimerEvent: {}
+[260.949536] (-) TimerEvent: {}
+[261.049797] (-) TimerEvent: {}
+[261.150054] (-) TimerEvent: {}
+[261.250304] (-) TimerEvent: {}
+[261.350578] (-) TimerEvent: {}
+[261.450823] (-) TimerEvent: {}
+[261.551052] (-) TimerEvent: {}
+[261.651282] (-) TimerEvent: {}
+[261.751526] (-) TimerEvent: {}
+[261.851742] (-) TimerEvent: {}
+[261.951999] (-) TimerEvent: {}
+[262.052274] (-) TimerEvent: {}
+[262.152490] (-) TimerEvent: {}
+[262.252756] (-) TimerEvent: {}
+[262.353014] (-) TimerEvent: {}
+[262.453263] (-) TimerEvent: {}
+[262.553531] (-) TimerEvent: {}
+[262.653760] (-) TimerEvent: {}
+[262.753987] (-) TimerEvent: {}
+[262.854254] (-) TimerEvent: {}
+[262.954507] (-) TimerEvent: {}
+[263.054771] (-) TimerEvent: {}
+[263.155034] (-) TimerEvent: {}
+[263.255281] (-) TimerEvent: {}
+[263.355592] (-) TimerEvent: {}
+[263.455846] (-) TimerEvent: {}
+[263.556077] (-) TimerEvent: {}
+[263.656297] (-) TimerEvent: {}
+[263.756553] (-) TimerEvent: {}
+[263.856811] (-) TimerEvent: {}
+[263.957074] (-) TimerEvent: {}
+[264.057307] (-) TimerEvent: {}
+[264.157576] (-) TimerEvent: {}
+[264.257805] (-) TimerEvent: {}
+[264.358072] (-) TimerEvent: {}
+[264.458335] (-) TimerEvent: {}
+[264.558577] (-) TimerEvent: {}
+[264.658804] (-) TimerEvent: {}
+[264.759061] (-) TimerEvent: {}
+[264.859291] (-) TimerEvent: {}
+[264.959547] (-) TimerEvent: {}
+[265.059809] (-) TimerEvent: {}
+[265.160065] (-) TimerEvent: {}
+[265.260319] (-) TimerEvent: {}
+[265.360573] (-) TimerEvent: {}
+[265.460801] (-) TimerEvent: {}
+[265.561022] (-) TimerEvent: {}
+[265.661270] (-) TimerEvent: {}
+[265.761528] (-) TimerEvent: {}
+[265.861784] (-) TimerEvent: {}
+[265.962009] (-) TimerEvent: {}
+[266.062226] (-) TimerEvent: {}
+[266.162489] (-) TimerEvent: {}
+[266.262762] (-) TimerEvent: {}
+[266.363118] (-) TimerEvent: {}
+[266.463377] (-) TimerEvent: {}
+[266.563638] (-) TimerEvent: {}
+[266.663917] (-) TimerEvent: {}
+[266.764189] (-) TimerEvent: {}
+[266.864459] (-) TimerEvent: {}
+[266.964739] (-) TimerEvent: {}
+[267.064994] (-) TimerEvent: {}
+[267.165254] (-) TimerEvent: {}
+[267.265512] (-) TimerEvent: {}
+[267.365778] (-) TimerEvent: {}
+[267.466063] (-) TimerEvent: {}
+[267.566334] (-) TimerEvent: {}
+[267.666630] (-) TimerEvent: {}
+[267.766889] (-) TimerEvent: {}
+[267.867156] (-) TimerEvent: {}
+[267.967421] (-) TimerEvent: {}
+[268.067687] (-) TimerEvent: {}
+[268.167950] (-) TimerEvent: {}
+[268.268223] (-) TimerEvent: {}
+[268.368507] (-) TimerEvent: {}
+[268.468881] (-) TimerEvent: {}
+[268.569168] (-) TimerEvent: {}
+[268.669426] (-) TimerEvent: {}
+[268.769688] (-) TimerEvent: {}
+[268.869966] (-) TimerEvent: {}
+[268.970239] (-) TimerEvent: {}
+[269.070514] (-) TimerEvent: {}
+[269.170778] (-) TimerEvent: {}
+[269.271042] (-) TimerEvent: {}
+[269.371305] (-) TimerEvent: {}
+[269.471562] (-) TimerEvent: {}
+[269.571828] (-) TimerEvent: {}
+[269.672093] (-) TimerEvent: {}
+[269.772328] (-) TimerEvent: {}
+[269.872590] (-) TimerEvent: {}
+[269.972814] (-) TimerEvent: {}
+[270.073064] (-) TimerEvent: {}
+[270.173322] (-) TimerEvent: {}
+[270.273592] (-) TimerEvent: {}
+[270.373869] (-) TimerEvent: {}
+[270.474144] (-) TimerEvent: {}
+[270.574423] (-) TimerEvent: {}
+[270.674646] (-) TimerEvent: {}
+[270.774907] (-) TimerEvent: {}
+[270.875130] (-) TimerEvent: {}
+[270.975348] (-) TimerEvent: {}
+[271.075614] (-) TimerEvent: {}
+[271.175879] (-) TimerEvent: {}
+[271.276144] (-) TimerEvent: {}
+[271.376416] (-) TimerEvent: {}
+[271.476689] (-) TimerEvent: {}
+[271.576955] (-) TimerEvent: {}
+[271.677217] (-) TimerEvent: {}
+[271.777504] (-) TimerEvent: {}
+[271.877768] (-) TimerEvent: {}
+[271.978033] (-) TimerEvent: {}
+[272.078303] (-) TimerEvent: {}
+[272.178625] (-) TimerEvent: {}
+[272.278855] (-) TimerEvent: {}
+[272.379082] (-) TimerEvent: {}
+[272.479307] (-) TimerEvent: {}
+[272.579559] (-) TimerEvent: {}
+[272.679816] (-) TimerEvent: {}
+[272.780074] (-) TimerEvent: {}
+[272.880337] (-) TimerEvent: {}
+[272.980595] (-) TimerEvent: {}
+[273.080850] (-) TimerEvent: {}
+[273.181118] (-) TimerEvent: {}
+[273.281381] (-) TimerEvent: {}
+[273.381654] (-) TimerEvent: {}
+[273.481932] (-) TimerEvent: {}
+[273.582191] (-) TimerEvent: {}
+[273.682466] (-) TimerEvent: {}
+[273.782686] (-) TimerEvent: {}
+[273.882955] (-) TimerEvent: {}
+[273.983222] (-) TimerEvent: {}
+[274.083488] (-) TimerEvent: {}
+[274.183754] (-) TimerEvent: {}
+[274.284009] (-) TimerEvent: {}
+[274.384268] (-) TimerEvent: {}
+[274.484528] (-) TimerEvent: {}
+[274.584755] (-) TimerEvent: {}
+[274.684970] (-) TimerEvent: {}
+[274.785227] (-) TimerEvent: {}
+[274.885499] (-) TimerEvent: {}
+[274.985776] (-) TimerEvent: {}
+[275.086037] (-) TimerEvent: {}
+[275.186306] (-) TimerEvent: {}
+[275.286537] (-) TimerEvent: {}
+[275.386800] (-) TimerEvent: {}
+[275.487024] (-) TimerEvent: {}
+[275.587286] (-) TimerEvent: {}
+[275.687540] (-) TimerEvent: {}
+[275.787799] (-) TimerEvent: {}
+[275.888063] (-) TimerEvent: {}
+[275.988310] (-) TimerEvent: {}
+[276.088588] (-) TimerEvent: {}
+[276.188869] (-) TimerEvent: {}
+[276.289142] (-) TimerEvent: {}
+[276.389472] (-) TimerEvent: {}
+[276.489729] (-) TimerEvent: {}
+[276.589991] (-) TimerEvent: {}
+[276.690250] (-) TimerEvent: {}
+[276.790533] (-) TimerEvent: {}
+[276.890754] (-) TimerEvent: {}
+[276.991028] (-) TimerEvent: {}
+[277.091288] (-) TimerEvent: {}
+[277.191557] (-) TimerEvent: {}
+[277.291832] (-) TimerEvent: {}
+[277.392103] (-) TimerEvent: {}
+[277.492376] (-) TimerEvent: {}
+[277.592634] (-) TimerEvent: {}
+[277.692901] (-) TimerEvent: {}
+[277.793170] (-) TimerEvent: {}
+[277.893442] (-) TimerEvent: {}
+[277.993711] (-) TimerEvent: {}
+[278.093966] (-) TimerEvent: {}
+[278.194228] (-) TimerEvent: {}
+[278.294487] (-) TimerEvent: {}
+[278.394748] (-) TimerEvent: {}
+[278.494964] (-) TimerEvent: {}
+[278.595178] (-) TimerEvent: {}
+[278.695439] (-) TimerEvent: {}
+[278.795706] (-) TimerEvent: {}
+[278.895983] (-) TimerEvent: {}
+[278.996252] (-) TimerEvent: {}
+[279.096507] (-) TimerEvent: {}
+[279.196755] (-) TimerEvent: {}
+[279.297017] (-) TimerEvent: {}
+[279.397320] (-) TimerEvent: {}
+[279.497654] (-) TimerEvent: {}
+[279.597914] (-) TimerEvent: {}
+[279.698180] (-) TimerEvent: {}
+[279.798448] (-) TimerEvent: {}
+[279.898673] (-) TimerEvent: {}
+[279.998895] (-) TimerEvent: {}
+[280.099117] (-) TimerEvent: {}
+[280.199374] (-) TimerEvent: {}
+[280.299622] (-) TimerEvent: {}
+[280.399874] (-) TimerEvent: {}
+[280.500122] (-) TimerEvent: {}
+[280.600375] (-) TimerEvent: {}
+[280.700628] (-) TimerEvent: {}
+[280.800850] (-) TimerEvent: {}
+[280.901113] (-) TimerEvent: {}
+[281.001380] (-) TimerEvent: {}
+[281.101631] (-) TimerEvent: {}
+[281.201896] (-) TimerEvent: {}
+[281.302165] (-) TimerEvent: {}
+[281.402435] (-) TimerEvent: {}
+[281.502702] (-) TimerEvent: {}
+[281.602927] (-) TimerEvent: {}
+[281.703185] (-) TimerEvent: {}
+[281.803415] (-) TimerEvent: {}
+[281.903664] (-) TimerEvent: {}
+[282.004000] (-) TimerEvent: {}
+[282.104265] (-) TimerEvent: {}
+[282.204528] (-) TimerEvent: {}
+[282.304790] (-) TimerEvent: {}
+[282.405051] (-) TimerEvent: {}
+[282.505318] (-) TimerEvent: {}
+[282.605591] (-) TimerEvent: {}
+[282.705861] (-) TimerEvent: {}
+[282.806130] (-) TimerEvent: {}
+[282.906395] (-) TimerEvent: {}
+[283.006633] (-) TimerEvent: {}
+[283.106894] (-) TimerEvent: {}
+[283.207154] (-) TimerEvent: {}
+[283.307402] (-) TimerEvent: {}
+[283.407667] (-) TimerEvent: {}
+[283.507931] (-) TimerEvent: {}
+[283.608197] (-) TimerEvent: {}
+[283.708452] (-) TimerEvent: {}
+[283.808713] (-) TimerEvent: {}
+[283.908974] (-) TimerEvent: {}
+[284.009232] (-) TimerEvent: {}
+[284.109466] (-) TimerEvent: {}
+[284.209856] (-) TimerEvent: {}
+[284.310092] (-) TimerEvent: {}
+[284.410349] (-) TimerEvent: {}
+[284.510585] (-) TimerEvent: {}
+[284.610803] (-) TimerEvent: {}
+[284.711029] (-) TimerEvent: {}
+[284.811362] (-) TimerEvent: {}
+[284.911621] (-) TimerEvent: {}
+[285.011887] (-) TimerEvent: {}
+[285.112153] (-) TimerEvent: {}
+[285.212412] (-) TimerEvent: {}
+[285.312639] (-) TimerEvent: {}
+[285.412868] (-) TimerEvent: {}
+[285.513126] (-) TimerEvent: {}
+[285.613383] (-) TimerEvent: {}
+[285.713641] (-) TimerEvent: {}
+[285.813862] (-) TimerEvent: {}
+[285.914130] (-) TimerEvent: {}
+[286.014526] (-) TimerEvent: {}
+[286.114751] (-) TimerEvent: {}
+[286.214971] (-) TimerEvent: {}
+[286.315228] (-) TimerEvent: {}
+[286.415451] (-) TimerEvent: {}
+[286.515707] (-) TimerEvent: {}
+[286.615965] (-) TimerEvent: {}
+[286.716204] (-) TimerEvent: {}
+[286.816476] (-) TimerEvent: {}
+[286.916740] (-) TimerEvent: {}
+[287.017078] (-) TimerEvent: {}
+[287.117323] (-) TimerEvent: {}
+[287.217610] (-) TimerEvent: {}
+[287.317881] (-) TimerEvent: {}
+[287.418145] (-) TimerEvent: {}
+[287.518375] (-) TimerEvent: {}
+[287.618611] (-) TimerEvent: {}
+[287.718841] (-) TimerEvent: {}
+[287.819103] (-) TimerEvent: {}
+[287.919350] (-) TimerEvent: {}
+[288.019677] (-) TimerEvent: {}
+[288.119968] (-) TimerEvent: {}
+[288.220259] (-) TimerEvent: {}
+[288.320513] (-) TimerEvent: {}
+[288.420759] (-) TimerEvent: {}
+[288.521089] (-) TimerEvent: {}
+[288.621313] (-) TimerEvent: {}
+[288.721578] (-) TimerEvent: {}
+[288.821844] (-) TimerEvent: {}
+[288.922103] (-) TimerEvent: {}
+[289.022358] (-) TimerEvent: {}
+[289.122685] (-) TimerEvent: {}
+[289.222914] (-) TimerEvent: {}
+[289.323133] (-) TimerEvent: {}
+[289.423368] (-) TimerEvent: {}
+[289.523647] (-) TimerEvent: {}
+[289.623907] (-) TimerEvent: {}
+[289.724163] (-) TimerEvent: {}
+[289.824400] (-) TimerEvent: {}
+[289.924679] (-) TimerEvent: {}
+[290.024943] (-) TimerEvent: {}
+[290.125169] (-) TimerEvent: {}
+[290.225387] (-) TimerEvent: {}
+[290.325622] (-) TimerEvent: {}
+[290.425931] (-) TimerEvent: {}
+[290.526186] (-) TimerEvent: {}
+[290.626431] (-) TimerEvent: {}
+[290.726672] (-) TimerEvent: {}
+[290.826920] (-) TimerEvent: {}
+[290.927231] (-) TimerEvent: {}
+[291.027486] (-) TimerEvent: {}
+[291.127709] (-) TimerEvent: {}
+[291.227959] (-) TimerEvent: {}
+[291.328230] (-) TimerEvent: {}
+[291.428502] (-) TimerEvent: {}
+[291.528749] (-) TimerEvent: {}
+[291.629058] (-) TimerEvent: {}
+[291.729305] (-) TimerEvent: {}
+[291.829603] (-) TimerEvent: {}
+[291.929908] (-) TimerEvent: {}
+[292.030155] (-) TimerEvent: {}
+[292.130472] (-) TimerEvent: {}
+[292.230739] (-) TimerEvent: {}
+[292.330959] (-) TimerEvent: {}
+[292.431218] (-) TimerEvent: {}
+[292.531448] (-) TimerEvent: {}
+[292.631725] (-) TimerEvent: {}
+[292.731982] (-) TimerEvent: {}
+[292.832239] (-) TimerEvent: {}
+[292.932502] (-) TimerEvent: {}
+[293.032789] (-) TimerEvent: {}
+[293.133052] (-) TimerEvent: {}
+[293.233314] (-) TimerEvent: {}
+[293.333567] (-) TimerEvent: {}
+[293.433831] (-) TimerEvent: {}
+[293.534074] (-) TimerEvent: {}
+[293.634296] (-) TimerEvent: {}
+[293.734489] (-) TimerEvent: {}
+[293.834727] (-) TimerEvent: {}
+[293.935001] (-) TimerEvent: {}
+[294.035232] (-) TimerEvent: {}
+[294.135465] (-) TimerEvent: {}
+[294.235708] (-) TimerEvent: {}
+[294.336016] (-) TimerEvent: {}
+[294.436282] (-) TimerEvent: {}
+[294.536551] (-) TimerEvent: {}
+[294.636781] (-) TimerEvent: {}
+[294.737021] (-) TimerEvent: {}
+[294.837291] (-) TimerEvent: {}
+[294.937550] (-) TimerEvent: {}
+[295.037779] (-) TimerEvent: {}
+[295.138016] (-) TimerEvent: {}
+[295.238321] (-) TimerEvent: {}
+[295.338568] (-) TimerEvent: {}
+[295.438795] (-) TimerEvent: {}
+[295.539038] (-) TimerEvent: {}
+[295.639349] (-) TimerEvent: {}
+[295.739614] (-) TimerEvent: {}
+[295.839868] (-) TimerEvent: {}
+[295.940123] (-) TimerEvent: {}
+[296.040367] (-) TimerEvent: {}
+[296.140671] (-) TimerEvent: {}
+[296.240925] (-) TimerEvent: {}
+[296.341182] (-) TimerEvent: {}
+[296.441420] (-) TimerEvent: {}
+[296.541737] (-) TimerEvent: {}
+[296.641999] (-) TimerEvent: {}
+[296.742224] (-) TimerEvent: {}
+[296.842474] (-) TimerEvent: {}
+[296.942772] (-) TimerEvent: {}
+[297.043067] (-) TimerEvent: {}
+[297.143296] (-) TimerEvent: {}
+[297.243524] (-) TimerEvent: {}
+[297.343792] (-) TimerEvent: {}
+[297.444050] (-) TimerEvent: {}
+[297.544284] (-) TimerEvent: {}
+[297.644544] (-) TimerEvent: {}
+[297.744780] (-) TimerEvent: {}
+[297.845010] (-) TimerEvent: {}
+[297.945247] (-) TimerEvent: {}
+[298.045486] (-) TimerEvent: {}
+[298.145781] (-) TimerEvent: {}
+[298.246135] (-) TimerEvent: {}
+[298.346554] (-) TimerEvent: {}
+[298.446890] (-) TimerEvent: {}
+[298.547192] (-) TimerEvent: {}
+[298.647420] (-) TimerEvent: {}
+[298.747682] (-) TimerEvent: {}
+[298.847957] (-) TimerEvent: {}
+[298.948227] (-) TimerEvent: {}
+[299.048489] (-) TimerEvent: {}
+[299.148756] (-) TimerEvent: {}
+[299.249005] (-) TimerEvent: {}
+[299.349290] (-) TimerEvent: {}
+[299.449573] (-) TimerEvent: {}
+[299.549833] (-) TimerEvent: {}
+[299.650089] (-) TimerEvent: {}
+[299.750354] (-) TimerEvent: {}
+[299.850612] (-) TimerEvent: {}
+[299.950848] (-) TimerEvent: {}
+[300.051160] (-) TimerEvent: {}
+[300.151409] (-) TimerEvent: {}
+[300.251673] (-) TimerEvent: {}
+[300.351897] (-) TimerEvent: {}
+[300.452149] (-) TimerEvent: {}
+[300.552374] (-) TimerEvent: {}
+[300.652635] (-) TimerEvent: {}
+[300.752889] (-) TimerEvent: {}
+[300.853146] (-) TimerEvent: {}
+[300.953415] (-) TimerEvent: {}
+[301.053649] (-) TimerEvent: {}
+[301.153954] (-) TimerEvent: {}
+[301.254219] (-) TimerEvent: {}
+[301.354479] (-) TimerEvent: {}
+[301.454732] (-) TimerEvent: {}
+[301.554997] (-) TimerEvent: {}
+[301.655293] (-) TimerEvent: {}
+[301.755546] (-) TimerEvent: {}
+[301.855793] (-) TimerEvent: {}
+[301.956019] (-) TimerEvent: {}
+[302.056290] (-) TimerEvent: {}
+[302.156516] (-) TimerEvent: {}
+[302.256765] (-) TimerEvent: {}
+[302.356990] (-) TimerEvent: {}
+[302.457258] (-) TimerEvent: {}
+[302.557533] (-) TimerEvent: {}
+[302.657795] (-) TimerEvent: {}
+[302.758049] (-) TimerEvent: {}
+[302.858287] (-) TimerEvent: {}
+[302.958611] (-) TimerEvent: {}
+[303.058845] (-) TimerEvent: {}
+[303.159125] (-) TimerEvent: {}
+[303.259362] (-) TimerEvent: {}
+[303.359646] (-) TimerEvent: {}
+[303.459900] (-) TimerEvent: {}
+[303.560159] (-) TimerEvent: {}
+[303.660415] (-) TimerEvent: {}
+[303.760659] (-) TimerEvent: {}
+[303.860971] (-) TimerEvent: {}
+[303.961213] (-) TimerEvent: {}
+[304.061536] (-) TimerEvent: {}
+[304.161875] (-) TimerEvent: {}
+[304.262157] (-) TimerEvent: {}
+[304.362425] (-) TimerEvent: {}
+[304.462728] (-) TimerEvent: {}
+[304.562948] (-) TimerEvent: {}
+[304.663177] (-) TimerEvent: {}
+[304.763437] (-) TimerEvent: {}
+[304.863696] (-) TimerEvent: {}
+[304.963966] (-) TimerEvent: {}
+[305.064310] (-) TimerEvent: {}
+[305.164572] (-) TimerEvent: {}
+[305.264804] (-) TimerEvent: {}
+[305.365080] (-) TimerEvent: {}
+[305.465412] (-) TimerEvent: {}
+[305.565731] (-) TimerEvent: {}
+[305.665987] (-) TimerEvent: {}
+[305.766239] (-) TimerEvent: {}
+[305.866512] (-) TimerEvent: {}
+[305.966738] (-) TimerEvent: {}
+[306.067001] (-) TimerEvent: {}
+[306.167264] (-) TimerEvent: {}
+[306.267518] (-) TimerEvent: {}
+[306.367771] (-) TimerEvent: {}
+[306.468048] (-) TimerEvent: {}
+[306.568342] (-) TimerEvent: {}
+[306.668567] (-) TimerEvent: {}
+[306.768796] (-) TimerEvent: {}
+[306.869112] (-) TimerEvent: {}
+[306.969390] (-) TimerEvent: {}
+[307.069641] (-) TimerEvent: {}
+[307.169889] (-) TimerEvent: {}
+[307.270153] (-) TimerEvent: {}
+[307.370427] (-) TimerEvent: {}
+[307.470645] (-) TimerEvent: {}
+[307.570873] (-) TimerEvent: {}
+[307.671106] (-) TimerEvent: {}
+[307.771414] (-) TimerEvent: {}
+[307.871669] (-) TimerEvent: {}
+[307.971933] (-) TimerEvent: {}
+[308.072159] (-) TimerEvent: {}
+[308.172423] (-) TimerEvent: {}
+[308.272678] (-) TimerEvent: {}
+[308.372937] (-) TimerEvent: {}
+[308.473192] (-) TimerEvent: {}
+[308.573418] (-) TimerEvent: {}
+[308.673684] (-) TimerEvent: {}
+[308.773945] (-) TimerEvent: {}
+[308.874195] (-) TimerEvent: {}
+[308.974461] (-) TimerEvent: {}
+[309.074695] (-) TimerEvent: {}
+[309.174926] (-) TimerEvent: {}
+[309.275303] (-) TimerEvent: {}
+[309.375671] (-) TimerEvent: {}
+[309.475971] (-) TimerEvent: {}
+[309.576275] (-) TimerEvent: {}
+[309.676530] (-) TimerEvent: {}
+[309.776782] (-) TimerEvent: {}
+[309.877010] (-) TimerEvent: {}
+[309.977313] (-) TimerEvent: {}
+[310.077566] (-) TimerEvent: {}
+[310.177793] (-) TimerEvent: {}
+[310.278039] (-) TimerEvent: {}
+[310.378341] (-) TimerEvent: {}
+[310.478585] (-) TimerEvent: {}
+[310.578814] (-) TimerEvent: {}
+[310.679064] (-) TimerEvent: {}
+[310.779325] (-) TimerEvent: {}
+[310.879626] (-) TimerEvent: {}
+[310.979880] (-) TimerEvent: {}
+[311.080145] (-) TimerEvent: {}
+[311.180379] (-) TimerEvent: {}
+[311.280687] (-) TimerEvent: {}
+[311.380917] (-) TimerEvent: {}
+[311.481382] (-) TimerEvent: {}
+[311.581664] (-) TimerEvent: {}
+[311.681914] (-) TimerEvent: {}
+[311.782225] (-) TimerEvent: {}
+[311.882515] (-) TimerEvent: {}
+[311.982734] (-) TimerEvent: {}
+[312.082958] (-) TimerEvent: {}
+[312.183190] (-) TimerEvent: {}
+[312.283502] (-) TimerEvent: {}
+[312.383757] (-) TimerEvent: {}
+[312.484079] (-) TimerEvent: {}
+[312.584414] (-) TimerEvent: {}
+[312.684690] (-) TimerEvent: {}
+[312.784957] (-) TimerEvent: {}
+[312.885215] (-) TimerEvent: {}
+[312.985468] (-) TimerEvent: {}
+[313.085716] (-) TimerEvent: {}
+[313.185981] (-) TimerEvent: {}
+[313.286243] (-) TimerEvent: {}
+[313.386492] (-) TimerEvent: {}
+[313.486739] (-) TimerEvent: {}
+[313.586990] (-) TimerEvent: {}
+[313.687302] (-) TimerEvent: {}
+[313.787558] (-) TimerEvent: {}
+[313.887809] (-) TimerEvent: {}
+[313.988156] (-) TimerEvent: {}
+[314.088420] (-) TimerEvent: {}
+[314.188675] (-) TimerEvent: {}
+[314.288935] (-) TimerEvent: {}
+[314.389197] (-) TimerEvent: {}
+[314.489432] (-) TimerEvent: {}
+[314.589691] (-) TimerEvent: {}
+[314.689947] (-) TimerEvent: {}
+[314.790201] (-) TimerEvent: {}
+[314.890443] (-) TimerEvent: {}
+[314.990670] (-) TimerEvent: {}
+[315.090937] (-) TimerEvent: {}
+[315.191199] (-) TimerEvent: {}
+[315.291468] (-) TimerEvent: {}
+[315.391741] (-) TimerEvent: {}
+[315.492003] (-) TimerEvent: {}
+[315.592264] (-) TimerEvent: {}
+[315.692519] (-) TimerEvent: {}
+[315.792762] (-) TimerEvent: {}
+[315.893032] (-) TimerEvent: {}
+[315.993286] (-) TimerEvent: {}
+[316.093542] (-) TimerEvent: {}
+[316.193778] (-) TimerEvent: {}
+[316.294088] (-) TimerEvent: {}
+[316.394341] (-) TimerEvent: {}
+[316.494576] (-) TimerEvent: {}
+[316.594832] (-) TimerEvent: {}
+[316.695076] (-) TimerEvent: {}
+[316.795356] (-) TimerEvent: {}
+[316.895617] (-) TimerEvent: {}
+[316.995886] (-) TimerEvent: {}
+[317.096150] (-) TimerEvent: {}
+[317.196381] (-) TimerEvent: {}
+[317.296647] (-) TimerEvent: {}
+[317.396933] (-) TimerEvent: {}
+[317.497193] (-) TimerEvent: {}
+[317.597454] (-) TimerEvent: {}
+[317.697723] (-) TimerEvent: {}
+[317.797982] (-) TimerEvent: {}
+[317.898301] (-) TimerEvent: {}
+[317.998563] (-) TimerEvent: {}
+[318.098856] (-) TimerEvent: {}
+[318.199140] (-) TimerEvent: {}
+[318.299460] (-) TimerEvent: {}
+[318.399718] (-) TimerEvent: {}
+[318.499959] (-) TimerEvent: {}
+[318.600232] (-) TimerEvent: {}
+[318.700490] (-) TimerEvent: {}
+[318.800735] (-) TimerEvent: {}
+[318.901046] (-) TimerEvent: {}
+[319.001298] (-) TimerEvent: {}
+[319.101551] (-) TimerEvent: {}
+[319.201767] (-) TimerEvent: {}
+[319.302020] (-) TimerEvent: {}
+[319.402293] (-) TimerEvent: {}
+[319.502584] (-) TimerEvent: {}
+[319.602838] (-) TimerEvent: {}
+[319.703097] (-) TimerEvent: {}
+[319.803335] (-) TimerEvent: {}
+[319.903644] (-) TimerEvent: {}
+[320.003902] (-) TimerEvent: {}
+[320.104160] (-) TimerEvent: {}
+[320.204386] (-) TimerEvent: {}
+[320.304645] (-) TimerEvent: {}
+[320.404913] (-) TimerEvent: {}
+[320.505176] (-) TimerEvent: {}
+[320.605438] (-) TimerEvent: {}
+[320.705705] (-) TimerEvent: {}
+[320.805966] (-) TimerEvent: {}
+[320.906219] (-) TimerEvent: {}
+[321.006476] (-) TimerEvent: {}
+[321.106716] (-) TimerEvent: {}
+[321.206995] (-) TimerEvent: {}
+[321.307282] (-) TimerEvent: {}
+[321.407543] (-) TimerEvent: {}
+[321.507827] (-) TimerEvent: {}
+[321.608089] (-) TimerEvent: {}
+[321.708373] (-) TimerEvent: {}
+[321.808635] (-) TimerEvent: {}
+[321.908939] (-) TimerEvent: {}
+[322.009163] (-) TimerEvent: {}
+[322.109457] (-) TimerEvent: {}
+[322.209726] (-) TimerEvent: {}
+[322.309987] (-) TimerEvent: {}
+[322.410234] (-) TimerEvent: {}
+[322.510491] (-) TimerEvent: {}
+[322.610750] (-) TimerEvent: {}
+[322.710979] (-) TimerEvent: {}
+[322.811229] (-) TimerEvent: {}
+[322.911543] (-) TimerEvent: {}
+[323.011821] (-) TimerEvent: {}
+[323.112082] (-) TimerEvent: {}
+[323.212344] (-) TimerEvent: {}
+[323.312611] (-) TimerEvent: {}
+[323.412862] (-) TimerEvent: {}
+[323.513159] (-) TimerEvent: {}
+[323.613418] (-) TimerEvent: {}
+[323.713661] (-) TimerEvent: {}
+[323.813967] (-) TimerEvent: {}
+[323.914231] (-) TimerEvent: {}
+[324.014454] (-) TimerEvent: {}
+[324.114702] (-) TimerEvent: {}
+[324.214972] (-) TimerEvent: {}
+[324.319726] (-) TimerEvent: {}
+[324.419983] (-) TimerEvent: {}
+[324.520245] (-) TimerEvent: {}
+[324.620470] (-) TimerEvent: {}
+[324.720743] (-) TimerEvent: {}
+[324.821002] (-) TimerEvent: {}
+[324.921268] (-) TimerEvent: {}
+[325.021524] (-) TimerEvent: {}
+[325.121796] (-) TimerEvent: {}
+[325.222021] (-) TimerEvent: {}
+[325.322276] (-) TimerEvent: {}
+[325.422477] (-) TimerEvent: {}
+[325.522757] (-) TimerEvent: {}
+[325.623015] (-) TimerEvent: {}
+[325.723280] (-) TimerEvent: {}
+[325.823523] (-) TimerEvent: {}
+[325.923828] (-) TimerEvent: {}
+[326.024109] (-) TimerEvent: {}
+[326.124380] (-) TimerEvent: {}
+[326.224634] (-) TimerEvent: {}
+[326.324857] (-) TimerEvent: {}
+[326.425124] (-) TimerEvent: {}
+[326.525368] (-) TimerEvent: {}
+[326.625673] (-) TimerEvent: {}
+[326.725917] (-) TimerEvent: {}
+[326.826232] (-) TimerEvent: {}
+[326.926507] (-) TimerEvent: {}
+[327.026765] (-) TimerEvent: {}
+[327.126999] (-) TimerEvent: {}
+[327.227286] (-) TimerEvent: {}
+[327.327552] (-) TimerEvent: {}
+[327.427815] (-) TimerEvent: {}
+[327.528064] (-) TimerEvent: {}
+[327.628343] (-) TimerEvent: {}
+[327.728590] (-) TimerEvent: {}
+[327.828909] (-) TimerEvent: {}
+[327.929174] (-) TimerEvent: {}
+[328.029428] (-) TimerEvent: {}
+[328.129745] (-) TimerEvent: {}
+[328.230002] (-) TimerEvent: {}
+[328.330258] (-) TimerEvent: {}
+[328.430498] (-) TimerEvent: {}
+[328.530732] (-) TimerEvent: {}
+[328.630992] (-) TimerEvent: {}
+[328.731210] (-) TimerEvent: {}
+[328.831460] (-) TimerEvent: {}
+[328.931724] (-) TimerEvent: {}
+[329.032002] (-) TimerEvent: {}
+[329.132262] (-) TimerEvent: {}
+[329.232527] (-) TimerEvent: {}
+[329.332756] (-) TimerEvent: {}
+[329.433030] (-) TimerEvent: {}
+[329.533290] (-) TimerEvent: {}
+[329.633553] (-) TimerEvent: {}
+[329.733812] (-) TimerEvent: {}
+[329.834061] (-) TimerEvent: {}
+[329.934386] (-) TimerEvent: {}
+[330.034658] (-) TimerEvent: {}
+[330.134925] (-) TimerEvent: {}
+[330.235162] (-) TimerEvent: {}
+[330.335429] (-) TimerEvent: {}
+[330.435695] (-) TimerEvent: {}
+[330.535952] (-) TimerEvent: {}
+[330.636212] (-) TimerEvent: {}
+[330.736464] (-) TimerEvent: {}
+[330.836761] (-) TimerEvent: {}
+[330.937072] (-) TimerEvent: {}
+[331.037328] (-) TimerEvent: {}
+[331.137580] (-) TimerEvent: {}
+[331.237886] (-) TimerEvent: {}
+[331.338178] (-) TimerEvent: {}
+[331.438473] (-) TimerEvent: {}
+[331.538788] (-) TimerEvent: {}
+[331.639022] (-) TimerEvent: {}
+[331.739278] (-) TimerEvent: {}
+[331.839537] (-) TimerEvent: {}
+[331.939791] (-) TimerEvent: {}
+[332.040031] (-) TimerEvent: {}
+[332.140345] (-) TimerEvent: {}
+[332.240603] (-) TimerEvent: {}
+[332.340857] (-) TimerEvent: {}
+[332.441108] (-) TimerEvent: {}
+[332.541357] (-) TimerEvent: {}
+[332.641605] (-) TimerEvent: {}
+[332.741927] (-) TimerEvent: {}
+[332.842187] (-) TimerEvent: {}
+[332.942454] (-) TimerEvent: {}
+[333.042679] (-) TimerEvent: {}
+[333.142920] (-) TimerEvent: {}
+[333.243179] (-) TimerEvent: {}
+[333.343434] (-) TimerEvent: {}
+[333.443708] (-) TimerEvent: {}
+[333.543999] (-) TimerEvent: {}
+[333.644266] (-) TimerEvent: {}
+[333.744523] (-) TimerEvent: {}
+[333.844778] (-) TimerEvent: {}
+[333.945009] (-) TimerEvent: {}
+[334.045305] (-) TimerEvent: {}
+[334.145567] (-) TimerEvent: {}
+[334.245855] (-) TimerEvent: {}
+[334.346121] (-) TimerEvent: {}
+[334.446362] (-) TimerEvent: {}
+[334.546677] (-) TimerEvent: {}
+[334.646980] (-) TimerEvent: {}
+[334.747284] (-) TimerEvent: {}
+[334.847580] (-) TimerEvent: {}
+[334.947885] (-) TimerEvent: {}
+[335.048178] (-) TimerEvent: {}
+[335.148477] (-) TimerEvent: {}
+[335.248775] (-) TimerEvent: {}
+[335.349070] (-) TimerEvent: {}
+[335.449380] (-) TimerEvent: {}
+[335.549638] (-) TimerEvent: {}
+[335.649899] (-) TimerEvent: {}
+[335.750154] (-) TimerEvent: {}
+[335.850471] (-) TimerEvent: {}
+[335.950774] (-) TimerEvent: {}
+[336.051068] (-) TimerEvent: {}
+[336.151363] (-) TimerEvent: {}
+[336.251672] (-) TimerEvent: {}
+[336.351934] (-) TimerEvent: {}
+[336.452159] (-) TimerEvent: {}
+[336.552436] (-) TimerEvent: {}
+[336.652697] (-) TimerEvent: {}
+[336.752949] (-) TimerEvent: {}
+[336.853269] (-) TimerEvent: {}
+[336.953520] (-) TimerEvent: {}
+[337.053757] (-) TimerEvent: {}
+[337.154070] (-) TimerEvent: {}
+[337.254343] (-) TimerEvent: {}
+[337.354643] (-) TimerEvent: {}
+[337.454872] (-) TimerEvent: {}
+[337.555101] (-) TimerEvent: {}
+[337.655375] (-) TimerEvent: {}
+[337.755636] (-) TimerEvent: {}
+[337.855894] (-) TimerEvent: {}
+[337.956143] (-) TimerEvent: {}
+[338.056457] (-) TimerEvent: {}
+[338.156682] (-) TimerEvent: {}
+[338.256936] (-) TimerEvent: {}
+[338.357206] (-) TimerEvent: {}
+[338.457494] (-) TimerEvent: {}
+[338.557759] (-) TimerEvent: {}
+[338.658025] (-) TimerEvent: {}
+[338.758285] (-) TimerEvent: {}
+[338.858559] (-) TimerEvent: {}
+[338.958814] (-) TimerEvent: {}
+[339.059119] (-) TimerEvent: {}
+[339.159371] (-) TimerEvent: {}
+[339.259625] (-) TimerEvent: {}
+[339.359870] (-) TimerEvent: {}
+[339.460183] (-) TimerEvent: {}
+[339.560440] (-) TimerEvent: {}
+[339.660700] (-) TimerEvent: {}
+[339.760963] (-) TimerEvent: {}
+[339.861232] (-) TimerEvent: {}
+[339.961491] (-) TimerEvent: {}
+[340.061751] (-) TimerEvent: {}
+[340.162018] (-) TimerEvent: {}
+[340.262301] (-) TimerEvent: {}
+[340.362550] (-) TimerEvent: {}
+[340.462778] (-) TimerEvent: {}
+[340.563024] (-) TimerEvent: {}
+[340.663318] (-) TimerEvent: {}
+[340.763621] (-) TimerEvent: {}
+[340.863862] (-) TimerEvent: {}
+[340.964170] (-) TimerEvent: {}
+[341.064436] (-) TimerEvent: {}
+[341.164718] (-) TimerEvent: {}
+[341.264980] (-) TimerEvent: {}
+[341.365239] (-) TimerEvent: {}
+[341.465480] (-) TimerEvent: {}
+[341.565795] (-) TimerEvent: {}
+[341.666074] (-) TimerEvent: {}
+[341.766338] (-) TimerEvent: {}
+[341.866576] (-) TimerEvent: {}
+[341.966840] (-) TimerEvent: {}
+[342.067076] (-) TimerEvent: {}
+[342.167344] (-) TimerEvent: {}
+[342.267598] (-) TimerEvent: {}
+[342.367857] (-) TimerEvent: {}
+[342.468126] (-) TimerEvent: {}
+[342.568388] (-) TimerEvent: {}
+[342.668648] (-) TimerEvent: {}
+[342.768892] (-) TimerEvent: {}
+[342.869212] (-) TimerEvent: {}
+[342.969464] (-) TimerEvent: {}
+[343.069726] (-) TimerEvent: {}
+[343.169990] (-) TimerEvent: {}
+[343.270246] (-) TimerEvent: {}
+[343.370505] (-) TimerEvent: {}
+[343.470762] (-) TimerEvent: {}
+[343.571023] (-) TimerEvent: {}
+[343.671288] (-) TimerEvent: {}
+[343.771520] (-) TimerEvent: {}
+[343.871809] (-) TimerEvent: {}
+[343.972069] (-) TimerEvent: {}
+[344.072333] (-) TimerEvent: {}
+[344.172572] (-) TimerEvent: {}
+[344.272806] (-) TimerEvent: {}
+[344.373026] (-) TimerEvent: {}
+[344.473287] (-) TimerEvent: {}
+[344.573559] (-) TimerEvent: {}
+[344.673843] (-) TimerEvent: {}
+[344.774146] (-) TimerEvent: {}
+[344.874398] (-) TimerEvent: {}
+[344.974637] (-) TimerEvent: {}
+[345.074916] (-) TimerEvent: {}
+[345.175186] (-) TimerEvent: {}
+[345.275449] (-) TimerEvent: {}
+[345.375707] (-) TimerEvent: {}
+[345.475944] (-) TimerEvent: {}
+[345.576241] (-) TimerEvent: {}
+[345.676502] (-) TimerEvent: {}
+[345.776740] (-) TimerEvent: {}
+[345.877046] (-) TimerEvent: {}
+[345.977302] (-) TimerEvent: {}
+[346.077605] (-) TimerEvent: {}
+[346.177892] (-) TimerEvent: {}
+[346.278202] (-) TimerEvent: {}
+[346.378480] (-) TimerEvent: {}
+[346.478745] (-) TimerEvent: {}
+[346.579012] (-) TimerEvent: {}
+[346.679277] (-) TimerEvent: {}
+[346.779541] (-) TimerEvent: {}
+[346.879810] (-) TimerEvent: {}
+[346.980068] (-) TimerEvent: {}
+[347.080345] (-) TimerEvent: {}
+[347.180612] (-) TimerEvent: {}
+[347.280881] (-) TimerEvent: {}
+[347.381147] (-) TimerEvent: {}
+[347.481407] (-) TimerEvent: {}
+[347.581670] (-) TimerEvent: {}
+[347.681910] (-) TimerEvent: {}
+[347.782216] (-) TimerEvent: {}
+[347.882473] (-) TimerEvent: {}
+[347.982692] (-) TimerEvent: {}
+[348.082941] (-) TimerEvent: {}
+[348.183250] (-) TimerEvent: {}
+[348.283512] (-) TimerEvent: {}
+[348.383774] (-) TimerEvent: {}
+[348.484038] (-) TimerEvent: {}
+[348.584288] (-) TimerEvent: {}
+[348.684563] (-) TimerEvent: {}
+[348.784821] (-) TimerEvent: {}
+[348.885082] (-) TimerEvent: {}
+[348.985341] (-) TimerEvent: {}
+[349.085601] (-) TimerEvent: {}
+[349.185864] (-) TimerEvent: {}
+[349.286130] (-) TimerEvent: {}
+[349.386388] (-) TimerEvent: {}
+[349.486644] (-) TimerEvent: {}
+[349.586940] (-) TimerEvent: {}
+[349.687238] (-) TimerEvent: {}
+[349.787524] (-) TimerEvent: {}
+[349.887816] (-) TimerEvent: {}
+[349.988134] (-) TimerEvent: {}
+[350.088405] (-) TimerEvent: {}
+[350.188676] (-) TimerEvent: {}
+[350.288935] (-) TimerEvent: {}
+[350.389159] (-) TimerEvent: {}
+[350.489419] (-) TimerEvent: {}
+[350.589676] (-) TimerEvent: {}
+[350.689929] (-) TimerEvent: {}
+[350.790173] (-) TimerEvent: {}
+[350.890499] (-) TimerEvent: {}
+[350.990735] (-) TimerEvent: {}
+[351.090997] (-) TimerEvent: {}
+[351.191254] (-) TimerEvent: {}
+[351.291530] (-) TimerEvent: {}
+[351.391774] (-) TimerEvent: {}
+[351.492085] (-) TimerEvent: {}
+[351.592340] (-) TimerEvent: {}
+[351.692581] (-) TimerEvent: {}
+[351.792873] (-) TimerEvent: {}
+[351.893134] (-) TimerEvent: {}
+[351.993393] (-) TimerEvent: {}
+[352.093657] (-) TimerEvent: {}
+[352.193923] (-) TimerEvent: {}
+[352.294179] (-) TimerEvent: {}
+[352.394446] (-) TimerEvent: {}
+[352.494685] (-) TimerEvent: {}
+[352.595001] (-) TimerEvent: {}
+[352.695234] (-) TimerEvent: {}
+[352.795492] (-) TimerEvent: {}
+[352.895733] (-) TimerEvent: {}
+[352.996046] (-) TimerEvent: {}
+[353.096320] (-) TimerEvent: {}
+[353.196635] (-) TimerEvent: {}
+[353.296899] (-) TimerEvent: {}
+[353.397230] (-) TimerEvent: {}
+[353.497507] (-) TimerEvent: {}
+[353.597771] (-) TimerEvent: {}
+[353.698032] (-) TimerEvent: {}
+[353.798280] (-) TimerEvent: {}
+[353.898559] (-) TimerEvent: {}
+[353.998789] (-) TimerEvent: {}
+[354.099049] (-) TimerEvent: {}
+[354.199292] (-) TimerEvent: {}
+[354.299569] (-) TimerEvent: {}
+[354.399836] (-) TimerEvent: {}
+[354.500095] (-) TimerEvent: {}
+[354.600358] (-) TimerEvent: {}
+[354.700586] (-) TimerEvent: {}
+[354.800846] (-) TimerEvent: {}
+[354.901111] (-) TimerEvent: {}
+[355.001374] (-) TimerEvent: {}
+[355.101621] (-) TimerEvent: {}
+[355.201929] (-) TimerEvent: {}
+[355.302193] (-) TimerEvent: {}
+[355.402450] (-) TimerEvent: {}
+[355.502692] (-) TimerEvent: {}
+[355.602962] (-) TimerEvent: {}
+[355.703227] (-) TimerEvent: {}
+[355.803486] (-) TimerEvent: {}
+[355.903749] (-) TimerEvent: {}
+[356.003992] (-) TimerEvent: {}
+[356.104296] (-) TimerEvent: {}
+[356.204551] (-) TimerEvent: {}
+[356.304801] (-) TimerEvent: {}
+[356.405040] (-) TimerEvent: {}
+[356.505344] (-) TimerEvent: {}
+[356.605567] (-) TimerEvent: {}
+[356.705815] (-) TimerEvent: {}
+[356.806057] (-) TimerEvent: {}
+[356.906373] (-) TimerEvent: {}
+[357.006649] (-) TimerEvent: {}
+[357.106876] (-) TimerEvent: {}
+[357.207119] (-) TimerEvent: {}
+[357.307408] (-) TimerEvent: {}
+[357.407730] (-) TimerEvent: {}
+[357.507992] (-) TimerEvent: {}
+[357.608251] (-) TimerEvent: {}
+[357.708513] (-) TimerEvent: {}
+[357.808781] (-) TimerEvent: {}
+[357.909036] (-) TimerEvent: {}
+[358.009296] (-) TimerEvent: {}
+[358.109528] (-) TimerEvent: {}
+[358.209761] (-) TimerEvent: {}
+[358.310015] (-) TimerEvent: {}
+[358.410280] (-) TimerEvent: {}
+[358.510503] (-) TimerEvent: {}
+[358.610746] (-) TimerEvent: {}
+[358.710972] (-) TimerEvent: {}
+[358.811232] (-) TimerEvent: {}
+[358.911490] (-) TimerEvent: {}
+[359.011796] (-) TimerEvent: {}
+[359.112052] (-) TimerEvent: {}
+[359.212306] (-) TimerEvent: {}
+[359.312543] (-) TimerEvent: {}
+[359.412847] (-) TimerEvent: {}
+[359.513114] (-) TimerEvent: {}
+[359.613378] (-) TimerEvent: {}
+[359.713609] (-) TimerEvent: {}
+[359.813898] (-) TimerEvent: {}
+[359.914187] (-) TimerEvent: {}
+[360.014475] (-) TimerEvent: {}
+[360.114767] (-) TimerEvent: {}
+[360.215071] (-) TimerEvent: {}
+[360.315382] (-) TimerEvent: {}
+[360.415602] (-) TimerEvent: {}
+[360.515820] (-) TimerEvent: {}
+[360.616049] (-) TimerEvent: {}
+[360.716286] (-) TimerEvent: {}
+[360.816539] (-) TimerEvent: {}
+[360.916792] (-) TimerEvent: {}
+[361.017045] (-) TimerEvent: {}
+[361.117282] (-) TimerEvent: {}
+[361.217592] (-) TimerEvent: {}
+[361.317853] (-) TimerEvent: {}
+[361.418116] (-) TimerEvent: {}
+[361.518360] (-) TimerEvent: {}
+[361.618659] (-) TimerEvent: {}
+[361.718914] (-) TimerEvent: {}
+[361.819148] (-) TimerEvent: {}
+[361.919438] (-) TimerEvent: {}
+[362.019676] (-) TimerEvent: {}
+[362.119972] (-) TimerEvent: {}
+[362.220223] (-) TimerEvent: {}
+[362.320479] (-) TimerEvent: {}
+[362.420701] (-) TimerEvent: {}
+[362.520977] (-) TimerEvent: {}
+[362.621201] (-) TimerEvent: {}
+[362.721460] (-) TimerEvent: {}
+[362.821715] (-) TimerEvent: {}
+[362.921949] (-) TimerEvent: {}
+[363.022229] (-) TimerEvent: {}
+[363.122460] (-) TimerEvent: {}
+[363.222679] (-) TimerEvent: {}
+[363.322900] (-) TimerEvent: {}
+[363.423194] (-) TimerEvent: {}
+[363.523467] (-) TimerEvent: {}
+[363.623715] (-) TimerEvent: {}
+[363.724010] (-) TimerEvent: {}
+[363.824280] (-) TimerEvent: {}
+[363.924534] (-) TimerEvent: {}
+[364.024798] (-) TimerEvent: {}
+[364.125052] (-) TimerEvent: {}
+[364.225285] (-) TimerEvent: {}
+[364.325593] (-) TimerEvent: {}
+[364.425847] (-) TimerEvent: {}
+[364.526108] (-) TimerEvent: {}
+[364.626348] (-) TimerEvent: {}
+[364.726635] (-) TimerEvent: {}
+[364.826865] (-) TimerEvent: {}
+[364.927124] (-) TimerEvent: {}
+[365.027365] (-) TimerEvent: {}
+[365.127657] (-) TimerEvent: {}
+[365.227890] (-) TimerEvent: {}
+[365.328138] (-) TimerEvent: {}
+[365.428391] (-) TimerEvent: {}
+[365.528609] (-) TimerEvent: {}
+[365.628867] (-) TimerEvent: {}
+[365.729122] (-) TimerEvent: {}
+[365.829374] (-) TimerEvent: {}
+[365.929629] (-) TimerEvent: {}
+[366.029889] (-) TimerEvent: {}
+[366.130125] (-) TimerEvent: {}
+[366.230376] (-) TimerEvent: {}
+[366.330605] (-) TimerEvent: {}
+[366.430828] (-) TimerEvent: {}
+[366.531067] (-) TimerEvent: {}
+[366.631290] (-) TimerEvent: {}
+[366.731540] (-) TimerEvent: {}
+[366.831774] (-) TimerEvent: {}
+[366.932069] (-) TimerEvent: {}
+[367.032376] (-) TimerEvent: {}
+[367.132626] (-) TimerEvent: {}
+[367.232885] (-) TimerEvent: {}
+[367.333143] (-) TimerEvent: {}
+[367.433421] (-) TimerEvent: {}
+[367.533679] (-) TimerEvent: {}
+[367.633929] (-) TimerEvent: {}
+[367.645935] (turtlebot3_tourguide) StdoutLine: {'line': b'-- verifying file...\n'}
+[367.646079] (turtlebot3_tourguide) StdoutLine: {'line': b"       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'\n"}
+[367.734019] (-) TimerEvent: {}
+[367.786630] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Downloading... done\n'}
+[367.804802] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting...\n'}
+[367.805011] (turtlebot3_tourguide) StdoutLine: {'line': b"     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'\n"}
+[367.805079] (turtlebot3_tourguide) StdoutLine: {'line': b"     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/boringssl'\n"}
+[367.805136] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [tar xfz]\n'}
+[367.834146] (-) TimerEvent: {}
+[367.934381] (-) TimerEvent: {}
+[368.034647] (-) TimerEvent: {}
+[368.134935] (-) TimerEvent: {}
+[368.235271] (-) TimerEvent: {}
+[368.335565] (-) TimerEvent: {}
+[368.435849] (-) TimerEvent: {}
+[368.528985] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [analysis]\n'}
+[368.529220] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [rename]\n'}
+[368.529318] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... [clean up]\n'}
+[368.529407] (turtlebot3_tourguide) StdoutLine: {'line': b'-- extracting... done\n'}
+[368.535928] (-) TimerEvent: {}
+[368.544291] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 93%] No update step for 'boringssl'\n"}
+[368.566780] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 94%] No patch step for 'boringssl'\n"}
+[368.592654] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 95%] No configure step for 'boringssl'\n"}
+[368.622347] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 96%] No build step for 'boringssl'\n"}
+[368.636037] (-) TimerEvent: {}
+[368.656913] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 97%] No install step for 'boringssl'\n"}
+[368.689997] (turtlebot3_tourguide) StdoutLine: {'line': b"[ 98%] No test step for 'boringssl'\n"}
+[368.717893] (turtlebot3_tourguide) StdoutLine: {'line': b"[100%] Completed 'boringssl'\n"}
+[368.736144] (-) TimerEvent: {}
+[368.757801] (turtlebot3_tourguide) StdoutLine: {'line': b'[100%] Built target boringssl\n'}
+[368.832307] (turtlebot3_tourguide) StderrLine: {'line': b'\x1b[33mCMake Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp/CMakeLists.txt:70 (message):\n'}
+[368.832508] (turtlebot3_tourguide) StderrLine: {'line': b'  A future Abseil release will default ABSL_PROPAGATE_CXX_STD to ON for CMake\n'}
+[368.832607] (turtlebot3_tourguide) StderrLine: {'line': b'  3.8 and up.  We recommend enabling this option to ensure your project still\n'}
+[368.832704] (turtlebot3_tourguide) StderrLine: {'line': b'  builds correctly.\n'}
+[368.832803] (turtlebot3_tourguide) StderrLine: {'line': b'\n'}
+[368.832901] (turtlebot3_tourguide) StderrLine: {'line': b'\x1b[0m\n'}
+[368.836222] (-) TimerEvent: {}
+[368.891829] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for res_servicename in resolv\n'}
+[368.936332] (-) TimerEvent: {}
+[368.968534] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for res_servicename in resolv - not found\n'}
+[368.968717] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for gethostbyname in nsl\n'}
+[369.032145] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for gethostbyname in nsl - found\n'}
+[369.032391] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for gethostbyname in socket\n'}
+[369.036407] (-) TimerEvent: {}
+[369.082969] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for gethostbyname in socket - not found\n'}
+[369.083177] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for socket in socket\n'}
+[369.136513] (-) TimerEvent: {}
+[369.150203] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for socket in socket - not found\n'}
+[369.150460] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for clock_gettime in rt\n'}
+[369.227553] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for clock_gettime in rt - found\n'}
+[369.228015] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file sys/types.h\n'}
+[369.236631] (-) TimerEvent: {}
+[369.292441] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file sys/types.h - found\n'}
+[369.292760] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file sys/socket.h\n'}
+[369.336755] (-) TimerEvent: {}
+[369.357840] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file sys/socket.h - found\n'}
+[369.358218] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/inet.h\n'}
+[369.426567] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/inet.h - found\n'}
+[369.427049] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/nameser_compat.h\n'}
+[369.436875] (-) TimerEvent: {}
+[369.487120] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/nameser_compat.h - found\n'}
+[369.487432] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/nameser.h\n'}
+[369.537003] (-) TimerEvent: {}
+[369.555081] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file arpa/nameser.h - found\n'}
+[369.555574] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file assert.h\n'}
+[369.626092] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file assert.h - found\n'}
+[369.626550] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file errno.h\n'}
+[369.637104] (-) TimerEvent: {}
+[369.707140] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file errno.h - found\n'}
+[369.707443] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file fcntl.h\n'}
+[369.737229] (-) TimerEvent: {}
+[369.770527] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file fcntl.h - found\n'}
+[369.770941] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file inttypes.h\n'}
+[369.830338] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file inttypes.h - found\n'}
+[369.830720] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file limits.h\n'}
+[369.837330] (-) TimerEvent: {}
+[369.890950] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file limits.h - found\n'}
+[369.891367] (turtlebot3_tourguide) StdoutLine: {'line': b'-- Looking for include file malloc.h\n'}
+[369.898648] (turtlebot3_tourguide) CommandEnded: {'returncode': -2}
+[369.902470] (turtlebot3_tourguide) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute\n    loop.run_until_complete(future)\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete\n    self.run_forever()\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever\n    self._run_once()\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once\n    event_list = self._selector.select(timeout)\n  File "/usr/lib/python3.10/selectors.py", line 469, in select\n    fd_event_list = self._selector.poll(timeout, max_ev)\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build\n    rc = await extension.build(\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 87, in build\n    rc = await self._reconfigure(args, env)\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 182, in _reconfigure\n    buildfile = get_buildfile(cmake_cache)\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 114, in get_buildfile\n    if \'Visual Studio\' in generator:\nTypeError: argument of type \'NoneType\' is not iterable\n'}
+[369.902606] (turtlebot3_tourguide) JobEnded: {'identifier': 'turtlebot3_tourguide', 'rc': 'SIGINT'}
+[369.913071] (-) EventReactorShutdown: {}

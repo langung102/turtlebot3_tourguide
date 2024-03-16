@@ -3,6 +3,8 @@
 #include "chrono"
 std::chrono::steady_clock::time_point startTime;
 std::chrono::steady_clock::time_point endTime;
+auto elaspedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime)*1000;
+
 RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
 {
     InitializeFirebase();
@@ -35,8 +37,7 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 
 bool caculateTimeout(){
     endTime = std::chrono::steady_clock::now();
-    auto elaspedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime)*1000;
-    RCLCPP_INFO(get_logger(), "Cancel! Elapsed time: %d", elaspedTime.count());
+    elaspedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime)*1000;
     if(elaspedTime > std::chrono::seconds(5))
     {
         return true;
@@ -74,7 +75,6 @@ void RequestHandler::handlerCallback()
         {
             startTime = std::chrono::steady_clock::now();
             state = 2;
-            setStatus(false);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
@@ -82,11 +82,12 @@ void RequestHandler::handlerCallback()
         {
             this->nav.cancelNavigation();
             state = 0;
-            setStatus(false);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
+        setStatus(false);
         break;
     case 2:
+        RCLCPP_INFO(get_logger(), "TimeOut! Elapsed time: %lld seconds", elaspedTime.count() );
         if(caculateTimeout){
             state = 0;
             setStatus(true);
@@ -106,9 +107,9 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.orientation.w = 0;
             this->nav.startNavigation(goal_pose);
             state = 3;
-            setStatus(false);
             RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
         }
+        setStatus(false);
         break;
     case 3:
         if (this->nav.doneNavigate())

@@ -1,0 +1,113 @@
+Getting released firebase-ios-sdk @ CocoaPods-10.22.0
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    DOWNLOAD_FIREBASE_IOS_SDK
+    DOWNLOAD_GOOGLETEST
+    PLATFORM
+
+
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Cloning into 'leveldb'...
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+From https://github.com/uNetworking/uWebSockets
+ * branch            4d94401b9c98346f9afd838556fdc7dce30561eb -> FETCH_HEAD
+From https://github.com/google/flatbuffers
+ * branch            99aa1ef21dd9dc3f9d4fb0eb82f4b59d0bb5e4c5 -> FETCH_HEAD
+HEAD is now at 99b3c03 Change version to 1.23.
+Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'
+Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'
+Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/benchmark'...
+Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/leveldb/third_party/googletest'...
+error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+error: 177 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+gmake[2]: *** [CMakeFiles/boringssl.dir/build.make:99: src/boringssl-stamp/boringssl-download] Error 128
+gmake[1]: *** [CMakeFiles/Makefile2:149: CMakeFiles/boringssl.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:91: all] Error 2
+[0mCMake Deprecation Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/CMakeLists.txt:40 (cmake_policy):
+  The OLD behavior for policy CMP0058 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+[0m
+Cloning into 'leveldb'...
+HEAD is now at 99b3c03 Change version to 1.23.
+Submodule 'third_party/benchmark' (https://github.com/google/benchmark) registered for path 'third_party/benchmark'
+Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'
+Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/benchmark'...
+Cloning into '/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/leveldb/third_party/googletest'...
+Checking patch util/env_windows.cc...
+Checking patch util/env_windows_test.cc...
+Applied patch util/env_windows.cc cleanly.
+Applied patch util/env_windows_test.cc cleanly.
+[33mCMake Warning at build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp/CMakeLists.txt:70 (message):
+  A future Abseil release will default ABSL_PROPAGATE_CXX_STD to ON for CMake
+  3.8 and up.  We recommend enabling this option to ensure your project still
+  builds correctly.
+
+[0m
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 182, in _reconfigure
+    buildfile = get_buildfile(cmake_cache)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 114, in get_buildfile
+    if 'Visual Studio' in generator:
+TypeError: argument of type 'NoneType' is not iterable

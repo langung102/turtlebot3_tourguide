@@ -1,0 +1,525 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Downloading external project dependencies...
+-- Download complete.
+-- Building external project dependencies...
+-- CMake generator: Unix Makefiles
+-- CMake generator platform: 
+-- CMake toolchain file: 
+-- Sub-configure options: -G;Unix Makefiles;-DCMAKE_C_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_CXX_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0";-DCMAKE_POSITION_INDEPENDENT_CODE=
+-- Sub-build options: 
+-- Build of external project dependencies complete.
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.a (found version "3.0.2")  
+-- Found ccache: /usr/bin/ccache
+-- firebase_execute_process(): running command: /usr/bin/cmake -G Unix Makefiles -DFIREBASE_DOWNLOAD_DIR=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads -DCMAKE_INSTALL_PREFIX=/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/opt -DFUZZING=OFF -DDOWNLOAD_BENCHMARK=OFF -DDOWNLOAD_GOOGLETEST=OFF -DEXTERNAL_PROJECT_HTTP_HEADER= /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- FirebaseSetupPythonInterpreter(LevelDbPatch): Creating Python virtualenv in /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch using /usr/bin/python3.10
+-- firebase_execute_process(): running command: /usr/bin/python3.10 -m venv /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch
+-- FirebaseSetupPythonInterpreter(LevelDbPatch): Found Python executable in virtualenv: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/pyvenv/LevelDbPatch/bin/python3
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external
+-- firebase_execute_process(): running command: /usr/bin/cmake --build . -- -j (working directory: /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external)
+[  2%] Creating directories for 'GoogleUtilities'
+[  2%] Creating directories for 'abseil-cpp'
+[  3%] Creating directories for 'protobuf'
+[  4%] Creating directories for 'nanopb'
+[  8%] Creating directories for 're2'
+[  8%] Creating directories for 'boringssl'
+[  8%] Creating directories for 'snappy'
+[  8%] Creating directories for 'c-ares'
+[ 10%] Creating directories for 'grpc'
+[ 11%] Performing download step (download, verify and extract) for 'protobuf'
+[ 13%] Performing download step (download, verify and extract) for 're2'
+[ 15%] Performing download step (download, verify and extract) for 'snappy'
+[ 15%] Performing download step (download, verify and extract) for 'abseil-cpp'
+[ 16%] Performing download step (download, verify and extract) for 'c-ares'
+[ 16%] Performing download step (download, verify and extract) for 'boringssl'
+[ 17%] Performing download step (download, verify and extract) for 'nanopb'
+[ 18%] Performing download step (download, verify and extract) for 'GoogleUtilities'
+[ 20%] Performing download step (download, verify and extract) for 'grpc'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/protocolbuffers/protobuf/archive/29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/abseil/abseil-cpp/archive/20220623.0.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/google/snappy/archive/refs/tags/1.1.9.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/google/re2/archive/8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/nanopb/nanopb/archive/nanopb-0.3.9.8.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/c-ares/c-ares/archive/e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/google/boringssl/archive/b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/google/GoogleUtilities/archive/7.12.0.tar.gz'
+-- Downloading...
+   dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/grpc/grpc/archive/v1.50.0.tar.gz'
+-- [download 0% complete]
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 3% complete]
+-- [download 5% complete]
+-- [download 0% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 9% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 13% complete]
+-- [download 1% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 16% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 2% complete]
+-- [download 26% complete]
+-- [download 28% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/GoogleUtilities-7.12.0.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/GoogleUtilities'
+-- extracting... [tar xfz]
+-- [download 29% complete]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 21%] No update step for 'GoogleUtilities'
+[ 22%] No patch step for 'GoogleUtilities'
+[ 23%] No configure step for 'GoogleUtilities'
+[ 24%] No build step for 'GoogleUtilities'
+[ 25%] No install step for 'GoogleUtilities'
+[ 26%] No test step for 'GoogleUtilities'
+[ 27%] Completed 'GoogleUtilities'
+[ 27%] Built target GoogleUtilities
+-- [download 30% complete]
+-- [download 3% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/nanopb-0.3.9.8.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/nanopb'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 28%] No update step for 'nanopb'
+[ 30%] Performing patch step for 'nanopb'
+-- [download 34% complete]
+patching file CMakeLists.txt
+patching file generator/nanopb_generator.py
+[ 31%] No configure step for 'nanopb'
+[ 32%] No build step for 'nanopb'
+[ 33%] No install step for 'nanopb'
+[ 34%] No test step for 'nanopb'
+-- [download 35% complete]
+[ 35%] Completed 'nanopb'
+[ 35%] Built target nanopb
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/re2-8e08f47b11b413302749c0d8b17a1c94777495d5.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/re2'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 36%] No update step for 're2'
+-- [download 36% complete]
+[ 37%] No patch step for 're2'
+-- [download 37% complete]
+-- [download 4% complete]
+[ 38%] No configure step for 're2'
+[ 40%] No build step for 're2'
+[ 41%] No install step for 're2'
+[ 42%] No test step for 're2'
+[ 43%] Completed 're2'
+-- [download 38% complete]
+[ 43%] Built target re2
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 5% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 6% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 7% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 8% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 9% complete]
+-- [download 66% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 10% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/snappy-1.1.9.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/snappy'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 44%] No update step for 'snappy'
+[ 45%] Performing patch step for 'snappy'
+patching file snappy.cc
+[ 46%] No configure step for 'snappy'
+[ 47%] No build step for 'snappy'
+[ 48%] No install step for 'snappy'
+[ 50%] No test step for 'snappy'
+[ 51%] Completed 'snappy'
+[ 51%] Built target snappy
+[ 52%] Creating directories for 'leveldb'
+[ 53%] Performing download step (git clone) for 'leveldb'
+-- [download 74% complete]
+-- [download 11% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 12% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 13% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 14% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/c-ares-e982924acee7f7313b4baa4ee5ec000c5e373c30.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/cares'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 54%] No update step for 'c-ares'
+[ 55%] No patch step for 'c-ares'
+[ 56%] No configure step for 'c-ares'
+[ 57%] No build step for 'c-ares'
+-- [download 97% complete]
+[ 58%] No install step for 'c-ares'
+[ 60%] No test step for 'c-ares'
+[ 61%] Completed 'c-ares'
+[ 61%] Built target c-ares
+-- [download 98% complete]
+-- [download 15% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/abseil-cpp-20220623.0.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/abseil-cpp'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 62%] No update step for 'abseil-cpp'
+[ 63%] No patch step for 'abseil-cpp'
+[ 64%] No configure step for 'abseil-cpp'
+[ 65%] No build step for 'abseil-cpp'
+[ 66%] No install step for 'abseil-cpp'
+[ 67%] No test step for 'abseil-cpp'
+[ 68%] Completed 'abseil-cpp'
+[ 68%] Built target abseil-cpp
+-- [download 16% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 26% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 29% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/protobuf-29cd005ce1fe1a8fabf11e325cb13006a6646d59.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/protobuf'
+-- extracting... [tar xfz]
+-- [download 30% complete]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 70%] No update step for 'protobuf'
+[ 71%] No patch step for 'protobuf'
+[ 72%] No configure step for 'protobuf'
+[ 73%] No build step for 'protobuf'
+[ 74%] No install step for 'protobuf'
+[ 75%] No test step for 'protobuf'
+[ 76%] Completed 'protobuf'
+[ 76%] Built target protobuf
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 36% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 67% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 74% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 98% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/grpc-1.50.0.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/grpc'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 77%] No update step for 'grpc'
+[ 78%] No patch step for 'grpc'
+[ 80%] No configure step for 'grpc'
+[ 81%] No build step for 'grpc'
+[ 82%] No install step for 'grpc'
+[ 83%] No test step for 'grpc'
+[ 84%] Completed 'grpc'
+[ 84%] Built target grpc
+Submodule path 'third_party/benchmark': checked out 'bf585a2789e30585b4e3ce6baf11ef2750b54677'
+Submodule path 'third_party/googletest': checked out 'c27acebba3b3c7d94209e0467b0a801db4af73ed'
+[ 85%] Performing update step for 'leveldb'
+[ 86%] Performing patch step for 'leveldb'
+Applying patch /home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore/cmake/external/leveldb-1.23_windows_paths.patch
+[ 87%] No configure step for 'leveldb'
+[ 88%] No build step for 'leveldb'
+[ 90%] No install step for 'leveldb'
+[ 91%] No test step for 'leveldb'
+[ 92%] Completed 'leveldb'
+[ 92%] Built target leveldb
+-- verifying file...
+       file='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/downloads/boringssl-b9232f9e27e5668bc0414879dcdedb2a59ea75f2.tar.gz'
+     dst='/home/dinhthong/turtlebot3_ws/src/turtlebot3_tourguide/build/turtlebot3_tourguide/firebase-cpp-sdk/external/src/firestore-build/external/src/boringssl'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 93%] No update step for 'boringssl'
+[ 94%] No patch step for 'boringssl'
+[ 95%] No configure step for 'boringssl'
+[ 96%] No build step for 'boringssl'
+[ 97%] No install step for 'boringssl'
+[ 98%] No test step for 'boringssl'
+[100%] Completed 'boringssl'
+[100%] Built target boringssl
+-- Looking for res_servicename in resolv
+-- Looking for res_servicename in resolv - not found
+-- Looking for gethostbyname in nsl
+-- Looking for gethostbyname in nsl - found
+-- Looking for gethostbyname in socket
+-- Looking for gethostbyname in socket - not found
+-- Looking for socket in socket
+-- Looking for socket in socket - not found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include file sys/socket.h
+-- Looking for include file sys/socket.h - found
+-- Looking for include file arpa/inet.h
+-- Looking for include file arpa/inet.h - found
+-- Looking for include file arpa/nameser_compat.h
+-- Looking for include file arpa/nameser_compat.h - found
+-- Looking for include file arpa/nameser.h
+-- Looking for include file arpa/nameser.h - found
+-- Looking for include file assert.h
+-- Looking for include file assert.h - found
+-- Looking for include file errno.h
+-- Looking for include file errno.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file limits.h
+-- Looking for include file limits.h - found
+-- Looking for include file malloc.h
