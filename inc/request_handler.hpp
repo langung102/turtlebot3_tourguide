@@ -3,6 +3,8 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+#include "tf2/LinearMath/Quaternion.h"
 #include <iostream>
 #include "global.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"

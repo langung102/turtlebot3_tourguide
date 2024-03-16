@@ -151,8 +151,10 @@ getRequestData getRequest(){
     myRequest.id = myID.Child("id").value().int64_value();
     firebase::Variant x = myID.Child("param").Child("x").value();
     firebase::Variant y = myID.Child("param").Child("y").value();
+    firebase::Variant yaw = myID.Child("param").Child("yaw").value();
     myRequest.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
     myRequest.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
+    myRequest.yPosition = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
     return myRequest; 
 }
 
@@ -206,7 +208,7 @@ getPositionData getPosition(){
     return myPosition; 
 }
 
-void setPosition(double x, double y){
+void setPosition(double x, double y, double yaw){
     // Ensure that the Firebase app is initialized.
     if (!firebase_app)
     {
@@ -229,6 +231,8 @@ void setPosition(double x, double y){
     // Set the value at the specified location.
     auto future = reference.Child("position").Child("x").SetValue(x);
     WaitForCompletion(future, "set");
-     auto future1 = reference.Child("position").Child("y").SetValue(y);
+    auto future1 = reference.Child("position").Child("y").SetValue(y);
+    WaitForCompletion(future1, "set");
+    auto future2 = reference.Child("position").Child("yaw").SetValue(yaw);
     WaitForCompletion(future1, "set");
 }
