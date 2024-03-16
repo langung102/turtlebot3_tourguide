@@ -1,5 +1,8 @@
 #include "request_handler.hpp"
-
+#include "turtlebot3_firebase.hpp"
+#include "chrono"
+std::chrono::steady_clock::time_point startTime;
+std::chrono::steady_clock::time_point endTime;
 RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
 {
     InitializeFirebase();
@@ -30,6 +33,17 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 {
 }
 
+bool caculateTimeout(){
+    endTime = std::chrono::steady_clock::now();
+    auto elaspedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime)*1000;
+    RCLCPP_INFO(get_logger(), "Cancel! Elapsed time: %d", elaspedTime.count());
+    if(elaspedTime > std::chrono::seconds(5))
+    {
+        return true;
+    }
+    return false;
+}
+
 void RequestHandler::handlerCallback()
 {
     static auto goal_pose = geometry_msgs::msg::PoseStamped();
@@ -53,23 +67,31 @@ void RequestHandler::handlerCallback()
             state = 1;
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
         }
+        setStatus(true);
         break;
     case 1:
         if (this->nav.doneNavigate())
         {
+            startTime = std::chrono::steady_clock::now();
             state = 2;
+            setStatus(false);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
-        if (request.id == 0)
+        if (request.id == 0)    
         {
             this->nav.cancelNavigation();
             state = 0;
+            setStatus(false);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
-
         break;
     case 2:
+        if(caculateTimeout){
+            state = 0;
+            setStatus(true);
+            RCLCPP_INFO(get_logger(), "TimeOut!\n");
+        }
         if (request.id == 2)
         {
             needPublishing = true;
@@ -84,6 +106,7 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.orientation.w = 0;
             this->nav.startNavigation(goal_pose);
             state = 3;
+            setStatus(false);
             RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
         }
         break;
@@ -100,6 +123,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
+        setStatus(false);
         break;
     default:
         break;

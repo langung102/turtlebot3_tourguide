@@ -18,6 +18,7 @@
 #include <firebase/database.h>
 #include "firebase/future.h"
 #include "firebase/util.h"
+#include "chrono"
 /*Database Information*/
 extern firebase::App* firebase_app;
 extern const char *databasePath;
@@ -59,5 +60,7 @@ struct getPositionData{
 getPositionData getPosition();
 
 void setPosition(double x, double y);
+
+void setStatus(bool value);
 
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */
