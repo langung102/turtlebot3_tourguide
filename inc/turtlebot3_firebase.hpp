@@ -62,4 +62,6 @@ getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);
 
+void setStatus(bool value);
+
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */

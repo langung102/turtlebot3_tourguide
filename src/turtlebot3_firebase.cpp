@@ -236,3 +236,28 @@ void setPosition(double x, double y, double yaw){
     auto future2 = reference.Child("position").Child("yaw").SetValue(yaw);
     WaitForCompletion(future1, "set");
 }
+
+void setStatus(bool value){
+     // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the database location where you want to publish the value.
+    firebase::database::DatabaseReference reference = database->GetReference(databasePath);
+    // Set the value at the specified location.
+    auto future = reference.Child("isFree").SetValue(value);
+    WaitForCompletion(future, "set");
+}

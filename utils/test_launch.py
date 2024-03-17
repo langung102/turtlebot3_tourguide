@@ -15,7 +15,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     test2 = LaunchConfiguration(
-        'turtlebot3_gazebo',
+        'turtlebot3_bringup',
         default=os.path.join(get_package_share_directory('turtlebot3_bringup'), 'launch'))
     LAUNCH_FILE2 = "/robot.launch.py"
 

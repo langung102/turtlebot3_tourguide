@@ -34,6 +34,7 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 void RequestHandler::handlerCallback()
 {
     static auto goal_pose = geometry_msgs::msg::PoseStamped();
+    setStatus(true);
 
     switch (state)
     {
@@ -52,6 +53,7 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.orientation = tf2::toMsg(quaternion);
             this->nav.startNavigation(goal_pose);
             state = 1;
+            setStatus(false);
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
         }
         break;
@@ -66,9 +68,9 @@ void RequestHandler::handlerCallback()
         {
             this->nav.cancelNavigation();
             state = 0;
+            setStatus(true);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
-
         break;
     case 2:
         if (request.id == 2)
@@ -92,6 +94,7 @@ void RequestHandler::handlerCallback()
         if (this->nav.doneNavigate())
         {
             state = 0;
+            setStatus(true);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 
@@ -99,6 +102,7 @@ void RequestHandler::handlerCallback()
         {
             this->nav.cancelNavigation();
             state = 0;
+            setStatus(true);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;

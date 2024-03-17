@@ -16,9 +16,9 @@ with open(yaml_file_path, 'r') as file:
 
 class AmclPoseSubscriber(Node):
     def __init__(self):
-        self.init_x = 0
-        self.init_y = 0
-        self.init_yaw = 0
+        self.init_x = 0.001
+        self.init_y = 0.001
+        self.init_yaw = 0.001
 
         super().__init__('amcl_pose_subscriber')
         self.subscription = self.create_subscription(
@@ -135,19 +135,19 @@ def send_signal_to_process(process):
 def launch_handler():
     process = None
     while True:
+        None
+        time.sleep(0.01)
         if isButtonPressed(0):
-            print("press 1")
             if process is None or process.poll() is not None:
                 process = launch_subprocess()
             else:
                 print("Subprocess is already running.")
             time.sleep(1)
         elif isButtonPressed(1):
-            print("long press 2")
-            data['amcl']['ros__parameters']['initial_pose']['x'] = amcl_pose_subscriber.init_x
-            data['amcl']['ros__parameters']['initial_pose']['y'] = amcl_pose_subscriber.init_y
+            data['amcl']['ros__parameters']['initial_pose']['x'] = amcl_pose_subscriber.init_x + 0.001
+            data['amcl']['ros__parameters']['initial_pose']['y'] = amcl_pose_subscriber.init_y + 0.001
 
-            data['amcl']['ros__parameters']['initial_pose']['yaw'] = amcl_pose_subscriber.init_yaw
+            data['amcl']['ros__parameters']['initial_pose']['yaw'] = amcl_pose_subscriber.init_yaw + 0.001
 
             print(data['amcl']['ros__parameters']['initial_pose']['x'],
                 data['amcl']['ros__parameters']['initial_pose']['y'],
@@ -158,7 +158,6 @@ def launch_handler():
 
             time.sleep(2)
         elif isButtonLongPressed(1):
-            print("press 2")
             if process is not None and process.poll() is None:
                 send_signal_to_process(process)
             else:
