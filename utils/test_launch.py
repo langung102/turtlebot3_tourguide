@@ -25,7 +25,7 @@ def generate_launch_description():
     LAUNCH_FILE3 = "/navigation2.launch.py"
     
     delay_action = TimerAction(
-        period=5.0,
+        period=10.0,
         actions=[
             Node(
                 package='turtlebot3_tourguide',
@@ -37,7 +37,7 @@ def generate_launch_description():
     return LaunchDescription([
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test3, LAUNCH_FILE3]),
-            launch_arguments={'use_sim_time': 'True', 'map': 'map.yaml'}.items(),
+            launch_arguments={'map': 'map.yaml'}.items(),
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test2, LAUNCH_FILE2])

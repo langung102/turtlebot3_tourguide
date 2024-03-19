@@ -7,6 +7,7 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     dbref = database->GetReference(requestPath);
     dbref.AddValueListener(this);
     timer = this->create_wall_timer(50ms, std::bind(&RequestHandler::handlerCallback, this));
+    setStatus(true);
 }
 
 RequestHandler::~RequestHandler()
@@ -22,6 +23,7 @@ void RequestHandler::OnValueChanged(
     firebase::Variant y = snapshot.Child("param").Child("y").value();
     firebase::Variant yaw = snapshot.Child("param").Child("yaw").value();
     request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
+    request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
     request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
     RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f) - %f", request.id, request.xPosition, request.yPosition, request.yaw);
 }
@@ -34,7 +36,6 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 void RequestHandler::handlerCallback()
 {
     static auto goal_pose = geometry_msgs::msg::PoseStamped();
-    setStatus(true);
 
     switch (state)
     {
