@@ -90,6 +90,12 @@ void RequestHandler::handlerCallback()
             state = 3;
             RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
         }
+        if (request.id == 0)
+        {
+            state = 0;
+            setStatus(true);
+            RCLCPP_INFO(get_logger(), "Cancel!\n");
+        }
         break;
     case 3:
         if (this->nav.doneNavigate())
