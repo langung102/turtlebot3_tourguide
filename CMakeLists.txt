@@ -44,11 +44,13 @@ find_package(rclcpp_action REQUIRED)
 set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1")
 
 set(SRC
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/myspeaker.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/request_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/update_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/navigation.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/global.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/inc/myspeaker.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/request_handler.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/update_handler.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/navigation.hpp
@@ -58,7 +60,7 @@ set(SRC
 add_executable(turtlebot3_tourguide
   ${SRC}
 )
-target_link_libraries(turtlebot3_tourguide "${firebase_libs}" ${CMAKE_BINARY_DIR}/libturtlebot3_firebase.a)
+target_link_libraries(turtlebot3_tourguide "${firebase_libs}" ${CMAKE_BINARY_DIR}/libturtlebot3_firebase.a asound)
 add_dependencies(turtlebot3_tourguide turtlebot3_firebase)
 
 ament_target_dependencies(turtlebot3_tourguide

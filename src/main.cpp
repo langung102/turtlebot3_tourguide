@@ -4,6 +4,7 @@
 #include <iostream>
 #include "update_handler.hpp"
 #include "request_handler.hpp"
+#include "myspeaker.hpp"
 #include "global.hpp"
 
 int main(int argc, char *argv[])
