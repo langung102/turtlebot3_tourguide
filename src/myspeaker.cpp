@@ -72,7 +72,7 @@ void playWav(const char *wav_file, double volume) {
 
 int myspeaker() {
     const char *text = "Please choose station you want to come"; // Text to speak
-    const char *wavfile = "test.wav"; // Temporary .wav file
+    const char *wavfile = "/root/test.wav"; // Temporary .wav file
     
     speakAndSave(text, wavfile, 1);
     playWav(wavfile, 1);
