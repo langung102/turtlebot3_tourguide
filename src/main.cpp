@@ -4,11 +4,11 @@
 #include <iostream>
 #include "update_handler.hpp"
 #include "request_handler.hpp"
-#include "myspeaker.hpp"
 #include "global.hpp"
 
 int main(int argc, char *argv[])
 {
+    speak("Starting programs");
     rclcpp::init(argc, argv);
     auto node_amcl_pose = std::make_shared<AmclPoseSubscriber>();
     auto node_battery = std::make_shared<BatterySubscriber>();
@@ -18,4 +18,5 @@ int main(int argc, char *argv[])
     executor.add_node(node_battery);
     executor.add_node(node_pub);
     executor.spin();
+    return 0;
 }

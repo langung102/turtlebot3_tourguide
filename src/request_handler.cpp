@@ -8,6 +8,7 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     dbref.AddValueListener(this);
     timer = this->create_wall_timer(50ms, std::bind(&RequestHandler::handlerCallback, this));
     setStatus(true);
+    speak("Waiting for request");
 }
 
 RequestHandler::~RequestHandler()
@@ -42,6 +43,7 @@ void RequestHandler::handlerCallback()
     case 0:
         if (request.id == 1)
         {
+            speak("Start navigating to pick up station");
             needPublishing = true;
             goal_pose.header.frame_id = "map";
             goal_pose.header.stamp = now();
@@ -62,6 +64,7 @@ void RequestHandler::handlerCallback()
         if (this->nav.doneNavigate())
         {
             state = 2;
+            speak("Reached pick up station, please choose your destination");
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
@@ -70,18 +73,20 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
+            speak("Cancelled");
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
     case 2:
         if (request.id == 2)
         {
+            speak("Start navigating to destination");
             needPublishing = true;
             goal_pose.header.frame_id = "map";
             goal_pose.header.stamp = now();
             goal_pose.pose.position.x = request.xPosition;
             goal_pose.pose.position.y = request.yPosition;
-            goal_pose.pose.position.z = 0;
+            goal_pose.pose.position.z = 0.0;
             double radians = request.yaw * M_PI / 180.0;
             tf2::Quaternion quaternion;
             quaternion.setRPY(0, 0, radians);
@@ -94,6 +99,7 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
+            speak("Cancelled");
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
@@ -102,6 +108,7 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
+            speak("Reached pick up destination");
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 
@@ -110,6 +117,7 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
+            speak("Cancelled");
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;

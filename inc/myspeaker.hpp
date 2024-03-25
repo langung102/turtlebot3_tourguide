@@ -14,6 +14,6 @@ void speakAndSave(const char *text, const char *wavfile);
 
 void playWav(const char *wav_file, double volume);
 
-int myspeaker();
+void speak(const char*);
 
 #endif SPEAKER
