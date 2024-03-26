@@ -18,5 +18,6 @@ int main(int argc, char *argv[])
     executor.add_node(node_battery);
     executor.add_node(node_pub);
     executor.spin();
+    speak("Program has shut down");
     return 0;
 }
