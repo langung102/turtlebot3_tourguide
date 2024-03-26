@@ -58,10 +58,17 @@ struct getPositionData{
     double yaw;
 };
 
+struct stationData{
+    std::string destinantionStation;
+    int id;
+    std::string nameStation;
+};
+
 getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);
 
 void setStatus(bool value);
 
+stationData getStation();
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */

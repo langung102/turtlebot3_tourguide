@@ -261,3 +261,57 @@ void setStatus(bool value){
     auto future = reference.Child("isFree").SetValue(value);
     WaitForCompletion(future, "set");
 }
+
+stationData getStation(){
+    stationData myStation;
+    myStation.destinantionStation = "NO DESTINATION";
+    myStation.id = -1;
+    myStation.nameStation = "NO NAME";
+           // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        // Handle error as needed.
+        return myStation;
+    }
+
+    // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        // Handle error as needed.
+        return myStation;
+    }
+
+ // Get the root reference location of the database.
+    firebase::database::DatabaseReference dbref = database->GetReference(requestPath);
+    firebase::Future<firebase::database::DataSnapshot> result = dbref.GetValue();
+    WaitForCompletion(result, "get");
+    const firebase::database::DataSnapshot station = *result.result();
+        //check the field of x and y of the param whether exist or not 
+    if(!(station.Child("station").HasChild("desc")) &&  !(station.Child("station").HasChild("id")) && !(station.Child("station").HasChild("name"))){
+        std::cerr << "Don't have this field x and y" << std::endl;
+    }
+    // check value of x whether null or not
+    if(!(station.Child("station").Child("desc").value().is_null())){
+        std::cerr << "desc's value is not null" << std::endl;
+    }
+    // check value of y whether null or not
+    if(!(station.Child("station").Child("id").value().is_null())){
+        std::cerr << "id's value is not null" << std::endl;
+    }
+    if(!(station.Child("station").Child("name").value().is_null())){
+        std::cerr << "name's value is not null" << std::endl;
+    }
+    //debug
+    std::cerr << station.Child("station").Child("desc").value().string_value()<< std::endl;
+    std::cerr << station.Child("station").Child("id").value().int64_value()<< std::endl;
+    std::cerr << station.Child("station").Child("name").value().string_value()<< std::endl;
+
+    // Assign a value to the variable myRequest
+    myStation.destinantionStation = station.Child("station").Child("desc").value().string_value();
+    myStation.id = station.Child("station").Child("id").value().int64_value();
+    myStation.nameStation = station.Child("station").Child("name").value().string_value();
+    return myStation; 
+}
