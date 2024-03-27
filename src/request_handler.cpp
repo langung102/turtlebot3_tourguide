@@ -26,7 +26,11 @@ void RequestHandler::OnValueChanged(
     request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
     request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
     request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
-    RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f) - %f", request.id, request.xPosition, request.yPosition, request.yaw);
+    request.station.destinantionStation = snapshot.Child("station").Child("desc").value().string_value();
+    request.station.id = snapshot.Child("station").Child("id").value().int64_value();
+    request.station.nameStation = snapshot.Child("station").Child("name").value().string_value();
+
+    RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f) - %f at %s", request.id, request.xPosition, request.yPosition, request.yaw, request.station.nameStation.c_str());
 }
 
 void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
@@ -37,13 +41,15 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 void RequestHandler::handlerCallback()
 {
     static auto goal_pose = geometry_msgs::msg::PoseStamped();
+    static char text[1024];
 
     switch (state)
     {
     case 0:
         if (request.id == 1)
         {
-            speak("Start navigating to pick up station");
+            sprintf(text, "Start navigating to %s station", request.station.nameStation.c_str());
+            speak((const char*) text);
             needPublishing = true;
             goal_pose.header.frame_id = "map";
             goal_pose.header.stamp = now();
@@ -64,7 +70,8 @@ void RequestHandler::handlerCallback()
         if (this->nav.doneNavigate())
         {
             state = 2;
-            speak("Reached pick up station, please choose your destination");
+            sprintf(text, "Reached pick %s station, please choose your destination", request.station.nameStation.c_str());
+            speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
@@ -80,7 +87,8 @@ void RequestHandler::handlerCallback()
     case 2:
         if (request.id == 2)
         {
-            speak("Start navigating to destination");
+            sprintf(text, "Start navigating to %s desination", request.station.nameStation.c_str());
+            speak((const char*) text);
             needPublishing = true;
             goal_pose.header.frame_id = "map";
             goal_pose.header.stamp = now();
@@ -108,7 +116,8 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
-            speak("Reached pick up destination");
+            sprintf(text, "Reached %s desination", request.station.nameStation.c_str());
+            speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 

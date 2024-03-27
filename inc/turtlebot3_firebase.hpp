@@ -42,12 +42,19 @@ int GetBattery();
 /*wait for getting and setting successfully*/
 void WaitForCompletion(const firebase::FutureBase &future, const char *name);
 
+struct stationData{
+    std::string destinantionStation;
+    int id;
+    std::string nameStation;
+};
+
 /*get request information*/
 struct getRequestData{
     int id;
     double yPosition;
     double xPosition;
     double yaw;
+    stationData station;
 };
 
 getRequestData getRequest();
@@ -56,12 +63,6 @@ struct getPositionData{
     double xPosition;
     double yPosition;
     double yaw;
-};
-
-struct stationData{
-    std::string destinantionStation;
-    int id;
-    std::string nameStation;
 };
 
 getPositionData getPosition();
