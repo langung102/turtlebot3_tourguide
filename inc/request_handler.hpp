@@ -13,6 +13,7 @@
 #include "turtlebot3_firebase.hpp"
 #include "myspeaker.hpp"
 #include "chrono"
+#include "curl/curl.h"
 
 class RequestHandler : public rclcpp::Node, public firebase::database::ValueListener
 {
@@ -24,6 +25,7 @@ private:
     void getInput();
     void OnValueChanged(const firebase::database::DataSnapshot &snapshot) override;
     void OnCancelled(const firebase::database::Error &error_code, const char *error_message) override;
+    void postHttpReachGoal();
     firebase::database::DatabaseReference dbref;
     firebase::database::Database *database;
     NavigateToGoal nav;

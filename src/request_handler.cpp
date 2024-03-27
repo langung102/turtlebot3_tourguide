@@ -38,6 +38,39 @@ void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
 {
 }
 
+void RequestHandler::postHttpReachGoal() {
+    CURL *curl;
+    CURLcode res;
+
+    /* In windows, this will init the winsock stuff */ 
+    curl_global_init(CURL_GLOBAL_ALL);
+
+    /* get a curl handle */ 
+    curl = curl_easy_init();
+    if(curl) {
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(curl, CURLOPT_URL, "https://ultimatetech.live/v1/tours/mockup");
+        /* Now specify the POST data */ 
+        const char *json = "{\"fromStation\": \"1\", \"toStation\": \"10\"}";
+        struct curl_slist *slist1 = NULL;
+        slist1 = curl_slist_append(slist1, "Content-Type: application/json");
+        slist1 = curl_slist_append(slist1, "Accept: application/json");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist1);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json);
+
+        /* Perform the request, res will get the return code */ 
+        res = curl_easy_perform(curl);
+        /* Check for errors */ 
+        if(res != CURLE_OK)
+        fprintf(stderr, "curl_easy_perform() failed: %s\n",
+                curl_easy_strerror(res));
+
+        /* always cleanup */ 
+        curl_easy_cleanup(curl);
+    }
+    curl_global_cleanup();
+}
+
 void RequestHandler::handlerCallback()
 {
     static auto goal_pose = geometry_msgs::msg::PoseStamped();
