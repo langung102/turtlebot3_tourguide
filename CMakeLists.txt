@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(turtlebot3_tourguide)
 
-option(BUILD_FOR_X64 "BUILDING FOR X64 ARCHITECTURE, OTHERWISE, BUILDING FOR AARCH64" OFF)
+option(BUILD_FOR_X64 "BUILDING FOR X64 ARCHITECTURE, OTHERWISE, BUILDING FOR AARCH64" ON)
 
 if (BUILD_FOR_X64)
   message(STATUS "building for x64")
@@ -51,6 +51,7 @@ find_package(rclcpp_action REQUIRED)
 set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1")
 
 set(SRC
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/planner.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/myspeaker.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/request_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/update_handler.cpp
@@ -75,6 +76,7 @@ ament_target_dependencies(turtlebot3_tourguide
   rclcpp_action
   geometry_msgs
   nav2_msgs
+  nav_msgs
   rclcpp_action  
   nav2_lifecycle_manager
   tf2_geometry_msgs
