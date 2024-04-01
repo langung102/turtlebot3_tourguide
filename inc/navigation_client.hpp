@@ -14,15 +14,18 @@
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include "nav2_util/geometry_utils.hpp"
 #include <action_msgs/msg/goal_status.hpp>
+#include "global.hpp"
 
 using namespace std::chrono_literals;
 
-class NavigateToGoal {
+class NavigationClient {
 public:
-    NavigateToGoal();
+    NavigationClient();
     void startNavigation(geometry_msgs::msg::PoseStamped);
     void cancelNavigation();
+    bool isNavigate();
     bool doneNavigate();
+    void spin_client();
     // bool isGoalReached();
 
 private:
@@ -31,7 +34,10 @@ private:
     nav2_msgs::action::NavigateToPose::Goal navigation_goal_;
     NavigationGoalHandle::SharedPtr navigation_goal_handle_;
     rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr navigation_action_client_;
+    rclcpp::Subscription<nav2_msgs::action::NavigateToPose::Impl::GoalStatusMessage>::SharedPtr
+        navigation_goal_status_sub_;
     std::chrono::milliseconds server_timeout_;
+    bool status; // 1 if navigating, 0 if not navigating
 };
 
 #endif

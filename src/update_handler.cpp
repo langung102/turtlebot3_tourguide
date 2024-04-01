@@ -35,23 +35,25 @@ BatterySubscriber::BatterySubscriber() : Node("battery_state_subscriber")
         {
             processBattery(msg);
         });
-    subscription_ = this->create_subscription<sensor_msgs::msg::BatteryState>(
-        "battery_state",
-        10,
-        std::bind(&BatterySubscriber::processBattery, this, std::placeholders::_1));
+    // subscription_ = this->create_subscription<sensor_msgs::msg::BatteryState>(
+    //     "battery_state",
+    //     10,
+    //     std::bind(&BatterySubscriber::processBattery, this, std::placeholders::_1));
 
     this->timer_ = this->create_wall_timer(std::chrono::seconds(10), std::bind(&BatterySubscriber::timerCallback, this));
 }
 
-void BatterySubscriber::timerCallback() {
+void BatterySubscriber::timerCallback()
+{
     SetBattery(this->battery);
     RCLCPP_INFO(get_logger(), "Battery: %d", this->battery);
 }
 
 void BatterySubscriber::processBattery(sensor_msgs::msg::BatteryState::SharedPtr msg)
 {
-    int tmp = (int) msg->percentage;
-    if (abs(this->battery - tmp) > 5) {
+    int tmp = (int)msg->percentage;
+    if (abs(this->battery - tmp) > 5)
+    {
         this->battery = tmp;
     }
 }

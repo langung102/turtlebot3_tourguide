@@ -1,18 +1,31 @@
-#include "navigation.hpp"
+#include "navigation_client.hpp"
 
-NavigateToGoal::NavigateToGoal() : server_timeout_(100)
+NavigationClient::NavigationClient() : server_timeout_(100)
 {
     auto options = rclcpp::NodeOptions().arguments(
         {"--ros-args", "--remap", "__node:=navigation_dialog_action_client", "--"});
-    client_node_ = std::make_shared<rclcpp::Node>("_", options);
+    client_node_ = std::make_shared<rclcpp::Node>("nav_client", options);
     navigation_goal_ = nav2_msgs::action::NavigateToPose::Goal();
     navigation_action_client_ =
         rclcpp_action::create_client<nav2_msgs::action::NavigateToPose>(
             client_node_,
             "navigate_to_pose");
+    navigation_goal_status_sub_ = client_node_->create_subscription<action_msgs::msg::GoalStatusArray>(
+        "navigate_to_pose/_action/status",
+        10,
+        [this](const action_msgs::msg::GoalStatusArray::SharedPtr msg) {
+            if (msg->status_list.back().status == action_msgs::msg::GoalStatus::STATUS_EXECUTING) {
+                this->status = 1;
+                std::cout << "navigating" << std::endl;
+            } else if (msg->status_list.back().status == action_msgs::msg::GoalStatus::STATUS_SUCCEEDED){
+                this->status = 0;
+                std::cout << "done navigating" << std::endl;
+            }
+        });
+    status = 0;
 }
 
-void NavigateToGoal::startNavigation(geometry_msgs::msg::PoseStamped pose)
+void NavigationClient::startNavigation(geometry_msgs::msg::PoseStamped pose)
 {
     auto is_action_server_ready =
         navigation_action_client_->wait_for_action_server(std::chrono::seconds(5));
@@ -58,7 +71,7 @@ void NavigateToGoal::startNavigation(geometry_msgs::msg::PoseStamped pose)
     }
 }
 
-void NavigateToGoal::cancelNavigation()
+void NavigationClient::cancelNavigation()
 {
     if (this->navigation_goal_handle_)
     {
@@ -76,14 +89,26 @@ void NavigateToGoal::cancelNavigation()
     }
 }
 
-bool NavigateToGoal::doneNavigate() {
+bool NavigationClient::doneNavigate() {
     rclcpp::spin_some(this->client_node_);
+    usleep(10000);
+    return !this->status;
+    // rclcpp::spin_some(this->client_node_);
     // std::cout << (int) navigation_goal_handle_->get_status() << std::endl;
-    return (int) navigation_goal_handle_->get_status() == 4;
+    // return (int) navigation_goal_handle_->get_status() == 4;
     // return status = action_msgs::msg::GoalStatus::STATUS_ACCEPTED ||
     //     status == action_msgs::msg::GoalStatus::STATUS_EXECUTING;
 }
 
+bool NavigationClient::isNavigate() {
+    rclcpp::spin_some(this->client_node_);
+    usleep(10000);
+    return this->status;
+}
+
+// void NavigationClient::spin_client() {
+//     rclcpp::spin_some(this->client_node_);
+// }
 // bool NavigateToGoal::isGoalReached() {
 //     return this->goal_checker.isGoalReached();
 // }

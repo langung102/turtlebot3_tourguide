@@ -51,17 +51,18 @@ find_package(rclcpp_action REQUIRED)
 set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1")
 
 set(SRC
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/planner.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/path_planning_client.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/myspeaker.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/request_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/update_handler.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/navigation.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/navigation_client.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/global.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/inc/path_planning_client.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/myspeaker.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/request_handler.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/update_handler.hpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/inc/navigation.hpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/inc/navigation_client.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/inc/global.hpp
 )
 
