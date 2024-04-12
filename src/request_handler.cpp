@@ -8,15 +8,7 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     dbref.AddValueListener(this);
     timer = this->create_wall_timer(50ms, std::bind(&RequestHandler::handlerCallback, this));
     setStatus(true);
-    stationData data;
-    data = getMultiStation();
-    std::cout << data.multipleStation<<std::endl;
-    parseMultiStation(data.multipleStation);
-    std::cout<< "numberOfStation: " << numberOfStation<<std::endl;
-    for(const auto& zone : zones){
-        std::cout << "Zone Name: " << zone.name << ", Value 1: " << zone.value1
-                  << ", Value 2: " << zone.value2 << ", Value 3: " << zone.value3 << std::endl;
-    }
+    isReachStation(0);
     // speak("Waiting for request");
 }
 
@@ -105,7 +97,13 @@ void RequestHandler::handlerCallback()
             this->nav.startNavigation(goal_pose);
             state = 1;
             setStatus(false);
+            isReachStation(0);
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
+        }
+
+        if (request_id == 4)
+        {
+
         }
         break;
     case 1:
@@ -113,6 +111,7 @@ void RequestHandler::handlerCallback()
         {
             state = 2;
             sprintf(text, "Reached pick %s station, please choose your destination", request.station.nameStation.c_str());
+            isReachStation(1);
             // speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
@@ -123,6 +122,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             // speak("Cancelled");
+            isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
@@ -143,6 +143,7 @@ void RequestHandler::handlerCallback()
             goal_pose.pose.orientation = tf2::toMsg(quaternion);
             this->nav.startNavigation(goal_pose);
             state = 3;
+            isReachStation(1);
             RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
         }
         if (request.id == 0)
@@ -150,6 +151,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             // speak("Cancelled");
+            isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
@@ -160,6 +162,7 @@ void RequestHandler::handlerCallback()
             setStatus(true);
             sprintf(text, "Reached %s desination", request.station.nameStation.c_str());
             // speak((const char*) text);
+            isReachStation(2);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 
@@ -169,6 +172,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             // speak("Cancelled");
+            isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;

@@ -4,9 +4,6 @@ firebase::App* firebase_app;
 const char *databasePath = "turtlebot_state";
 const char *requestPath = "request";
 
-const char *email = "minhlangstudy@gmail.com";
-const char *password = "123456789";
-
 const char *api_key = "AIzaSyD3m-cPZIxZwK59Y8q1HCLxWVOf0qVHSjQ";
 const char *app_id = "1:419978511119:android:eb17bcb42e9438e41cf47a";
 const char *database_url = "https://turtlebot3-3bd17-default-rtdb.asia-southeast1.firebasedatabase.app";
@@ -72,6 +69,32 @@ void SetBattery(int value){
     auto future = reference.Child("battery").SetValue(value);
     WaitForCompletion(future, "set");
 }
+
+void isReachStation(int value){
+  // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        // Handle error as needed.
+        return;
+    }
+
+    // Get a reference to the database location where you want to publish the value.
+    firebase::database::DatabaseReference reference = database->GetReference(databasePath);
+    // Set the value at the specified location.
+    auto future = reference.Child("isReachStation").SetValue(value);
+    WaitForCompletion(future, "set");
+}
+
 int GetBattery(){
        // Ensure that the Firebase app is initialized.
     if (!firebase_app)
