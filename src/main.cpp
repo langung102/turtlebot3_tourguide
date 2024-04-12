@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     rclcpp::init(argc, argv);
     // rclcpp::shutdown();
     // speak("Starting programs");
+
     auto node_amcl_pose = std::make_shared<AmclPoseSubscriber>();
     auto node_battery = std::make_shared<BatterySubscriber>();
     // auto path_planning_client = std::make_shared<PathPlanningClient>();

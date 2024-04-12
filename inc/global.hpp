@@ -8,5 +8,4 @@ extern bool stopNavigating;
 extern int state;
 extern int request_id;
 extern getRequestData request;
-
 #endif

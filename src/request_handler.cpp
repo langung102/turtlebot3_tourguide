@@ -27,7 +27,7 @@ void RequestHandler::OnValueChanged(
     request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
     request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
     request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
-    request.station.destinantionStation = snapshot.Child("station").Child("desc").value().string_value();
+    request.station.description= snapshot.Child("station").Child("description").value().string_value();
     request.station.id = snapshot.Child("station").Child("id").value().int64_value();
     request.station.nameStation = snapshot.Child("station").Child("name").value().string_value();
 
