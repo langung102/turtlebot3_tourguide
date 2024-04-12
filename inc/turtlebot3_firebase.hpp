@@ -39,6 +39,8 @@ extern firebase::AppOptions options;
 void SetBattery(int value);
 int GetBattery();
 
+void isReachStation(int value);
+
 /*wait for getting and setting successfully*/
 void WaitForCompletion(const firebase::FutureBase &future, const char *name);
 
