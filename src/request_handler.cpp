@@ -8,6 +8,15 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     dbref.AddValueListener(this);
     timer = this->create_wall_timer(50ms, std::bind(&RequestHandler::handlerCallback, this));
     setStatus(true);
+    stationData data;
+    data = getMultiStation();
+    std::cout << data.multipleStation<<std::endl;
+    parseMultiStation(data.multipleStation);
+    std::cout<< "numberOfStation: " << numberOfStation<<std::endl;
+    for(const auto& zone : zones){
+        std::cout << "Zone Name: " << zone.name << ", Value 1: " << zone.value1
+                  << ", Value 2: " << zone.value2 << ", Value 3: " << zone.value3 << std::endl;
+    }
     // speak("Waiting for request");
 }
 
@@ -26,7 +35,7 @@ void RequestHandler::OnValueChanged(
     request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
     request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
     request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
-    request.station.destinantionStation = snapshot.Child("station").Child("desc").value().string_value();
+    request.station.description= snapshot.Child("station").Child("description").value().string_value();
     request.station.id = snapshot.Child("station").Child("id").value().int64_value();
     request.station.nameStation = snapshot.Child("station").Child("name").value().string_value();
 

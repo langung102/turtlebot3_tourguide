@@ -18,6 +18,9 @@
 #include <firebase/database.h>
 #include "firebase/future.h"
 #include "firebase/util.h"
+#include <cstdlib> 
+#include <vector>
+#include <sstream>
 /*Database Information*/
 extern firebase::App* firebase_app;
 extern const char *databasePath;
@@ -34,7 +37,7 @@ extern const char *project_id;
 void InitializeFirebase();
 
 extern firebase::AppOptions options;
-
+extern int numberOfStation;
 /*Battery information*/
 void SetBattery(int value);
 int GetBattery();
@@ -43,9 +46,10 @@ int GetBattery();
 void WaitForCompletion(const firebase::FutureBase &future, const char *name);
 
 struct stationData{
-    std::string destinantionStation;
+    std::string description;
     int id;
     std::string nameStation;
+    std::string multipleStation;
 };
 
 /*get request information*/
@@ -64,7 +68,22 @@ struct getPositionData{
     double yPosition;
     double yaw;
 };
-
+struct multiStation{
+    std::string name;
+    double xPosition;
+    double yPosition;
+    double yaw;
+};
+//struct save data for multiple Station
+struct Zone {
+    std::string name;
+    double value1;
+    double value2;
+    int value3;
+};
+extern std::vector<Zone> zones;
+stationData getMultiStation();
+void parseMultiStation(std::string str);
 getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);

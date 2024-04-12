@@ -14,6 +14,8 @@ const char *storage_bucket = "turtlebot3-3bd17.appspot.com";
 const char *project_id = "turtlebot3-3bd17";
 
 firebase::AppOptions options;
+std::vector<Zone> zones;
+int numberOfStation = 0;
 
 void InitializeFirebase()
 {
@@ -264,10 +266,12 @@ void setStatus(bool value){
 
 stationData getStation(){
     stationData myStation;
-    myStation.destinantionStation = "NO DESTINATION";
+    myStation.description= "NO DESTINATION";
     myStation.id = -1;
     myStation.nameStation = "NO NAME";
-           // Ensure that the Firebase app is initialized.
+    myStation.multipleStation = "No Station";
+    // myStation.multipleStation = "No stattion";
+     // Ensure that the Firebase app is initialized.
     if (!firebase_app)
     {
         std::cerr << "Firebase app is not initialized." << std::endl;
@@ -290,12 +294,12 @@ stationData getStation(){
     WaitForCompletion(result, "get");
     const firebase::database::DataSnapshot station = *result.result();
         //check the field of x and y of the param whether exist or not 
-    if(!(station.Child("station").HasChild("desc")) &&  !(station.Child("station").HasChild("id")) && !(station.Child("station").HasChild("name"))){
-        std::cerr << "Don't have this field x and y" << std::endl;
+    if(!(station.Child("station").HasChild("description")) &&  !(station.Child("station").HasChild("id")) && !(station.Child("station").HasChild("name"))){
+        std::cerr << "Don't have this field" << std::endl;
     }
     // check value of x whether null or not
-    if(!(station.Child("station").Child("desc").value().is_null())){
-        std::cerr << "desc's value is not null" << std::endl;
+    if(!(station.Child("station").Child("description").value().is_null())){
+        std::cerr << "description's value is not null" << std::endl;
     }
     // check value of y whether null or not
     if(!(station.Child("station").Child("id").value().is_null())){
@@ -305,13 +309,80 @@ stationData getStation(){
         std::cerr << "name's value is not null" << std::endl;
     }
     //debug
-    std::cerr << station.Child("station").Child("desc").value().string_value()<< std::endl;
+    std::cerr << station.Child("station").Child("description").value().string_value()<< std::endl;
     std::cerr << station.Child("station").Child("id").value().int64_value()<< std::endl;
     std::cerr << station.Child("station").Child("name").value().string_value()<< std::endl;
 
     // Assign a value to the variable myRequest
-    myStation.destinantionStation = station.Child("station").Child("desc").value().string_value();
+    myStation.description = station.Child("station").Child("description").value().string_value();
     myStation.id = station.Child("station").Child("id").value().int64_value();
     myStation.nameStation = station.Child("station").Child("name").value().string_value();
     return myStation; 
+}
+
+stationData getMultiStation(){
+    stationData myStation;
+    myStation.description= "NO DESTINATION";
+    myStation.id = -1;
+    myStation.nameStation = "NO NAME";
+    myStation.multipleStation = "No stattion";
+       // Ensure that the Firebase app is initialized.
+    if (!firebase_app)
+    {
+        std::cerr << "Firebase app is not initialized." << std::endl;
+        // Handle error as needed.
+        return myStation;
+    }
+
+    // Get a reference to the Firebase Realtime Database.
+    firebase::database::Database *database = firebase::database::Database::GetInstance(firebase_app);
+    if (!database)
+    {
+        std::cerr << "Failed to get the database instance." << std::endl;
+        // Handle error as needed.
+        return myStation;
+    }
+         // Get the root reference location of the database.
+    firebase::database::DatabaseReference dbref = database->GetReference(requestPath);
+    firebase::Future<firebase::database::DataSnapshot> result = dbref.GetValue();
+    WaitForCompletion(result, "get");
+    const firebase::database::DataSnapshot myMultiStation = *result.result();
+    //check field of id whether exist or not 
+    if(!(myMultiStation .HasChild("multipleStation"))){
+        std::cerr << "Don't have this multipleStation's field" << std::endl;
+    }
+    // check value of id whether null or not
+    if(!(myMultiStation.Child("multipleStation").value().is_null())){
+        std::cerr << "multipleStation is not null" << std::endl;
+    }
+    myStation.multipleStation = myMultiStation.Child("multipleStation").value().string_value();
+    return myStation;
+}
+
+void parseMultiStation(std::string str){
+  // Tokenize the string by semicolon
+    std::istringstream iss(str);
+    std::string token;
+    std::vector<std::string> tokens;
+    while (std::getline(iss, token, ';')) {
+        tokens.push_back(token);
+    }
+        // Parse the number
+      numberOfStation = std::stoi(tokens[0]);
+      for (size_t i = 1; i < tokens.size(); ++i) {
+        std::istringstream zone_stream(tokens[i]);
+        std::string zone_name;
+        std::getline(zone_stream, zone_name, ':');
+
+        Zone zone;
+        zone.name = zone_name;
+        zone_stream >> zone.value1;
+        zone_stream.ignore(); // Ignore the delimiter ':'
+        zone_stream >> zone.value2;
+        zone_stream.ignore(); // Ignore the delimiter ':'
+        std::string value3_str;
+        std::getline(zone_stream, value3_str, ';');
+        zone.value3 = std::stoi(value3_str);
+        zones.push_back(zone);
+    }
 }
