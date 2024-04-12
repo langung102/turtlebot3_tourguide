@@ -3,12 +3,17 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+#include "tf2/LinearMath/Quaternion.h"
 #include <iostream>
 #include "global.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
-#include "navigation.hpp"
+#include "navigation_client.hpp"
 #include "turtlebot3_firebase.hpp"
+#include "myspeaker.hpp"
+#include "chrono"
+#include "curl/curl.h"
 
 class RequestHandler : public rclcpp::Node, public firebase::database::ValueListener
 {
@@ -20,9 +25,10 @@ private:
     void getInput();
     void OnValueChanged(const firebase::database::DataSnapshot &snapshot) override;
     void OnCancelled(const firebase::database::Error &error_code, const char *error_message) override;
+    void postHttpReachGoal();
     firebase::database::DatabaseReference dbref;
     firebase::database::Database *database;
-    NavigateToGoal nav;
+    NavigationClient nav;
     rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer;
 };
