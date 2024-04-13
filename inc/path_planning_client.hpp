@@ -41,7 +41,7 @@ class PathPlanningClient : public rclcpp::Node
 {
 public:
     PathPlanningClient();
-    void requestPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses);
+    std::vector<int> getOptimizedPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses);
     double processPath(const nav_msgs::msg::Path::SharedPtr path);
     std::vector<int> bruteForce(std::vector<std::vector<double>> graph, int s);
 
@@ -58,7 +58,7 @@ private:
     bool followPath(const nav_msgs::msg::Path::SharedPtr path,
                     const std::string controller_id = "",
                     const std::string goal_checker_id = "");
-    NavigationClient nav;
+    // NavigationClient nav;
     TspSolving tsp_solving;
 };
 

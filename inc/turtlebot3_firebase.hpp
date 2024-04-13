@@ -37,7 +37,6 @@ extern const char *project_id;
 void InitializeFirebase();
 
 extern firebase::AppOptions options;
-extern int numberOfStation;
 /*Battery information*/
 void SetBattery(int value);
 int GetBattery();
@@ -51,14 +50,13 @@ struct stationData{
     std::string description;
     int id;
     std::string nameStation;
-    std::string multipleStation;
 };
 
 /*get request information*/
 struct getRequestData{
     int id;
-    double yPosition;
     double xPosition;
+    double yPosition;
     double yaw;
     stationData station;
 };
@@ -70,22 +68,9 @@ struct getPositionData{
     double yPosition;
     double yaw;
 };
-struct multiStation{
-    std::string name;
-    double xPosition;
-    double yPosition;
-    double yaw;
-};
-//struct save data for multiple Station
-struct Zone {
-    std::string name;
-    double value1;
-    double value2;
-    int value3;
-};
-extern std::vector<Zone> zones;
-stationData getMultiStation();
-void parseMultiStation(std::string str);
+
+std::vector<getRequestData> getMultiStation();
+void parseMultiStation(std::string str, std::vector<getRequestData> &reqs);
 getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);

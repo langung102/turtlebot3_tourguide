@@ -124,59 +124,60 @@ PathPlanningClient::PathPlanningClient() : Node("path_planning_client")
         this, "follow_path");
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
 
-    auto pose1 = std::make_shared<geometry_msgs::msg::PoseStamped>();
-    pose1->header.frame_id = "map";
-    pose1->header.stamp = now();
-    pose1->pose.position.x = 1.0;
-    pose1->pose.position.y = 0.0;
-    pose1->pose.position.z = 0.0;
-    pose1->pose.orientation.w = 1.0;
-    pose1->pose.orientation.x = 0.0;
-    pose1->pose.orientation.y = 0.0;
-    pose1->pose.orientation.z = 0.0;
+    // auto pose1 = std::make_shared<geometry_msgs::msg::PoseStamped>();
+    // pose1->header.frame_id = "map";
+    // pose1->header.stamp = now();
+    // pose1->pose.position.x = 1.0;
+    // pose1->pose.position.y = 0.0;
+    // pose1->pose.position.z = 0.0;
+    // pose1->pose.orientation.w = 1.0;
+    // pose1->pose.orientation.x = 0.0;
+    // pose1->pose.orientation.y = 0.0;
+    // pose1->pose.orientation.z = 0.0;
 
-    auto pose2 = std::make_shared<geometry_msgs::msg::PoseStamped>();
-    pose2->header.frame_id = "map";
-    pose2->header.stamp = now();
-    pose2->pose.position.x = 4.0;
-    pose2->pose.position.y = 1.0;
-    pose2->pose.position.z = 0.0;
-    pose2->pose.orientation.w = 1.0;
-    pose2->pose.orientation.x = 0.0;
-    pose2->pose.orientation.y = 0.0;
-    pose2->pose.orientation.z = 0.0;
+    // auto pose2 = std::make_shared<geometry_msgs::msg::PoseStamped>();
+    // pose2->header.frame_id = "map";
+    // pose2->header.stamp = now();
+    // pose2->pose.position.x = 4.0;
+    // pose2->pose.position.y = 1.0;
+    // pose2->pose.position.z = 0.0;
+    // pose2->pose.orientation.w = 1.0;
+    // pose2->pose.orientation.x = 0.0;
+    // pose2->pose.orientation.y = 0.0;
+    // pose2->pose.orientation.z = 0.0;
 
-    auto pose3 = std::make_shared<geometry_msgs::msg::PoseStamped>();
-    pose3->header.frame_id = "map";
-    pose3->header.stamp = now();
-    pose3->pose.position.x = 2.5;
-    pose3->pose.position.y = 2.5;
-    pose3->pose.position.z = 0.0;
-    pose3->pose.orientation.w = 1.0;
-    pose3->pose.orientation.x = 0.0;
-    pose3->pose.orientation.y = 0.0;
-    pose3->pose.orientation.z = 0.0;
+    // auto pose3 = std::make_shared<geometry_msgs::msg::PoseStamped>();
+    // pose3->header.frame_id = "map";
+    // pose3->header.stamp = now();
+    // pose3->pose.position.x = 2.5;
+    // pose3->pose.position.y = 2.5;
+    // pose3->pose.position.z = 0.0;
+    // pose3->pose.orientation.w = 1.0;
+    // pose3->pose.orientation.x = 0.0;
+    // pose3->pose.orientation.y = 0.0;
+    // pose3->pose.orientation.z = 0.0;
 
-    auto pose4 = std::make_shared<geometry_msgs::msg::PoseStamped>();
-    pose4->header.frame_id = "map";
-    pose4->header.stamp = now();
-    pose4->pose.position.x = 2.5;
-    pose4->pose.position.y = -1.0;
-    pose4->pose.position.z = 0.0;
-    pose4->pose.orientation.w = 1.0;
-    pose4->pose.orientation.x = 0.0;
-    pose4->pose.orientation.y = 0.0;
-    pose4->pose.orientation.z = 0.0;
+    // auto pose4 = std::make_shared<geometry_msgs::msg::PoseStamped>();
+    // pose4->header.frame_id = "map";
+    // pose4->header.stamp = now();
+    // pose4->pose.position.x = 2.5;
+    // pose4->pose.position.y = -1.0;
+    // pose4->pose.position.z = 0.0;
+    // pose4->pose.orientation.w = 1.0;
+    // pose4->pose.orientation.x = 0.0;
+    // pose4->pose.orientation.y = 0.0;
+    // pose4->pose.orientation.z = 0.0;
 
-    std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes = {pose1, pose2, pose3, pose4};
+    // std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes = {pose1, pose2, pose3, pose4};
 
-    this->requestPath(allposes);
+    // this->requestPath(allposes);
 }
 
-void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses)
+std::vector<int> PathPlanningClient::getOptimizedPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses)
 {
     std::vector<std::vector<double>> distances(poses.size(), std::vector<double>(poses.size()));
     std::vector<std::vector<nav_msgs::msg::Path::SharedPtr>> paths(poses.size(), std::vector<nav_msgs::msg::Path::SharedPtr>(poses.size()));
+    std::vector<int> optimized_path;
 
     for (size_t i = 0; i < poses.size(); ++i)
     {
@@ -188,7 +189,7 @@ void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_
             if (paths[i][j] == nullptr || paths[j][i] == nullptr)
             {
                 RCLCPP_ERROR(get_logger(), "Invalid path.");
-                return;
+                return optimized_path;
             }
             paths[i][j] = smoothPath(paths[i][j]);
             paths[j][i] = smoothPath(paths[j][i]);
@@ -206,7 +207,7 @@ void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_
         std::cout << std::endl;
     }
 
-    std::vector<int> optimized_path = bruteForce(distances, 0);
+    optimized_path = bruteForce(distances, 0);
     // std::vector<int> optimized_path = tsp_solving.dynamicProgramming(distances, 0);
 
     std::cout << "Minimum Path: ";
@@ -214,12 +215,14 @@ void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_
         std::cout << vertex << " ";
     std::cout << std::endl;
 
-    for (int vertex : optimized_path)
-    {
-        while (!nav.doneNavigate());
-        std::cout << "navigating to: " << poses[vertex]->pose.position.x << " " << poses[vertex]->pose.position.y << std::endl;
-        nav.startNavigation(*poses[vertex]);
-    }
+    return optimized_path;
+
+    // for (int vertex : optimized_path)
+    // {
+    //     while (!nav.doneNavigate());
+    //     std::cout << "navigating to: " << poses[vertex]->pose.position.x << " " << poses[vertex]->pose.position.y << std::endl;
+    //     nav.startNavigation(*poses[vertex]);
+    // }
 
     // int prev = optimized_path[0], cur = optimized_path[1];
     // for (int i=1; i < optimized_path.size(); i++)

@@ -11,7 +11,6 @@ const char *storage_bucket = "turtlebot3-3bd17.appspot.com";
 const char *project_id = "turtlebot3-3bd17";
 
 firebase::AppOptions options;
-std::vector<Zone> zones;
 int numberOfStation = 0;
 
 void InitializeFirebase()
@@ -292,7 +291,6 @@ stationData getStation(){
     myStation.description= "NO DESTINATION";
     myStation.id = -1;
     myStation.nameStation = "NO NAME";
-    myStation.multipleStation = "No Station";
     // myStation.multipleStation = "No stattion";
      // Ensure that the Firebase app is initialized.
     if (!firebase_app)
@@ -343,18 +341,14 @@ stationData getStation(){
     return myStation; 
 }
 
-stationData getMultiStation(){
-    stationData myStation;
-    myStation.description= "NO DESTINATION";
-    myStation.id = -1;
-    myStation.nameStation = "NO NAME";
-    myStation.multipleStation = "No stattion";
+std::vector<getRequestData> getMultiStation(){
+    std::vector<getRequestData> stations;
        // Ensure that the Firebase app is initialized.
     if (!firebase_app)
     {
         std::cerr << "Firebase app is not initialized." << std::endl;
         // Handle error as needed.
-        return myStation;
+        return stations;
     }
 
     // Get a reference to the Firebase Realtime Database.
@@ -363,7 +357,7 @@ stationData getMultiStation(){
     {
         std::cerr << "Failed to get the database instance." << std::endl;
         // Handle error as needed.
-        return myStation;
+        return stations;
     }
          // Get the root reference location of the database.
     firebase::database::DatabaseReference dbref = database->GetReference(requestPath);
@@ -378,11 +372,12 @@ stationData getMultiStation(){
     if(!(myMultiStation.Child("multipleStation").value().is_null())){
         std::cerr << "multipleStation is not null" << std::endl;
     }
-    myStation.multipleStation = myMultiStation.Child("multipleStation").value().string_value();
-    return myStation;
+    std::string stationString = myMultiStation.Child("multipleStation").value().string_value();
+    parseMultiStation(stationString, stations);
+    return stations;
 }
 
-void parseMultiStation(std::string str){
+void parseMultiStation(std::string str, std::vector<getRequestData> &reqs){
   // Tokenize the string by semicolon
     std::istringstream iss(str);
     std::string token;
@@ -397,15 +392,16 @@ void parseMultiStation(std::string str){
         std::string zone_name;
         std::getline(zone_stream, zone_name, ':');
 
-        Zone zone;
-        zone.name = zone_name;
-        zone_stream >> zone.value1;
+        getRequestData my_req;
+        my_req.station.nameStation = zone_name;
+        zone_stream >> my_req.xPosition;
         zone_stream.ignore(); // Ignore the delimiter ':'
-        zone_stream >> zone.value2;
+        zone_stream >> my_req.yPosition;
         zone_stream.ignore(); // Ignore the delimiter ':'
         std::string value3_str;
         std::getline(zone_stream, value3_str, ';');
-        zone.value3 = std::stoi(value3_str);
-        zones.push_back(zone);
+        my_req.yaw = std::stoi(value3_str);
+        my_req.id = 3;
+        reqs.push_back(my_req);
     }
 }

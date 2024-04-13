@@ -4,3 +4,4 @@ bool needPublishing = false;
 int state = 0;
 getRequestData request;
 bool isNavigate = false;
+std::vector<getRequestData> multiple_request;
