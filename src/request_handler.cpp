@@ -21,31 +21,28 @@ RequestHandler::~RequestHandler()
 void RequestHandler::OnValueChanged(
     const firebase::database::DataSnapshot &snapshot)
 {
-    request.id = snapshot.Child("id").value().int64_value();
-    if (request.id == 3)
+    int tmp_id = snapshot.Child("id").value().int64_value();
+    RCLCPP_INFO(get_logger(), "Got request with ID %d", request.id);
+    request.numStation = snapshot.Child("numStation").value().int64_value();
+    request.station.clear();
+    for (int i = 0; i < request.numStation; i++)
     {
-        multiple_request.clear();
-        parseMultiStation(snapshot.Child("multipleStation").value().string_value(), multiple_request);
-        RCLCPP_INFO(get_logger(), "Got request with ID %d", request.id);
-        for (int i = 0; i < multiple_request.size(); i++)
-        {
-            RCLCPP_INFO(get_logger(), "%s - %f ; %f ; %f\n", multiple_request[i].station.nameStation.c_str(), multiple_request[i].xPosition, multiple_request[i].yPosition, multiple_request[i].yaw);
-        }
+        Station station;
+        char str[10];
+        sprintf(str, "station%d", i);
+        firebase::Variant x = snapshot.Child(str).Child("x").value();
+        firebase::Variant y = snapshot.Child(str).Child("y").value();
+        firebase::Variant yaw = snapshot.Child(str).Child("yaw").value();
+        station.x = (x.is_int64()) ? x.int64_value() : x.double_value();
+        station.y = (y.is_int64()) ? y.int64_value() : y.double_value();
+        station.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
+        station.description = snapshot.Child(str).Child("description").value().string_value();
+        station.id = snapshot.Child(str).Child("id").value().int64_value();
+        station.name = snapshot.Child(str).Child("name").value().string_value();
+        request.station.push_back(station);
+        RCLCPP_INFO(get_logger(), "Got %s station: %f - %f - %f", request.station[i].name.c_str(), request.station[i].x, request.station[i].y, request.station[i].yaw);
     }
-    if (request.id == 0 || request.id == 1 || request.id == 2)
-    {
-        firebase::Variant x = snapshot.Child("param").Child("x").value();
-        firebase::Variant y = snapshot.Child("param").Child("y").value();
-        firebase::Variant yaw = snapshot.Child("param").Child("yaw").value();
-        request.xPosition = (x.is_int64()) ? x.int64_value() : x.double_value();
-        request.yPosition = (y.is_int64()) ? y.int64_value() : y.double_value();
-        request.yaw = (yaw.is_int64()) ? yaw.int64_value() : yaw.double_value();
-        request.station.description = snapshot.Child("station").Child("description").value().string_value();
-        request.station.id = snapshot.Child("station").Child("id").value().int64_value();
-        request.station.nameStation = snapshot.Child("station").Child("name").value().string_value();
-
-        RCLCPP_INFO(get_logger(), "Got request with ID %d and position (%f;%f) - %f at %s", request.id, request.xPosition, request.yPosition, request.yaw, request.station.nameStation.c_str());
-    }
+    request.id = tmp_id;
 }
 
 void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
@@ -103,65 +100,55 @@ geometry_msgs::msg::PoseStamped RequestHandler::convert2GeometryMsg(double x, do
     return goal_pose;
 }
 
-void RequestHandler::handlerMultipleStation()
-{
-    static char text[1024];
-
-    std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes;
-    for (int i = 0; i < multiple_request.size(); i++)
-    {
-        allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(multiple_request[i].yPosition, multiple_request[i].xPosition, multiple_request[i].yaw)));
-    }
-    std::vector<int> optimized_path = path_cli.getOptimizedPath(allposes);
-    for (int vertex : optimized_path)
-    {
-        sprintf(text, "Start navigating to %s station", multiple_request[vertex].station.nameStation.c_str());
-        // speak((const char*) text);
-        RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
-        this->nav.startNavigation(*allposes[vertex]);
-        while (!nav.doneNavigate()) {
-            if (request.id == 0) {
-                this->nav.cancelNavigation();
-                setStatus(true);
-                // speak("Cancelled");
-                isReachStation(0);
-                RCLCPP_INFO(get_logger(), "Cancel!\n");
-                return;
-            }
-        }
-    }
-    multiple_request.clear();
-}
-
 void RequestHandler::handlerCallback()
 {
     static char text[1024];
+    static std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes;
+    static std::vector<int> optimized_idx;
 
     switch (state)
     {
     case 0:
         if (request.id == 1)
         {
-            sprintf(text, "Start navigating to %s station", request.station.nameStation.c_str());
-            // speak((const char*) text);
-            this->nav.startNavigation(convert2GeometryMsg(request.xPosition, request.yPosition, request.yaw));
+            if (request.numStation == 1)
+            {
+                sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
+                // speak((const char*) text);
+                this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
+            }
+            else if (request.numStation > 1)
+            {
+                for (int i = 0; i < request.station.size(); i++)
+                {
+                    allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
+                }
+                optimized_idx = path_cli.getOptimizedPath(allposes);
+
+                int s = optimized_idx[0];
+
+                sprintf(text, "Start navigating to %s station", request.station[s].name.c_str());
+                // speak((const char*) text);
+                this->nav.startNavigation(convert2GeometryMsg(request.station[s].x, request.station[s].y, request.station[s].yaw));
+            }
             state = 1;
             setStatus(false);
             isReachStation(0);
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
-        }
-
-        if (request.id == 3)
-        {
-            setStatus(false);
-            handlerMultipleStation();
         }
         break;
     case 1:
         if (this->nav.doneNavigate())
         {
             state = 2;
-            sprintf(text, "Reached pick %s station, please choose your destination", request.station.nameStation.c_str());
+            if (request.numStation == 1)
+            {
+                sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[0].name.c_str());
+            }
+            else if (request.numStation > 1)
+            {
+                sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[optimized_idx[0]].name.c_str());
+            }
             isReachStation(1);
             // speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
@@ -180,12 +167,46 @@ void RequestHandler::handlerCallback()
     case 2:
         if (request.id == 2)
         {
-            sprintf(text, "Start navigating to %s desination", request.station.nameStation.c_str());
-            // speak((const char*) text);
-            this->nav.startNavigation(convert2GeometryMsg(request.xPosition, request.yPosition, request.yaw));
-            state = 3;
-            isReachStation(1);
-            RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
+            if (request.numStation == 1)
+            {
+                sprintf(text, "Start navigating to %s desination", request.station[0].name.c_str());
+                // speak((const char*) text);
+                this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
+                state = 3;
+                isReachStation(1);
+                RCLCPP_INFO(get_logger(), "Start navigating to destination!\n");
+            }
+            else if (request.numStation > 1)
+            {
+                for (int i = 1; i < request.numStation+1; i++)
+                {
+                    sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
+                    // speak((const char*) text);
+                    RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
+                    this->nav.startNavigation(*allposes[optimized_idx[i]]);
+                    while (!nav.doneNavigate())
+                    {
+                        if (request.id == 0)
+                        {
+                            this->nav.cancelNavigation();
+                            setStatus(true);
+                            // speak("Cancelled");
+                            isReachStation(0);
+                            RCLCPP_INFO(get_logger(), "Cancel!\n");
+                            return;
+                        }
+                    }
+                    sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
+                    // speak((const char*) text);
+                    rclcpp::sleep_for(std::chrono::seconds(5));
+                }
+                state = 0;
+                setStatus(true);
+                sprintf(text, "This is the end of tour");
+                // speak((const char*) text);
+                isReachStation(2);
+                RCLCPP_INFO(get_logger(), "End of tour!\n");
+            }
         }
         if (request.id == 0)
         {
@@ -201,8 +222,11 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
-            sprintf(text, "Reached %s desination", request.station.nameStation.c_str());
+            sprintf(text, "Reached %s desination", request.station[0].name.c_str());
             // speak((const char*) text);
+            sprintf(text, "%s", request.station[0].description.c_str());
+            // speak((const char*) text);
+            rclcpp::sleep_for(std::chrono::seconds(5));
             isReachStation(2);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }

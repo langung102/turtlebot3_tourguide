@@ -46,22 +46,23 @@ void isReachStation(int value);
 /*wait for getting and setting successfully*/
 void WaitForCompletion(const firebase::FutureBase &future, const char *name);
 
-struct stationData{
-    std::string description;
+struct Station{
     int id;
-    std::string nameStation;
+    std::string description;
+    std::string name;
+    double x;
+    double y;
+    double yaw;
 };
 
 /*get request information*/
-struct getRequestData{
+struct Request{
     int id;
-    double xPosition;
-    double yPosition;
-    double yaw;
-    stationData station;
+    int numStation;
+    std::vector<Station> station;
 };
 
-getRequestData getRequest();
+Request getRequest();
 
 struct getPositionData{
     double xPosition;
@@ -69,13 +70,13 @@ struct getPositionData{
     double yaw;
 };
 
-std::vector<getRequestData> getMultiStation();
-void parseMultiStation(std::string str, std::vector<getRequestData> &reqs);
+std::vector<Request> getMultiStation();
+void parseMultiStation(std::string str, std::vector<Request> &reqs);
 getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);
 
 void setStatus(bool value);
 
-stationData getStation();
+Station getStation();
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */

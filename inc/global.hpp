@@ -6,7 +6,5 @@
 extern bool needPublishing;
 extern bool stopNavigating;
 extern int state;
-extern int request_id;
-extern getRequestData request;
-extern std::vector<getRequestData> multiple_request;
+extern Request request;
 #endif

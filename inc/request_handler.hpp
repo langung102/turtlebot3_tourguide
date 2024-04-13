@@ -23,7 +23,6 @@ public:
     ~RequestHandler();
 private:
     void handlerCallback();
-    void handlerMultipleStation();
     void getInput();
     void OnValueChanged(const firebase::database::DataSnapshot &snapshot) override;
     void OnCancelled(const firebase::database::Error &error_code, const char *error_message) override;

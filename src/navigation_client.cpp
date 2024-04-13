@@ -18,12 +18,10 @@ NavigationClient::NavigationClient() : server_timeout_(100)
             if (msg->status_list.back().status == action_msgs::msg::GoalStatus::STATUS_EXECUTING)
             {
                 this->status = 1;
-                std::cout << "navigating" << std::endl;
             }
             else if (msg->status_list.back().status == action_msgs::msg::GoalStatus::STATUS_SUCCEEDED)
             {
                 this->status = 0;
-                std::cout << "done navigating" << std::endl;
             }
         });
     status = 0;
@@ -98,11 +96,6 @@ bool NavigationClient::doneNavigate()
     rclcpp::spin_some(this->client_node_);
     usleep(10000);
     return !this->status;
-    // rclcpp::spin_some(this->client_node_);
-    // std::cout << (int) navigation_goal_handle_->get_status() << std::endl;
-    // return (int) navigation_goal_handle_->get_status() == 4;
-    // return status = action_msgs::msg::GoalStatus::STATUS_ACCEPTED ||
-    //     status == action_msgs::msg::GoalStatus::STATUS_EXECUTING;
 }
 
 bool NavigationClient::isNavigate()
@@ -111,10 +104,3 @@ bool NavigationClient::isNavigate()
     usleep(10000);
     return this->status;
 }
-
-// void NavigationClient::spin_client() {
-//     rclcpp::spin_some(this->client_node_);
-// }
-// bool NavigateToGoal::isGoalReached() {
-//     return this->goal_checker.isGoalReached();
-// }
