@@ -22,7 +22,7 @@ void RequestHandler::OnValueChanged(
     const firebase::database::DataSnapshot &snapshot)
 {
     int tmp_id = snapshot.Child("id").value().int64_value();
-    RCLCPP_INFO(get_logger(), "Got request with ID %d", request.id);
+    RCLCPP_INFO(get_logger(), "Got request with ID %d", tmp_id);
     request.numStation = snapshot.Child("numStation").value().int64_value();
     request.station.clear();
     for (int i = 0; i < request.numStation; i++)
@@ -111,26 +111,9 @@ void RequestHandler::handlerCallback()
     case 0:
         if (request.id == 1)
         {
-            if (request.numStation == 1)
-            {
-                sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
-                // speak((const char*) text);
-                this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
-            }
-            else if (request.numStation > 1)
-            {
-                for (int i = 0; i < request.station.size(); i++)
-                {
-                    allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
-                }
-                optimized_idx = path_cli.getOptimizedPath(allposes);
-
-                int s = optimized_idx[0];
-
-                sprintf(text, "Start navigating to %s station", request.station[s].name.c_str());
-                // speak((const char*) text);
-                this->nav.startNavigation(convert2GeometryMsg(request.station[s].x, request.station[s].y, request.station[s].yaw));
-            }
+            sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
+            // speak((const char*) text);
+            this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
             state = 1;
             setStatus(false);
             isReachStation(0);
@@ -141,14 +124,7 @@ void RequestHandler::handlerCallback()
         if (this->nav.doneNavigate())
         {
             state = 2;
-            if (request.numStation == 1)
-            {
-                sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[0].name.c_str());
-            }
-            else if (request.numStation > 1)
-            {
-                sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[optimized_idx[0]].name.c_str());
-            }
+            sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[0].name.c_str());
             isReachStation(1);
             // speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
@@ -178,7 +154,16 @@ void RequestHandler::handlerCallback()
             }
             else if (request.numStation > 1)
             {
-                for (int i = 1; i < request.numStation+1; i++)
+                allposes.clear();
+                optimized_idx.clear();
+
+                for (int i = 0; i < request.station.size(); i++)
+                {
+                    allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
+                }
+                optimized_idx = path_cli.getOptimizedPath(allposes);
+
+                for (int i = 0; i < request.numStation + 1; i++)
                 {
                     sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
                     // speak((const char*) text);
