@@ -10,7 +10,7 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     setStatus(true);
     isReachStation(0);
     needPublishing = true;
-    // speak("Waiting for request");
+    speak("Waiting for request");
 }
 
 RequestHandler::~RequestHandler()
@@ -112,7 +112,7 @@ void RequestHandler::handlerCallback()
         if (request.id == 1)
         {
             sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
-            // speak((const char*) text);
+            speak((const char*) text);
             this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
             state = 1;
             setStatus(false);
@@ -126,7 +126,7 @@ void RequestHandler::handlerCallback()
             state = 2;
             sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[0].name.c_str());
             isReachStation(1);
-            // speak((const char*) text);
+            speak((const char*) text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
@@ -135,7 +135,7 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
-            // speak("Cancelled");
+            speak("Cancelled");
             isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
@@ -146,7 +146,7 @@ void RequestHandler::handlerCallback()
             if (request.numStation == 1)
             {
                 sprintf(text, "Start navigating to %s desination", request.station[0].name.c_str());
-                // speak((const char*) text);
+                speak((const char*) text);
                 this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
                 state = 3;
                 isReachStation(1);
@@ -166,7 +166,7 @@ void RequestHandler::handlerCallback()
                 for (int i = 0; i < request.numStation + 1; i++)
                 {
                     sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
-                    // speak((const char*) text);
+                    speak((const char*) text);
                     RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
                     this->nav.startNavigation(*allposes[optimized_idx[i]]);
                     while (!nav.doneNavigate())
@@ -175,20 +175,20 @@ void RequestHandler::handlerCallback()
                         {
                             this->nav.cancelNavigation();
                             setStatus(true);
-                            // speak("Cancelled");
+                            speak("Cancelled");
                             isReachStation(0);
                             RCLCPP_INFO(get_logger(), "Cancel!\n");
                             return;
                         }
                     }
                     sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
-                    // speak((const char*) text);
+                    speak((const char*) text);
                     rclcpp::sleep_for(std::chrono::seconds(5));
                 }
                 state = 0;
                 setStatus(true);
                 sprintf(text, "This is the end of tour");
-                // speak((const char*) text);
+                speak((const char*) text);
                 isReachStation(2);
                 RCLCPP_INFO(get_logger(), "End of tour!\n");
             }
@@ -197,7 +197,7 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
-            // speak("Cancelled");
+            speak("Cancelled");
             isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
@@ -208,9 +208,9 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             sprintf(text, "Reached %s desination", request.station[0].name.c_str());
-            // speak((const char*) text);
+            speak((const char*) text);
             sprintf(text, "%s", request.station[0].description.c_str());
-            // speak((const char*) text);
+            speak((const char*) text);
             rclcpp::sleep_for(std::chrono::seconds(5));
             isReachStation(2);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
@@ -221,7 +221,7 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
-            // speak("Cancelled");
+            speak("Cancelled");
             isReachStation(0);
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
