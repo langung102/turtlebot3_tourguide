@@ -190,6 +190,8 @@ void RequestHandler::handlerCallback()
                 sprintf(text, "This is the end of tour");
                 // speak((const char*) text);
                 isReachStation(2);
+                rclcpp::sleep_for(std::chrono::seconds(3));
+                isReachStation(0);
                 RCLCPP_INFO(get_logger(), "End of tour!\n");
             }
         }
@@ -211,8 +213,9 @@ void RequestHandler::handlerCallback()
             // speak((const char*) text);
             sprintf(text, "%s", request.station[0].description.c_str());
             // speak((const char*) text);
-            rclcpp::sleep_for(std::chrono::seconds(5));
             isReachStation(2);
+            rclcpp::sleep_for(std::chrono::seconds(3));
+            isReachStation(0);
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 
