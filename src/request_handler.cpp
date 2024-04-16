@@ -9,6 +9,7 @@ RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
     timer = this->create_wall_timer(50ms, std::bind(&RequestHandler::handlerCallback, this));
     setStatus(true);
     isReachStation(0);
+    setPosition(0,0,0);
     needPublishing = true;
     speak("Waiting for request");
 }
@@ -181,9 +182,11 @@ void RequestHandler::handlerCallback()
                             return;
                         }
                     }
-                    sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
-                    speak((const char *)text);
-                    rclcpp::sleep_for(std::chrono::seconds(5));
+                    if (i != request.numStation) {
+                        sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
+                        speak((const char *)text);
+                        rclcpp::sleep_for(std::chrono::seconds(5));
+                    }
                 }
                 state = 0;
                 setStatus(true);

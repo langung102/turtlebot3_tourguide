@@ -1,7 +1,7 @@
 #include "myspeaker.hpp"
 
 #define PCM_DEVICE "hw:2,0"
-#define SPEAKER_VOLUME 4
+#define SPEAKER_VOLUME 15
 
 // Function to speak text using espeak and save it to a temporary .wav file
 void speakAndSave(const char *text, const char *wavfile, double volume) {
@@ -73,6 +73,7 @@ void playWav(const char *wav_file, double volume) {
 
 void speak(const char* text) {
     const char *wavfile = "/root/test.wav"; // Temporary .wav file
+    std::remove(wavfile);
     
     speakAndSave(text, wavfile, SPEAKER_VOLUME);
     playWav(wavfile, 1);
