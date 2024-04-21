@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    speak("Starting programs");
+    // speak("Starting programs");
     auto node_amcl_pose = std::make_shared<AmclPoseSubscriber>();
     auto node_battery = std::make_shared<BatterySubscriber>();
     auto node_pub = std::make_shared<RequestHandler>();
@@ -19,6 +19,6 @@ int main(int argc, char *argv[])
     executor.add_node(node_battery);
     executor.add_node(node_pub);
     executor.spin();
-    speak("Program has shut down");
+    // speak("Program has shut down");
     return 0;
 }
