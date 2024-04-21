@@ -9,16 +9,16 @@ After=network-online.target
 
 [Service]
 
-Type=idle
+Type=simple
 User=root
 Environment="HOME=root"
 Environment="ROS_DOMAIN_ID=30"
 Environment="TURTLEBOT3_MODEL=burger"
-Environment="LDS_MODEL=LDS-02"
+Environment="LDS_MODEL=LD-19"
 Environment="RMW_IMPLEMENTATION=rmw_cyclonedds_cpp"
 
 # Command to execute when the service is started
-ExecStart=/bin/bash -c 'source /home/root/.bashrc; source /opt/ros/humble/setup.bash; source home/root/humble_ws/install/setup.bash; /usr/bin/python3 /home/root/launcher.py;'
+ExecStart=/bin/bash -c 'source /root/.bashrc; source /opt/ros/humble/setup.bash; source /root/turtlebot3_ws/install/setup.bash; /usr/bin/python3 /root/launcher.py;'
 
 # Disable Python's buffering of STDOUT and STDERR, so that output from the
 # service shows up immediately in systemd's logs
@@ -38,4 +38,4 @@ StartLimitBurst=0
 
 # Tell systemd to automatically start this service when the system boots
 # (assuming the service is enabled)
-WantedBy=default.target
+WantedBy=multi-user.target

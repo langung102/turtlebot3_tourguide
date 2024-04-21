@@ -37,7 +37,7 @@ def generate_launch_description():
     return LaunchDescription([
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test3, LAUNCH_FILE3]),
-            launch_arguments={'map': 'map.yaml'}.items(),
+            launch_arguments={'map': '/root/map.yaml'}.items(),
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test2, LAUNCH_FILE2])
