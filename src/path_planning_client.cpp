@@ -217,13 +217,6 @@ std::vector<int> PathPlanningClient::getOptimizedPath(const std::vector<std::sha
 
     return optimized_path;
 
-    // for (int vertex : optimized_path)
-    // {
-    //     while (!nav.doneNavigate());
-    //     std::cout << "navigating to: " << poses[vertex]->pose.position.x << " " << poses[vertex]->pose.position.y << std::endl;
-    //     nav.startNavigation(*poses[vertex]);
-    // }
-
     // int prev = optimized_path[0], cur = optimized_path[1];
     // for (int i=1; i < optimized_path.size(); i++)
     // {
