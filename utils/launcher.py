@@ -30,7 +30,7 @@ class AmclPoseSubscriber(Node):
 
     def amcl_pose_callback(self, msg):
         self.init_x = msg.pose.pose.position.x
-        self.init_y = msg.pose.pose.position.x
+        self.init_y = msg.pose.pose.position.y
 
         euler = euler_from_quaternion(
             [msg.pose.pose.orientation.x,
@@ -127,7 +127,7 @@ def button_processing():
 
 
 def launch_subprocess():
-    return subprocess.Popen(['ros2', 'launch', 'test_launch.py'])
+    return subprocess.Popen(['ros2', 'launch', '/root/test_launch.py'])
 
 def send_signal_to_process(process):
     process.send_signal(signal.SIGINT)
