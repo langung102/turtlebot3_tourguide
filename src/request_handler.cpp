@@ -106,6 +106,8 @@ void RequestHandler::handlerCallback()
     static char text[1024];
     static std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes;
     static std::vector<int> optimized_idx;
+    static auto start_timer = std::chrono::steady_clock::now();
+    static bool flag_auto_back = true;
 
     switch (state)
     {
@@ -119,6 +121,10 @@ void RequestHandler::handlerCallback()
             setStatus(false);
             isReachStation(0);
             RCLCPP_INFO(get_logger(), "Start navigating to pick up station!\n");
+        }
+        if (flag_auto_back && std::chrono::steady_clock::now() - start_timer > std::chrono::seconds(10)) {
+            this->nav.startNavigation(convert2GeometryMsg(0, 0, 0));
+            flag_auto_back = false;
         }
         break;
     case 1:
@@ -136,8 +142,11 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
+            flag_auto_back = true;
+            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
+            start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
@@ -175,9 +184,13 @@ void RequestHandler::handlerCallback()
                         if (request.id == 0)
                         {
                             this->nav.cancelNavigation();
+                            state = 0;
                             setStatus(true);
+                            flag_auto_back = true;
+                            start_timer = std::chrono::steady_clock::now();
                             speak("Cancelled");
                             isReachStation(0);
+                            start_timer = std::chrono::steady_clock::now();
                             RCLCPP_INFO(get_logger(), "Cancel!\n");
                             return;
                         }
@@ -190,6 +203,8 @@ void RequestHandler::handlerCallback()
                 }
                 state = 0;
                 setStatus(true);
+                flag_auto_back = true;
+                start_timer = std::chrono::steady_clock::now();
                 sprintf(text, "This is the end of tour");
                 speak((const char *)text);
                 isReachStation(2);
@@ -202,8 +217,11 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
+            flag_auto_back = true;
+            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
+            start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
@@ -212,6 +230,8 @@ void RequestHandler::handlerCallback()
         {
             state = 0;
             setStatus(true);
+            flag_auto_back = true;
+            start_timer = std::chrono::steady_clock::now();
             sprintf(text, "Reached %s desination", request.station[0].name.c_str());
             speak((const char *)text);
             sprintf(text, "%s", request.station[0].description.c_str());
@@ -219,6 +239,7 @@ void RequestHandler::handlerCallback()
             isReachStation(2);
             rclcpp::sleep_for(std::chrono::seconds(3));
             isReachStation(0);
+            start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Reached destination!\n");
         }
 
@@ -227,8 +248,11 @@ void RequestHandler::handlerCallback()
             this->nav.cancelNavigation();
             state = 0;
             setStatus(true);
+            flag_auto_back = true;
+            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
+            start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
