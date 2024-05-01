@@ -1,6 +1,6 @@
 #include "request_handler.hpp"
 
-RequestHandler::RequestHandler() : Node("user_input_publisher"), ValueListener()
+RequestHandler::RequestHandler() : Node("request_handler"), ValueListener()
 {
     InitializeFirebase();
     database = firebase::database::Database::GetInstance(firebase_app);
