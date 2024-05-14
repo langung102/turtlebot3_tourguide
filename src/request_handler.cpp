@@ -164,53 +164,8 @@ void RequestHandler::handlerCallback()
             }
             else if (request.numStation > 1)
             {
-                allposes.clear();
-                optimized_idx.clear();
-
-                for (int i = 0; i < request.station.size(); i++)
-                {
-                    allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
-                }
-                optimized_idx = path_cli.getOptimizedPath(allposes);
-
-                for (int i = 0; i < request.numStation + 1; i++)
-                {
-                    sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
-                    // speak((const char *)text);
-                    RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
-                    this->nav.startNavigation(*allposes[optimized_idx[i]]);
-                    while (!nav.doneNavigate())
-                    {
-                        if (request.id == 0)
-                        {
-                            this->nav.cancelNavigation();
-                            state = 0;
-                            setStatus(true);
-                            flag_auto_back = true;
-                            start_timer = std::chrono::steady_clock::now();
-                            // speak("Cancelled");
-                            isReachStation(0);
-                            start_timer = std::chrono::steady_clock::now();
-                            RCLCPP_INFO(get_logger(), "Cancel!\n");
-                            return;
-                        }
-                    }
-                    if (i != request.numStation) {
-                        sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
-                        // speak((const char *)text);
-                        rclcpp::sleep_for(std::chrono::seconds(5));
-                    }
-                }
-                state = 0;
-                setStatus(true);
-                flag_auto_back = true;
-                start_timer = std::chrono::steady_clock::now();
-                sprintf(text, "This is the end of tour");
-                // speak((const char *)text);
-                isReachStation(2);
-                rclcpp::sleep_for(std::chrono::seconds(3));
-                isReachStation(0);
-                RCLCPP_INFO(get_logger(), "End of tour!\n");
+                state = 4;
+                RCLCPP_INFO(get_logger(), "Start navigating to multiple destination!\n");
             }
         }
         if (request.id == 0)
@@ -256,6 +211,54 @@ void RequestHandler::handlerCallback()
             RCLCPP_INFO(get_logger(), "Cancel!\n");
         }
         break;
+    case 4:
+        allposes.clear();
+        optimized_idx.clear();
+
+        for (int i = 0; i < request.station.size(); i++)
+        {
+            allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
+        }
+        optimized_idx = path_cli.getOptimizedPath(allposes);
+
+        for (int i = 0; i < request.numStation + 1; i++)
+        {
+            sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
+            // speak((const char *)text);
+            RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
+            this->nav.startNavigation(*allposes[optimized_idx[i]]);
+            while (!nav.doneNavigate())
+            {
+                if (request.id == 0)
+                {
+                    this->nav.cancelNavigation();
+                    state = 0;
+                    setStatus(true);
+                    flag_auto_back = true;
+                    start_timer = std::chrono::steady_clock::now();
+                    // speak("Cancelled");
+                    isReachStation(0);
+                    start_timer = std::chrono::steady_clock::now();
+                    RCLCPP_INFO(get_logger(), "Cancel!\n");
+                    return;
+                }
+            }
+            if (i != request.numStation) {
+                sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
+                // speak((const char *)text);
+                rclcpp::sleep_for(std::chrono::seconds(5));
+            }
+        }
+        state = 0;
+        setStatus(true);
+        flag_auto_back = true;
+        start_timer = std::chrono::steady_clock::now();
+        sprintf(text, "This is the end of tour");
+        // speak((const char *)text);
+        isReachStation(2);
+        rclcpp::sleep_for(std::chrono::seconds(3));
+        isReachStation(0);
+        RCLCPP_INFO(get_logger(), "End of tour!\n");
     default:
         break;
     }
