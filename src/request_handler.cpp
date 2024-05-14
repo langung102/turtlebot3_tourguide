@@ -144,7 +144,6 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
@@ -174,7 +173,6 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
@@ -187,7 +185,6 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            start_timer = std::chrono::steady_clock::now();
             sprintf(text, "Reached %s desination", request.station[0].name.c_str());
             speak((const char *)text);
             sprintf(text, "%s", request.station[0].description.c_str());
@@ -205,7 +202,6 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            start_timer = std::chrono::steady_clock::now();
             speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
@@ -236,7 +232,6 @@ void RequestHandler::handlerCallback()
                     state = 0;
                     setStatus(true);
                     flag_auto_back = true;
-                    start_timer = std::chrono::steady_clock::now();
                     speak("Cancelled");
                     isReachStation(0);
                     start_timer = std::chrono::steady_clock::now();
