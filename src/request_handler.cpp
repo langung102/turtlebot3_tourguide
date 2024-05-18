@@ -116,6 +116,8 @@ void RequestHandler::handlerCallback()
         {
             sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
             speak((const char *)text);
+            allposes.clear();
+            allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw)));
             this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
             state = 1;
             setStatus(false);
@@ -209,9 +211,6 @@ void RequestHandler::handlerCallback()
         }
         break;
     case 4:
-        allposes.clear();
-        optimized_idx.clear();
-
         for (int i = 0; i < request.station.size(); i++)
         {
             allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[i].x, request.station[i].y, request.station[i].yaw)));
@@ -242,10 +241,12 @@ void RequestHandler::handlerCallback()
             if (i != request.numStation)
             {
                 sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
-                speak((const char *)text);
+                // speak((const char *)text);
                 rclcpp::sleep_for(std::chrono::seconds(5));
             }
         }
+        allposes.clear();
+        optimized_idx.clear();
         state = 0;
         setStatus(true);
         flag_auto_back = true;
