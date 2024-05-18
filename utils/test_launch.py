@@ -14,6 +14,11 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    test1 = LaunchConfiguration(
+        'turtlebot3_tourguide',
+        default=os.path.join(get_package_share_directory('turtlebot3_tourguide'), 'launch'))
+    LAUNCH_FILE1 = "/turtlebot3_tourguide.launch.py"
+
     test2 = LaunchConfiguration(
         'turtlebot3_bringup',
         default=os.path.join(get_package_share_directory('turtlebot3_bringup'), 'launch'))
@@ -27,17 +32,16 @@ def generate_launch_description():
     delay_action = TimerAction(
         period=10.0,
         actions=[
-            Node(
-                package='turtlebot3_tourguide',
-                executable='turtlebot3_tourguide',
-                output='screen'),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([test1, LAUNCH_FILE1])
+            )
         ]
     )
 
     return LaunchDescription([
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test3, LAUNCH_FILE3]),
-            launch_arguments={'map': 'map.yaml'}.items(),
+            launch_arguments={'map': '/root/map.yaml'}.items(),
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([test2, LAUNCH_FILE2])

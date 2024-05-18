@@ -37,58 +37,46 @@ extern const char *project_id;
 void InitializeFirebase();
 
 extern firebase::AppOptions options;
-extern int numberOfStation;
 /*Battery information*/
 void SetBattery(int value);
 int GetBattery();
 
+void isReachStation(int value);
+
 /*wait for getting and setting successfully*/
 void WaitForCompletion(const firebase::FutureBase &future, const char *name);
 
-struct stationData{
-    std::string description;
+struct Station{
     int id;
-    std::string nameStation;
-    std::string multipleStation;
+    std::string description;
+    std::string name;
+    double x;
+    double y;
+    double yaw;
 };
 
 /*get request information*/
-struct getRequestData{
+struct Request{
     int id;
-    double yPosition;
-    double xPosition;
-    double yaw;
-    stationData station;
+    int numStation;
+    std::vector<Station> station;
 };
 
-getRequestData getRequest();
+Request getRequest();
 
 struct getPositionData{
     double xPosition;
     double yPosition;
     double yaw;
 };
-struct multiStation{
-    std::string name;
-    double xPosition;
-    double yPosition;
-    double yaw;
-};
-//struct save data for multiple Station
-struct Zone {
-    std::string name;
-    double value1;
-    double value2;
-    int value3;
-};
-extern std::vector<Zone> zones;
-stationData getMultiStation();
-void parseMultiStation(std::string str);
+
+std::vector<Request> getMultiStation();
+void parseMultiStation(std::string str, std::vector<Request> &reqs);
 getPositionData getPosition();
 
 void setPosition(double x, double y, double yaw);
 
 void setStatus(bool value);
 
-stationData getStation();
+Station getStation();
 #endif /* INC_TURTLEBOT3FIREBASE_H_ */

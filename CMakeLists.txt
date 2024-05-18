@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(turtlebot3_tourguide)
 
-option(BUILD_FOR_X64 "BUILDING FOR X64 ARCHITECTURE, OTHERWISE, BUILDING FOR AARCH64" ON)
+option(BUILD_FOR_X64 "BUILDING FOR X64 ARCHITECTURE, OTHERWISE, BUILDING FOR AARCH64" OFF)
 
 if (BUILD_FOR_X64)
   message(STATUS "building for x64")
@@ -88,5 +88,9 @@ ament_target_dependencies(turtlebot3_tourguide
 install(TARGETS
 turtlebot3_tourguide
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()

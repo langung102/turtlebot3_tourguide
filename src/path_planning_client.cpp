@@ -1,32 +1,110 @@
 #include "path_planning_client.hpp"
 
-std::vector<int> travllingSalesmanProblem(std::vector<std::vector<double>> graph, int s)
+TspSolving::TspSolving()
+{
+    minCost = INT_MAX;
+}
+
+double TspSolving::dp(int i, int mask)
+{
+    if (mask == (1 << size) - 1)
+    {                      // All vertices have been visited
+        return dist[i][0]; // Return to vertex 1
+    }
+    if (memo[i][mask] != 0)
+    {
+        return memo[i][mask];
+    }
+
+    double res = INT_MAX;
+
+    for (int j = 0; j < size; ++j)
+    {
+        if (!(mask & (1 << j)))
+        {
+            res = (double) std::min(res, dp(j, mask | (1 << j)) + dist[i][j]);
+        }
+    }
+
+    return memo[i][mask] = res;
+}
+
+void TspSolving::savePath(int i, int mask)
+{
+    if (mask == (1 << size) - 1)
+    {
+        shortestPath.push_back(0); // Starting vertex
+        return;
+    }
+
+    for (int j = 0; j < size; ++j)
+    {
+        if (!(mask & (1 << j)))
+        {
+            double nextCost = (double) dp(j, mask | (1 << j)) + dist[i][j];
+            if (dp(i, mask) == nextCost)
+            {
+                shortestPath.push_back(j);    // Add vertex j to the path
+                savePath(j, mask | (1 << j)); // Recursive call with vertex j
+                return;
+            }
+        }
+    }
+}
+
+std::vector<int> TspSolving::dynamicProgramming(std::vector<std::vector<double>> graph, int s)
+{
+    dist = graph;
+    size = graph.size();
+
+    memo = new double *[size];
+    for (int i = 0; i < size; i++)
+    {
+        memo[i] = new double[1 << size];
+    }
+
+    savePath(s, 1);
+
+    for (int i = 0; i < size; i++)
+    {
+        delete[] memo[i];
+    }
+    delete[] memo;
+
+    shortestPath.insert(shortestPath.begin(), s);
+
+    return shortestPath;
+}
+
+std::vector<int> PathPlanningClient::bruteForce(std::vector<std::vector<double>> graph, int s)
 {
     std::vector<int> vertex;
     for (int i = 0; i < graph.size(); i++)
+    {
         if (i != s)
             vertex.push_back(i);
+    }
 
     std::vector<int> min_path_vertices;
     double min_path_weight = std::numeric_limits<double>::max();
     do
     {
-        double current_pathweight = 0;
-        double k = s;
+        double current_path_weight = 0;
+        int k = s;
         std::vector<int> current_path_vertices;
         current_path_vertices.push_back(s);
         for (int i = 0; i < vertex.size(); i++)
         {
-            current_pathweight += graph[k][vertex[i]];
+            current_path_weight += graph[k][vertex[i]];
             k = vertex[i];
             current_path_vertices.push_back(k);
         }
-        current_pathweight += graph[k][s];
+        current_path_weight += graph[k][s];
         current_path_vertices.push_back(s);
 
-        if (current_pathweight < min_path_weight)
+        if (current_path_weight < min_path_weight)
         {
-            min_path_weight = current_pathweight;
+            min_path_weight = current_path_weight;
             min_path_vertices = current_path_vertices;
         }
 
@@ -40,6 +118,10 @@ PathPlanningClient::PathPlanningClient() : Node("path_planning_client")
 {
     compute_path_to_pose_client_ = rclcpp_action::create_client<nav2_msgs::action::ComputePathToPose>(
         this, "compute_path_to_pose");
+    smooth_path_client_ = rclcpp_action::create_client<nav2_msgs::action::SmoothPath>(
+        this, "smooth_path");
+    follow_path_client_ = rclcpp_action::create_client<nav2_msgs::action::FollowPath>(
+        this, "follow_path");
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
 
     auto pose1 = std::make_shared<geometry_msgs::msg::PoseStamped>();
@@ -88,13 +170,14 @@ PathPlanningClient::PathPlanningClient() : Node("path_planning_client")
 
     std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> allposes = {pose1, pose2, pose3, pose4};
 
-    this->requestPath(allposes);
+    this->getOptimizedPath(allposes);
 }
 
-void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses)
+std::vector<int> PathPlanningClient::getOptimizedPath(const std::vector<std::shared_ptr<geometry_msgs::msg::PoseStamped>> &poses)
 {
     std::vector<std::vector<double>> distances(poses.size(), std::vector<double>(poses.size()));
     std::vector<std::vector<nav_msgs::msg::Path::SharedPtr>> paths(poses.size(), std::vector<nav_msgs::msg::Path::SharedPtr>(poses.size()));
+    std::vector<int> optimized_path;
 
     for (size_t i = 0; i < poses.size(); ++i)
     {
@@ -102,6 +185,14 @@ void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_
         {
             // Call getPath with the current pair of poses
             paths[i][j] = getPath(poses[i], poses[j]);
+            paths[j][i] = getPath(poses[j], poses[i]);
+            if (paths[i][j] == nullptr || paths[j][i] == nullptr)
+            {
+                RCLCPP_ERROR(get_logger(), "Invalid path.");
+                return optimized_path;
+            }
+            paths[i][j] = smoothPath(paths[i][j]);
+            paths[j][i] = smoothPath(paths[j][i]);
             distances[i][j] = processPath(paths[i][j]);
             distances[j][i] = distances[i][j];
             std::cout << "Path from pose " << poses[i]->pose.position.x << "," << poses[i]->pose.position.y << " to pose " << poses[j]->pose.position.x << "," << poses[j]->pose.position.y << ": " << processPath(paths[i][j]) << std::endl;
@@ -116,35 +207,26 @@ void PathPlanningClient::requestPath(const std::vector<std::shared_ptr<geometry_
         std::cout << std::endl;
     }
 
-    std::vector<int> optimized_path = travllingSalesmanProblem(distances, 0);
+    optimized_path = bruteForce(distances, 0);
+    // std::vector<int> optimized_path = tsp_solving.dynamicProgramming(distances, 0);
 
     std::cout << "Minimum Path: ";
     for (int vertex : optimized_path)
         std::cout << vertex << " ";
     std::cout << std::endl;
 
-    for (int vertex : optimized_path)
-    {
-        while (!nav.doneNavigate());
-        std::cout << "navigating to: " << poses[vertex]->pose.position.x << " " << poses[vertex]->pose.position.y << std::endl;
-        nav.startNavigation(*poses[vertex]);
-    }
-    std::cout << std::endl;
+    return optimized_path;
 
-    // for (const auto& path : allPossiblePaths) {
-    //     for (int node : path) {
-    //         std::cout << node << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
-
-    // if (path != nullptr)
+    // int prev = optimized_path[0], cur = optimized_path[1];
+    // for (int i=1; i < optimized_path.size(); i++)
     // {
-    //     processPath(path);
-    // }
-    // else
-    // {
-    //     RCLCPP_ERROR(get_logger(), "Failed to get path.");
+    //     cur = optimized_path[i];
+    //     while (!nav.doneNavigate());
+    //     // std::cout << "navigating to: " << poses[i]->pose.position.x << " " << poses[i]->pose.position.y << std::endl;
+    //     std::cout << prev << "-->" << cur << std::endl;
+    //     followPath(paths[prev][cur]);
+    //     prev = optimized_path[i];
+    //     // nav.startNavigation(*poses[vertex]);
     // }
 }
 
@@ -163,9 +245,6 @@ double PathPlanningClient::processPath(const nav_msgs::msg::Path::SharedPtr path
         }
         prev_pose = std::make_shared<geometry_msgs::msg::PoseStamped>(pose);
     }
-
-    // std::cout << "Length of the global path: " << std::fixed << std::setprecision(2)
-    //           << path_length << " units" << std::endl;
     return path_length;
 }
 
@@ -217,4 +296,87 @@ std::shared_ptr<nav_msgs::msg::Path> PathPlanningClient::getPath(const std::shar
     }
 
     return std::make_shared<nav_msgs::msg::Path>(result.result->path);
+}
+
+std::shared_ptr<nav_msgs::msg::Path> PathPlanningClient::smoothPath(const nav_msgs::msg::Path::SharedPtr path, std::string smoother_id,
+                                                                    double max_duration, bool check_for_collision)
+{
+    RCLCPP_INFO(this->get_logger(), "Waiting for 'SmoothPath' action server");
+    while (!smooth_path_client_->wait_for_action_server(std::chrono::seconds(1)))
+    {
+        RCLCPP_INFO(this->get_logger(), "'SmoothPath' action server not available, waiting...");
+    }
+
+    auto goal_msg = nav2_msgs::action::SmoothPath::Goal();
+    goal_msg.path = *path;
+    goal_msg.smoother_id = smoother_id;
+    goal_msg.max_smoothing_duration = rclcpp::Duration::from_seconds(max_duration);
+    goal_msg.check_for_collisions = check_for_collision;
+
+    if (!smoother_id.empty())
+    {
+        goal_msg.smoother_id = smoother_id;
+    }
+
+    goal_msg.check_for_collisions = check_for_collision;
+
+    RCLCPP_INFO(this->get_logger(), "Smoothing path...");
+    auto send_goal_options = rclcpp_action::Client<nav2_msgs::action::SmoothPath>::SendGoalOptions();
+    auto future_goal_handle = smooth_path_client_->async_send_goal(goal_msg, send_goal_options);
+    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future_goal_handle) != rclcpp::FutureReturnCode::SUCCESS)
+    {
+        RCLCPP_ERROR(this->get_logger(), "Failed to send goal to SmoothPath action server");
+        return nullptr;
+    }
+
+    auto goal_handle = future_goal_handle.get();
+    if (!goal_handle)
+    {
+        RCLCPP_ERROR(this->get_logger(), "Goal was rejected by the SmoothPath action server");
+        return nullptr;
+    }
+
+    auto result_future = smooth_path_client_->async_get_result(goal_handle);
+    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result_future) != rclcpp::FutureReturnCode::SUCCESS)
+    {
+        RCLCPP_ERROR(this->get_logger(), "Failed to receive result from SmoothPath action server");
+        return nullptr;
+    }
+
+    auto result = result_future.get();
+    if (result.code != rclcpp_action::ResultCode::SUCCEEDED)
+    {
+        RCLCPP_WARN(this->get_logger(), "Getting path failed.");
+        return nullptr;
+    }
+
+    return std::make_shared<nav_msgs::msg::Path>(result.result->path);
+}
+
+bool PathPlanningClient::followPath(const nav_msgs::msg::Path::SharedPtr path,
+                                    const std::string controller_id,
+                                    const std::string goal_checker_id)
+{
+    auto goal_msg = nav2_msgs::action::FollowPath::Goal();
+    goal_msg.path = *path;
+    goal_msg.controller_id = controller_id;
+    goal_msg.goal_checker_id = goal_checker_id;
+
+    RCLCPP_INFO(get_logger(), "Executing path...");
+    auto future_goal_handle = follow_path_client_->async_send_goal(goal_msg);
+
+    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future_goal_handle) != rclcpp::FutureReturnCode::SUCCESS)
+    {
+        RCLCPP_ERROR(this->get_logger(), "Failed to send goal to FollowPath action server");
+        return false;
+    }
+
+    auto goal_handle_ = future_goal_handle.get();
+    if (!goal_handle_)
+    {
+        RCLCPP_ERROR(get_logger(), "Follow path was rejected!");
+        return false;
+    }
+    auto result_future = follow_path_client_->async_get_result(goal_handle_);
+    return true;
 }

@@ -2,5 +2,5 @@
 
 bool needPublishing = false;
 int state = 0;
-getRequestData request;
 bool isNavigate = false;
+Request request;

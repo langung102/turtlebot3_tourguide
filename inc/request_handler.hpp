@@ -10,6 +10,7 @@
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "navigation_client.hpp"
+#include "path_planning_client.hpp"
 #include "turtlebot3_firebase.hpp"
 #include "myspeaker.hpp"
 #include "chrono"
@@ -26,9 +27,11 @@ private:
     void OnValueChanged(const firebase::database::DataSnapshot &snapshot) override;
     void OnCancelled(const firebase::database::Error &error_code, const char *error_message) override;
     void postHttpReachGoal();
+    geometry_msgs::msg::PoseStamped convert2GeometryMsg(double x, double y, double yaw);
     firebase::database::DatabaseReference dbref;
     firebase::database::Database *database;
     NavigationClient nav;
+    PathPlanningClient path_cli;
     rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer;
 };
