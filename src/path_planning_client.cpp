@@ -184,6 +184,7 @@ std::vector<int> PathPlanningClient::getOptimizedPath(const std::vector<std::sha
         for (size_t j = i + 1; j < poses.size(); ++j)
         {
             // Call getPath with the current pair of poses
+            std::cout << i << " " << j << std::endl;
             paths[i][j] = getPath(poses[i], poses[j]);
             paths[j][i] = getPath(poses[j], poses[i]);
             if (paths[i][j] == nullptr || paths[j][i] == nullptr)
