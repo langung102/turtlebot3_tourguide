@@ -1,6 +1,6 @@
 #include "request_handler.hpp"
 
-RequestHandler::RequestHandler() : Node("request_handler"), ValueListener()
+RequestHandler::RequestHandler() : Node("request_handler"), ValueListener(), speaker("hw:2,0", 15)
 {
     InitializeFirebase();
     database = firebase::database::Database::GetInstance(firebase_app);
@@ -11,7 +11,7 @@ RequestHandler::RequestHandler() : Node("request_handler"), ValueListener()
     isReachStation(0);
     setPosition(0, 0, 0);
     needPublishing = true;
-    speak("Waiting for request");
+    speaker.speak("Waiting for request");
 }
 
 RequestHandler::~RequestHandler()
@@ -115,7 +115,7 @@ void RequestHandler::handlerCallback()
         if (request.id == 1)
         {
             sprintf(text, "Start navigating to %s station", request.station[0].name.c_str());
-            speak((const char *)text);
+            speaker.speak((const char *)text);
             allposes.clear();
             allposes.push_back(std::make_shared<geometry_msgs::msg::PoseStamped>(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw)));
             this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
@@ -136,7 +136,7 @@ void RequestHandler::handlerCallback()
             state = 2;
             sprintf(text, "Reached %s station, please confirm on your mobile app to start navigating", request.station[0].name.c_str());
             isReachStation(1);
-            speak((const char *)text);
+            speaker.speak((const char *)text);
             RCLCPP_INFO(get_logger(), "Reached pick up station!\n");
         }
 
@@ -146,7 +146,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            speak("Cancelled");
+            speaker.speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
@@ -158,7 +158,7 @@ void RequestHandler::handlerCallback()
             if (request.numStation == 1)
             {
                 sprintf(text, "Start navigating to %s desination", request.station[0].name.c_str());
-                speak((const char *)text);
+                speaker.speak((const char *)text);
                 this->nav.startNavigation(convert2GeometryMsg(request.station[0].x, request.station[0].y, request.station[0].yaw));
                 state = 3;
                 isReachStation(1);
@@ -175,7 +175,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            speak("Cancelled");
+            speaker.speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
@@ -188,9 +188,9 @@ void RequestHandler::handlerCallback()
             setStatus(true);
             flag_auto_back = true;
             sprintf(text, "Reached %s desination", request.station[0].name.c_str());
-            speak((const char *)text);
+            speaker.speak((const char *)text);
             sprintf(text, "%s", request.station[0].description.c_str());
-            speak((const char *)text);
+            speaker.speak((const char *)text);
             isReachStation(2);
             rclcpp::sleep_for(std::chrono::seconds(3));
             isReachStation(0);
@@ -204,7 +204,7 @@ void RequestHandler::handlerCallback()
             state = 0;
             setStatus(true);
             flag_auto_back = true;
-            speak("Cancelled");
+            speaker.speak("Cancelled");
             isReachStation(0);
             start_timer = std::chrono::steady_clock::now();
             RCLCPP_INFO(get_logger(), "Cancel!\n");
@@ -217,12 +217,17 @@ void RequestHandler::handlerCallback()
         }
         optimized_idx = path_cli.getOptimizedPath(allposes);
 
-        for (int i = 0; i < request.numStation + 1; i++)
+        for (int i = 0; i < request.numStation + 2; i++)
         {
-            sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]].name.c_str());
-            speak((const char *)text);
+            if (i != 0 && i != request.numStation+1)
+            {
+                sprintf(text, "Start navigating to %s station", request.station[optimized_idx[i]-1].name.c_str());
+                speaker.speak((const char *)text);
+            }
+
             RCLCPP_INFO(get_logger(), "Navigating to multiple stations!\n");
             this->nav.startNavigation(*allposes[optimized_idx[i]]);
+            rclcpp::sleep_for(std::chrono::seconds(2));
             while (!nav.doneNavigate())
             {
                 if (request.id == 0)
@@ -231,17 +236,17 @@ void RequestHandler::handlerCallback()
                     state = 0;
                     setStatus(true);
                     flag_auto_back = true;
-                    speak("Cancelled");
+                    speaker.speak("Cancelled");
                     isReachStation(0);
                     start_timer = std::chrono::steady_clock::now();
                     RCLCPP_INFO(get_logger(), "Cancel!\n");
                     return;
                 }
             }
-            if (i != request.numStation)
+            if (i != 0 && i != request.numStation+1)
             {
-                sprintf(text, "%s", request.station[optimized_idx[i]].description.c_str());
-                // speak((const char *)text);
+                sprintf(text, "%s", request.station[optimized_idx[i]-1].description.c_str());
+                speaker.speak((const char *)text);
                 rclcpp::sleep_for(std::chrono::seconds(5));
             }
         }
@@ -252,7 +257,7 @@ void RequestHandler::handlerCallback()
         flag_auto_back = true;
         start_timer = std::chrono::steady_clock::now();
         sprintf(text, "This is the end of tour");
-        speak((const char *)text);
+        speaker.speak((const char *)text);
         isReachStation(2);
         rclcpp::sleep_for(std::chrono::seconds(3));
         isReachStation(0);

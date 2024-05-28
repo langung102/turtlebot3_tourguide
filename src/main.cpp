@@ -6,11 +6,14 @@
 #include "request_handler.hpp"
 #include "path_planning_client.hpp"
 #include "global.hpp"
+#include <string>
 
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    speak("Starting programs");
+    const char* dev = "hw:2,0";
+    Speaker speaker(dev, 15);
+    speaker.speak("Starting programs");
     auto node_amcl_pose = std::make_shared<AmclPoseSubscriber>();
     auto node_battery = std::make_shared<BatterySubscriber>();
     auto node_pub = std::make_shared<RequestHandler>();
@@ -19,6 +22,6 @@ int main(int argc, char *argv[])
     executor.add_node(node_battery);
     executor.add_node(node_pub);
     executor.spin();
-    speak("Program has shut down");
+    speaker.speak("Program has shut down");
     return 0;
 }

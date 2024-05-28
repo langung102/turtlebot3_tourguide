@@ -1,13 +1,15 @@
 #include "myspeaker.hpp"
 
-#define PCM_DEVICE "hw:2,0"
-#define SPEAKER_VOLUME 15
+Speaker::Speaker(const char* device_name, float volume) {
+    pcm_device = device_name;
+    speaker_volume = volume;
+}
 
 // Function to speak text using espeak and save it to a temporary .wav file
-void speakAndSave(const char *text, const char *wavfile, double volume) {
+void Speaker::speakAndSave(const char *text, const char *wavfile) {
     // Construct the espeak command to generate the audio
     char cmd[1024];
-    sprintf(cmd, "echo \"%s\" | /root/piper/build/piper --model /root/en_US-hfc_female-medium.onnx --output_file - | ffmpeg -f wav -i pipe: -ar 44100 -ac 2 -af \"volume=%f\" -ab 192k %s", text, volume, wavfile);
+    sprintf(cmd, "echo \"%s\" | /root/piper/build/piper --model /root/en_US-hfc_female-medium.onnx --output_file - | ffmpeg -f wav -i pipe: -ar 44100 -ac 2 -af \"volume=%f\" -ab 192k %s", text, speaker_volume, wavfile);
 
     // Execute the command
     int ret = system(cmd);
@@ -17,10 +19,10 @@ void speakAndSave(const char *text, const char *wavfile, double volume) {
     }
 }
 
-void playWav(const char *wav_file, double volume) {
+void Speaker::playWav(const char *wav_file, double volume) {
     // Open the PCM device
     snd_pcm_t *pcm_handle;
-    if (snd_pcm_open(&pcm_handle, PCM_DEVICE, SND_PCM_STREAM_PLAYBACK, 0) < 0) {
+    if (snd_pcm_open(&pcm_handle, pcm_device, SND_PCM_STREAM_PLAYBACK, 0) < 0) {
         std::cerr << "Error opening PCM device" << std::endl;
         return;
     }
@@ -71,11 +73,11 @@ void playWav(const char *wav_file, double volume) {
     snd_pcm_close(pcm_handle);
 }
 
-void speak(const char* text) {
+void Speaker::speak(const char* text) {
     const char *wavfile = "/root/test.wav"; // Temporary .wav file
     std::remove(wavfile);
     
-    speakAndSave(text, wavfile, SPEAKER_VOLUME);
+    speakAndSave(text, wavfile);
     playWav(wavfile, 1);
 
     // Clean up temporary file
