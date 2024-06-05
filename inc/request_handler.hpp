@@ -34,6 +34,7 @@ private:
     PathPlanningClient path_cli;
     rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer;
+    Speaker speaker;
 };
 
 #endif

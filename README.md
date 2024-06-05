@@ -6,9 +6,23 @@ git submodule update --remote
 ```
 
 ## How to build
+### In CMakeLists.txt
+- set(BUILD_FOR_X64 ON) if you are building on X64 machine
+- set(BUILD_FOR_X64 OFF) if you are building on AARCH64 machine
+
+### Build with CMake
 
 ```
-cd to your ros workspace
+mkdir build
+cd build/
+cmake ..
+make -j4
+```
+
+### Build with colcon
+
+```
+cd <your ros workspace>
 colcon build --packages-select turtlebot3_tourguide
 ```
 
