@@ -11,9 +11,6 @@
 #include <sys/wait.h>
 #include <alsa/asoundlib.h>
 
-// #define PCM_DEVICE "hw:2,0"
-// #define SPEAKER_VOLUME 15
-
 class Speaker 
 {
 private:

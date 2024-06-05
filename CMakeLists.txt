@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(turtlebot3_tourguide)
 
-option(BUILD_FOR_X64 "BUILDING FOR X64 ARCHITECTURE, OTHERWISE, BUILDING FOR AARCH64" OFF)
+set(BUILD_FOR_X64 ON)
 
 if (BUILD_FOR_X64)
   message(STATUS "building for x64")
@@ -50,9 +50,22 @@ find_package(rclcpp_action REQUIRED)
 
 set(CMAKE_CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1")
 
+set(SPEAKER_SRC
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/myspeaker.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/inc/myspeaker.hpp
+)
+
+add_library(speaker
+  ${SPEAKER_SRC}
+)
+if (BUILD_FOR_X64)
+  target_compile_definitions(speaker PUBLIC BUILD_FOR_X64=1)
+else()
+  target_compile_definitions(speaker PUBLIC BUILD_FOR_X64=0 asound)
+endif()
+
 set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/src/path_planning_client.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/myspeaker.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/request_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/update_handler.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/navigation_client.cpp
@@ -69,8 +82,9 @@ set(SRC
 add_executable(turtlebot3_tourguide
   ${SRC}
 )
-target_link_libraries(turtlebot3_tourguide "${firebase_libs}" ${CMAKE_BINARY_DIR}/libturtlebot3_firebase.a asound)
+target_link_libraries(turtlebot3_tourguide "${firebase_libs}" ${CMAKE_BINARY_DIR}/libturtlebot3_firebase.a ${CMAKE_BINARY_DIR}/libspeaker.a)
 add_dependencies(turtlebot3_tourguide turtlebot3_firebase)
+
 
 ament_target_dependencies(turtlebot3_tourguide
   rclcpp
