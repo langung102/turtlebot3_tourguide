@@ -3,4 +3,4 @@
 bool needPublishing = false;
 int state = 0;
 bool isNavigate = false;
-Request request;
+std::queue<Request> request_list;

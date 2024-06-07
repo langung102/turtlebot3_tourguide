@@ -24,6 +24,7 @@ void RequestHandler::OnValueChanged(
 {
     int tmp_id = snapshot.Child("id").value().int64_value();
     RCLCPP_INFO(get_logger(), "Got request with ID %d", tmp_id);
+    Request request;
     request.numStation = snapshot.Child("numStation").value().int64_value();
     request.station.clear();
     for (int i = 0; i < request.numStation; i++)
@@ -44,6 +45,7 @@ void RequestHandler::OnValueChanged(
         RCLCPP_INFO(get_logger(), "Got %s station: %f - %f - %f", request.station[i].name.c_str(), request.station[i].x, request.station[i].y, request.station[i].yaw);
     }
     request.id = tmp_id;
+    request_list.push(request);
 }
 
 void RequestHandler::OnCancelled(const firebase::database::Error &error_code,
@@ -108,6 +110,12 @@ void RequestHandler::handlerCallback()
     static std::vector<int> optimized_idx;
     static auto start_timer = std::chrono::steady_clock::now();
     static bool flag_auto_back = true;
+    static Request request;
+
+    if (!request_list.empty()) {
+        request = request_list.front();
+        request_list.pop();
+    }
 
     switch (state)
     {
